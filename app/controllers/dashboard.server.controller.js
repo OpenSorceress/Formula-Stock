@@ -64,12 +64,22 @@ exports.render = function(req, res, next) {
 					var prices = [];
 					
 					api_response.query.results.quote.forEach(function(stock) {
+						console.log(stock);
 						var regex = /<b>(.*?)<\/b>/;
-						var price = stock.LastTradeRealtimeWithTime.match(regex)[1];
+						//var price = undefined;
+						// console.log(stock.LastTradeRealtimeWithTime);
+						
+/*
+						if(stock.LastTradeRealtimeWithTime == null) {
+							price = 'N/A';
+						} else {
+							var price = stock.LastTradeRealtimeWithTime.match(regex)[1];
+						}
+*/
 						
 						prices.push({
 							ticker: stock.symbol,
-							price: price
+							price: stock.LastTradePriceOnly
 						});
 					});
 					
