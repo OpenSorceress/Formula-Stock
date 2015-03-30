@@ -1,0 +1,26 @@
+{
+	"actionable" : [
+		{
+			"date" : {
+				"day" : "18",
+				"month" : "1",
+				"year" : "2015"
+			},
+			"name" : "TRANSGLOBE ENERGY",
+			"ticker" : "TGL.TO",
+			"action" : "BUY", 
+			"percentage_weight" : 5.85174
+		},
+		{
+			"date" : { 
+				"day" : "18", 
+				"month" : "1", 
+				"year" : "2015"
+			},
+			"name" : "NU SKIN ENTERPRISES ",
+			"ticker" : "NUS",
+			"action" : "BUY", 
+			"percentage_weight" : 94.1483
+		}
+	]
+}
