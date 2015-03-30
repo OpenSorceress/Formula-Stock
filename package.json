@@ -1,0 +1,18 @@
+{
+  "name": "FormulaStocks",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.10.1",
+    "connect": "^3.3.4",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.2.1",
+    "express": "^4.11.0",
+    "express-session": "^1.10.1",
+    "gulp": "latest",
+    "jade": "^1.9.1",
+    "mongoose": "^3.8.21",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "request": "^2.51.0"
+  }
+}
