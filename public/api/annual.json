@@ -1,0 +1,4331 @@
+{
+"logs" : [
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1970"
+		},
+	"balance" : 100000
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1970"
+		},
+	"balance" : 96818
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1970"
+		},
+	"balance" : 98023
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1970"
+		},
+	"balance" : 91065
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1970"
+		},
+	"balance" : 86095
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1970"
+		},
+	"balance" : 93930
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1970"
+		},
+	"balance" : 91544
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1970"
+		},
+	"balance" : 95322
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1970"
+		},
+	"balance" : 99796
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1970"
+		},
+	"balance" : 111326
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1970"
+		},
+	"balance" : 120837
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1970"
+		},
+	"balance" : 133481
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1971"
+		},
+	"balance" : 138468
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1971"
+		},
+	"balance" : 153925
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1971"
+		},
+	"balance" : 158689
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1971"
+		},
+	"balance" : 159779
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1971"
+		},
+	"balance" : 163165
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1971"
+		},
+	"balance" : 164986
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1971"
+		},
+	"balance" : 163838
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1971"
+		},
+	"balance" : 164986
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1971"
+		},
+	"balance" : 165687
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1971"
+		},
+	"balance" : 174698
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1971"
+		},
+	"balance" : 176993
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1971"
+		},
+	"balance" : 201206
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1972"
+		},
+	"balance" : 219516
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1972"
+		},
+	"balance" : 228671
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1972"
+		},
+	"balance" : 224675
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1972"
+		},
+	"balance" : 224675
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1972"
+		},
+	"balance" : 229253
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1972"
+		},
+	"balance" : 214115
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1972"
+		},
+	"balance" : 202608
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1972"
+		},
+	"balance" : 207091
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1972"
+		},
+	"balance" : 212670
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1972"
+		},
+	"balance" : 196018
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1972"
+		},
+	"balance" : 210717
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1972"
+		},
+	"balance" : 215204
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1973"
+		},
+	"balance" : 215223
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1973"
+		},
+	"balance" : 224918
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1973"
+		},
+	"balance" : 236439
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1973"
+		},
+	"balance" : 223877
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1973"
+		},
+	"balance" : 204923
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1973"
+		},
+	"balance" : 204832
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1973"
+		},
+	"balance" : 220920
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1973"
+		},
+	"balance" : 219651
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1973"
+		},
+	"balance" : 234345
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1973"
+		},
+	"balance" : 263798
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1973"
+		},
+	"balance" : 231112
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1973"
+		},
+	"balance" : 209888
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1974"
+		},
+	"balance" : 233588
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1974"
+		},
+	"balance" : 237691
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1974"
+		},
+	"balance" : 253584
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1974"
+		},
+	"balance" : 239898
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1974"
+		},
+	"balance" : 227583
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1974"
+		},
+	"balance" : 227083
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1974"
+		},
+	"balance" : 215549
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1974"
+		},
+	"balance" : 210390
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1974"
+		},
+	"balance" : 193231
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1974"
+		},
+	"balance" : 207849
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1974"
+		},
+	"balance" : 216544
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1974"
+		},
+	"balance" : 197409
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1975"
+		},
+	"balance" : 224784
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1975"
+		},
+	"balance" : 251069
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1975"
+		},
+	"balance" : 265463
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1975"
+		},
+	"balance" : 281706
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1975"
+		},
+	"balance" : 310134
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1975"
+		},
+	"balance" : 311473
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1975"
+		},
+	"balance" : 331050
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1975"
+		},
+	"balance" : 301630
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1975"
+		},
+	"balance" : 298183
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1975"
+		},
+	"balance" : 303622
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1975"
+		},
+	"balance" : 314115
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1975"
+		},
+	"balance" : 318089
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1976"
+		},
+	"balance" : 350885
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1976"
+		},
+	"balance" : 405931
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1976"
+		},
+	"balance" : 429166
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1976"
+		},
+	"balance" : 426833
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1976"
+		},
+	"balance" : 421578
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1976"
+		},
+	"balance" : 426892
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1976"
+		},
+	"balance" : 442857
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1976"
+		},
+	"balance" : 422727
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1976"
+		},
+	"balance" : 434114
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1976"
+		},
+	"balance" : 416364
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1976"
+		},
+	"balance" : 417287
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1976"
+		},
+	"balance" : 455877
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1977"
+		},
+	"balance" : 480990
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1977"
+		},
+	"balance" : 479781
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1977"
+		},
+	"balance" : 484635
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1977"
+		},
+	"balance" : 480433
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1977"
+		},
+	"balance" : 490405
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1977"
+		},
+	"balance" : 505832
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1977"
+		},
+	"balance" : 520232
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1977"
+		},
+	"balance" : 504412
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1977"
+		},
+	"balance" : 505472
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1977"
+		},
+	"balance" : 505403
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1977"
+		},
+	"balance" : 526052
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1977"
+		},
+	"balance" : 547279
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1978"
+		},
+	"balance" : 531978
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1978"
+		},
+	"balance" : 534334
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1978"
+		},
+	"balance" : 557367
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1978"
+		},
+	"balance" : 596292
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1978"
+		},
+	"balance" : 642944
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1978"
+		},
+	"balance" : 664983
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1978"
+		},
+	"balance" : 662947
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1978"
+		},
+	"balance" : 719245
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1978"
+		},
+	"balance" : 736919
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1978"
+		},
+	"balance" : 666871
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1978"
+		},
+	"balance" : 615739
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1978"
+		},
+	"balance" : 638852
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1979"
+		},
+	"balance" : 672838
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1979"
+		},
+	"balance" : 668501
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1979"
+		},
+	"balance" : 689972
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1979"
+		},
+	"balance" : 713303
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1979"
+		},
+	"balance" : 707408
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1979"
+		},
+	"balance" : 729765
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1979"
+		},
+	"balance" : 746868
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1979"
+		},
+	"balance" : 791285
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1979"
+		},
+	"balance" : 816406
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1979"
+		},
+	"balance" : 775248
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1979"
+		},
+	"balance" : 751527
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1979"
+		},
+	"balance" : 800989
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1980"
+		},
+	"balance" : 832649
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1980"
+		},
+	"balance" : 845318
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1980"
+		},
+	"balance" : 763663
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1980"
+		},
+	"balance" : 733128
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1980"
+		},
+	"balance" : 775573
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1980"
+		},
+	"balance" : 831843
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1980"
+		},
+	"balance" : 885407
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1980"
+		},
+	"balance" : 951135
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1980"
+		},
+	"balance" : 1011034
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1980"
+		},
+	"balance" : 1017050
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1980"
+		},
+	"balance" : 1027027
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1980"
+		},
+	"balance" : 1004064
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1981"
+		},
+	"balance" : 1032442
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1981"
+		},
+	"balance" : 1039466
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1981"
+		},
+	"balance" : 1114463
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1981"
+		},
+	"balance" : 1178961
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1981"
+		},
+	"balance" : 1171573
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1981"
+		},
+	"balance" : 1221025
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1981"
+		},
+	"balance" : 1180286
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1981"
+		},
+	"balance" : 1157331
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1981"
+		},
+	"balance" : 1074698
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1981"
+		},
+	"balance" : 1087549
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1981"
+		},
+	"balance" : 1122412
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1981"
+		},
+	"balance" : 1156203
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1982"
+		},
+	"balance" : 1127387
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1982"
+		},
+	"balance" : 1104657
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1982"
+		},
+	"balance" : 1100416
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1982"
+		},
+	"balance" : 1145075
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1982"
+		},
+	"balance" : 1153309
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1982"
+		},
+	"balance" : 1125370
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1982"
+		},
+	"balance" : 1131577
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1982"
+		},
+	"balance" : 1153781
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1982"
+		},
+	"balance" : 1273755
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1982"
+		},
+	"balance" : 1380507
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1982"
+		},
+	"balance" : 1503459
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1982"
+		},
+	"balance" : 1552148
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1983"
+		},
+	"balance" : 1617934
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1983"
+		},
+	"balance" : 1687174
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1983"
+		},
+	"balance" : 1805750
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1983"
+		},
+	"balance" : 1917026
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1983"
+		},
+	"balance" : 2066611
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1983"
+		},
+	"balance" : 2181320
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1983"
+		},
+	"balance" : 2172153
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1983"
+		},
+	"balance" : 2137748
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1983"
+		},
+	"balance" : 2256355
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1983"
+		},
+	"balance" : 2255916
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1983"
+		},
+	"balance" : 2331411
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1983"
+		},
+	"balance" : 2377402
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1984"
+		},
+	"balance" : 2437671
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1984"
+		},
+	"balance" : 2460773
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1984"
+		},
+	"balance" : 2537804
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1984"
+		},
+	"balance" : 2522011
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1984"
+		},
+	"balance" : 2321579
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1984"
+		},
+	"balance" : 2420661
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1984"
+		},
+	"balance" : 2412637
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1984"
+		},
+	"balance" : 2665231
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1984"
+		},
+	"balance" : 2709270
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1984"
+		},
+	"balance" : 2712000
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1984"
+		},
+	"balance" : 2785217
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1984"
+		},
+	"balance" : 2853073
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1985"
+		},
+	"balance" : 3190490
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1985"
+		},
+	"balance" : 3349365
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1985"
+		},
+	"balance" : 3403908
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1985"
+		},
+	"balance" : 3427868
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1985"
+		},
+	"balance" : 3565349
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1985"
+		},
+	"balance" : 3651357
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1985"
+		},
+	"balance" : 3744097
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1985"
+		},
+	"balance" : 3730339
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1985"
+		},
+	"balance" : 3612102
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1985"
+		},
+	"balance" : 3803056
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1985"
+		},
+	"balance" : 4174293
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1985"
+		},
+	"balance" : 4238822
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1986"
+		},
+	"balance" : 4294518
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1986"
+		},
+	"balance" : 4648099
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1986"
+		},
+	"balance" : 5248739
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1986"
+		},
+	"balance" : 5399760
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1986"
+		},
+	"balance" : 5946874
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1986"
+		},
+	"balance" : 5768354
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1986"
+		},
+	"balance" : 5460925
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1986"
+		},
+	"balance" : 6044675
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1986"
+		},
+	"balance" : 6224656
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1986"
+		},
+	"balance" : 6223306
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1986"
+		},
+	"balance" : 6477587
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1986"
+		},
+	"balance" : 6386501
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1987"
+		},
+	"balance" : 7574522
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1987"
+		},
+	"balance" : 8028697
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1987"
+		},
+	"balance" : 8632312
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1987"
+		},
+	"balance" : 8790314
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1987"
+		},
+	"balance" : 9051309
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1987"
+		},
+	"balance" : 9352846
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1987"
+		},
+	"balance" : 9516987
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1987"
+		},
+	"balance" : 10348132
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1987"
+		},
+	"balance" : 11469351
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1987"
+		},
+	"balance" : 9124626
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1987"
+		},
+	"balance" : 9157265
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1987"
+		},
+	"balance" : 10330500
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1988"
+		},
+	"balance" : 10536361
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1988"
+		},
+	"balance" : 11868492
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1988"
+		},
+	"balance" : 11988829
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1988"
+		},
+	"balance" : 12020873
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1988"
+		},
+	"balance" : 11881522
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1988"
+		},
+	"balance" : 12640962
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1988"
+		},
+	"balance" : 12191122
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1988"
+		},
+	"balance" : 11770415
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1988"
+		},
+	"balance" : 12369589
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1988"
+		},
+	"balance" : 12615378
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1988"
+		},
+	"balance" : 11973643
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1988"
+		},
+	"balance" : 12037384
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1989"
+		},
+	"balance" : 13169632
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1989"
+		},
+	"balance" : 12424896
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1989"
+		},
+	"balance" : 12582575
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1989"
+		},
+	"balance" : 13563135
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1989"
+		},
+	"balance" : 14224122
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1989"
+		},
+	"balance" : 14004794
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1989"
+		},
+	"balance" : 14418794
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1989"
+		},
+	"balance" : 14675163
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1989"
+		},
+	"balance" : 15568071
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1989"
+		},
+	"balance" : 14784082
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1989"
+		},
+	"balance" : 14227427
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1989"
+		},
+	"balance" : 14751048
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1990"
+		},
+	"balance" : 13645003
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1990"
+		},
+	"balance" : 13894045
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1990"
+		},
+	"balance" : 14547128
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1990"
+		},
+	"balance" : 14028911
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1990"
+		},
+	"balance" : 15730467
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1990"
+		},
+	"balance" : 16613947
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1990"
+		},
+	"balance" : 15448815
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1990"
+		},
+	"balance" : 13466008
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1990"
+		},
+	"balance" : 12902427
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1990"
+		},
+	"balance" : 11959901
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1990"
+		},
+	"balance" : 12984378
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1990"
+		},
+	"balance" : 13898195
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1991"
+		},
+	"balance" : 16184304
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1991"
+		},
+	"balance" : 17085296
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1991"
+		},
+	"balance" : 17539798
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1991"
+		},
+	"balance" : 18566199
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1991"
+		},
+	"balance" : 19486593
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1991"
+		},
+	"balance" : 18671754
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1991"
+		},
+	"balance" : 19032691
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1991"
+		},
+	"balance" : 19116180
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1991"
+		},
+	"balance" : 19343517
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1991"
+		},
+	"balance" : 19028870
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1991"
+		},
+	"balance" : 18032127
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1991"
+		},
+	"balance" : 19536715
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1992"
+		},
+	"balance" : 21567499
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1992"
+		},
+	"balance" : 21276965
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1992"
+		},
+	"balance" : 21238499
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1992"
+		},
+	"balance" : 20775795
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1992"
+		},
+	"balance" : 20216190
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1992"
+		},
+	"balance" : 19022900
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1992"
+		},
+	"balance" : 19253334
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1992"
+		},
+	"balance" : 18133892
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1992"
+		},
+	"balance" : 18126034
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1992"
+		},
+	"balance" : 18667990
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1992"
+		},
+	"balance" : 20473260
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1992"
+		},
+	"balance" : 21101810
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1993"
+		},
+	"balance" : 21317977
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1993"
+		},
+	"balance" : 20448296
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1993"
+		},
+	"balance" : 21783184
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1993"
+		},
+	"balance" : 21413791
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1993"
+		},
+	"balance" : 21766494
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1993"
+		},
+	"balance" : 21672831
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1993"
+		},
+	"balance" : 22055991
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1993"
+		},
+	"balance" : 21527204
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1993"
+		},
+	"balance" : 22285046
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1993"
+		},
+	"balance" : 22967436
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1993"
+		},
+	"balance" : 22746118
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1993"
+		},
+	"balance" : 24959316
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1994"
+		},
+	"balance" : 25988462
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1994"
+		},
+	"balance" : 26049042
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1994"
+		},
+	"balance" : 25872580
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1994"
+		},
+	"balance" : 25967056
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1994"
+		},
+	"balance" : 25025096
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1994"
+		},
+	"balance" : 24807943
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1994"
+		},
+	"balance" : 25482086
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1994"
+		},
+	"balance" : 26955344
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1994"
+		},
+	"balance" : 27508732
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1994"
+		},
+	"balance" : 27533946
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1994"
+		},
+	"balance" : 27158538
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1994"
+		},
+	"balance" : 27445210
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1995"
+		},
+	"balance" : 28956154
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1995"
+		},
+	"balance" : 29856548
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1995"
+		},
+	"balance" : 31268030
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1995"
+		},
+	"balance" : 31798064
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1995"
+		},
+	"balance" : 33212164
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1995"
+		},
+	"balance" : 35379040
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1995"
+		},
+	"balance" : 36542269
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1995"
+		},
+	"balance" : 38024261
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1995"
+		},
+	"balance" : 40056809
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1995"
+		},
+	"balance" : 39413830
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1995"
+		},
+	"balance" : 40782292
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1995"
+		},
+	"balance" : 42951250
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1996"
+		},
+	"balance" : 42427331
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1996"
+		},
+	"balance" : 43364267
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1996"
+		},
+	"balance" : 44877996
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1996"
+		},
+	"balance" : 46352140
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1996"
+		},
+	"balance" : 46482064
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1996"
+		},
+	"balance" : 46779212
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1996"
+		},
+	"balance" : 44757364
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1996"
+		},
+	"balance" : 45948316
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1996"
+		},
+	"balance" : 45914261
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1996"
+		},
+	"balance" : 46609298
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1996"
+		},
+	"balance" : 46855023
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1996"
+		},
+	"balance" : 47764787
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1997"
+		},
+	"balance" : 49187533
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1997"
+		},
+	"balance" : 49303111
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1997"
+		},
+	"balance" : 47144826
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1997"
+		},
+	"balance" : 46804386
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1997"
+		},
+	"balance" : 50171662
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1997"
+		},
+	"balance" : 52262897
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1997"
+		},
+	"balance" : 53596761
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1997"
+		},
+	"balance" : 53737404
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1997"
+		},
+	"balance" : 56960306
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1997"
+		},
+	"balance" : 55528168
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1997"
+		},
+	"balance" : 55721380
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1997"
+		},
+	"balance" : 54557443
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1998"
+		},
+	"balance" : 55910947
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1998"
+		},
+	"balance" : 56411219
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1998"
+		},
+	"balance" : 58903684
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1998"
+		},
+	"balance" : 64753279
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1998"
+		},
+	"balance" : 64667439
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1998"
+		},
+	"balance" : 66511531
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1998"
+		},
+	"balance" : 61037347
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1998"
+		},
+	"balance" : 49985637
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1998"
+		},
+	"balance" : 53603028
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1998"
+		},
+	"balance" : 59858958
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1998"
+		},
+	"balance" : 61527572
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1998"
+		},
+	"balance" : 62550271
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "1999"
+		},
+	"balance" : 62440010
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "1999"
+		},
+	"balance" : 57098202
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "1999"
+		},
+	"balance" : 60340804
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "1999"
+		},
+	"balance" : 66664916
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "1999"
+		},
+	"balance" : 65512490
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "1999"
+		},
+	"balance" : 71570894
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "1999"
+		},
+	"balance" : 65948508
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "1999"
+		},
+	"balance" : 64310056
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "1999"
+		},
+	"balance" : 59620410
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "1999"
+		},
+	"balance" : 64904439
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "1999"
+		},
+	"balance" : 59060290
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "1999"
+		},
+	"balance" : 59551448
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2000"
+		},
+	"balance" : 56534142
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2000"
+		},
+	"balance" : 57499271
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2000"
+		},
+	"balance" : 61395015
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2000"
+		},
+	"balance" : 61952496
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2000"
+		},
+	"balance" : 59716319
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2000"
+		},
+	"balance" : 60631174
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2000"
+		},
+	"balance" : 59871915
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2000"
+		},
+	"balance" : 64295121
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2000"
+		},
+	"balance" : 68765571
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2000"
+		},
+	"balance" : 66376852
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2000"
+		},
+	"balance" : 62248695
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2000"
+		},
+	"balance" : 65414717
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2001"
+		},
+	"balance" : 70771383
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2001"
+		},
+	"balance" : 71535037
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2001"
+		},
+	"balance" : 64354113
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2001"
+		},
+	"balance" : 67348946
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2001"
+		},
+	"balance" : 71085867
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2001"
+		},
+	"balance" : 74670228
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2001"
+		},
+	"balance" : 74461769
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2001"
+		},
+	"balance" : 75094111
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2001"
+		},
+	"balance" : 67494117
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2001"
+		},
+	"balance" : 71059081
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2001"
+		},
+	"balance" : 78031341
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2001"
+		},
+	"balance" : 81578662
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2002"
+		},
+	"balance" : 85856515
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2002"
+		},
+	"balance" : 87014950
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2002"
+		},
+	"balance" : 89388418
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2002"
+		},
+	"balance" : 91553854
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2002"
+		},
+	"balance" : 93954762
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2002"
+		},
+	"balance" : 94151342
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2002"
+		},
+	"balance" : 91824686
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2002"
+		},
+	"balance" : 91883021
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2002"
+		},
+	"balance" : 88884121
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2002"
+		},
+	"balance" : 94959315
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2002"
+		},
+	"balance" : 108208527
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2002"
+		},
+	"balance" : 103805657
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2003"
+		},
+	"balance" : 99464221
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2003"
+		},
+	"balance" : 101207804
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2003"
+		},
+	"balance" : 110494489
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2003"
+		},
+	"balance" : 117885014
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2003"
+		},
+	"balance" : 126445233
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2003"
+		},
+	"balance" : 131233670
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2003"
+		},
+	"balance" : 142028665
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2003"
+		},
+	"balance" : 147772040
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2003"
+		},
+	"balance" : 149735004
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2003"
+		},
+	"balance" : 154455210
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2003"
+		},
+	"balance" : 159550241
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2003"
+		},
+	"balance" : 161885342
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2004"
+		},
+	"balance" : 171112016
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2004"
+		},
+	"balance" : 174054317
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2004"
+		},
+	"balance" : 183286470
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2004"
+		},
+	"balance" : 184377858
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2004"
+		},
+	"balance" : 174438153
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2004"
+		},
+	"balance" : 179065571
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2004"
+		},
+	"balance" : 174965447
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2004"
+		},
+	"balance" : 173089136
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2004"
+		},
+	"balance" : 179985355
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2004"
+		},
+	"balance" : 177261424
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2004"
+		},
+	"balance" : 183780106
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2004"
+		},
+	"balance" : 188803360
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2005"
+		},
+	"balance" : 189509494
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2005"
+		},
+	"balance" : 187658609
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2005"
+		},
+	"balance" : 192937300
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2005"
+		},
+	"balance" : 183568168
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2005"
+		},
+	"balance" : 191137847
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2005"
+		},
+	"balance" : 188127010
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2005"
+		},
+	"balance" : 213289000
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2005"
+		},
+	"balance" : 216571063
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2005"
+		},
+	"balance" : 229988735
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2005"
+		},
+	"balance" : 237535934
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2005"
+		},
+	"balance" : 256433775
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2005"
+		},
+	"balance" : 249091258
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2006"
+		},
+	"balance" : 301962150
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2006"
+		},
+	"balance" : 305536437
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2006"
+		},
+	"balance" : 336170525
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2006"
+		},
+	"balance" : 326723630
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2006"
+		},
+	"balance" : 314599622
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2006"
+		},
+	"balance" : 318009082
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2006"
+		},
+	"balance" : 316651218
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2006"
+		},
+	"balance" : 333131466
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2006"
+		},
+	"balance" : 325020569
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2006"
+		},
+	"balance" : 344520989
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2006"
+		},
+	"balance" : 376056794
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2006"
+		},
+	"balance" : 378341857
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2007"
+		},
+	"balance" : 390511708
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2007"
+		},
+	"balance" : 393217300
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2007"
+		},
+	"balance" : 410451523
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2007"
+		},
+	"balance" : 425596013
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2007"
+		},
+	"balance" : 444769320
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2007"
+		},
+	"balance" : 444631263
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2007"
+		},
+	"balance" : 423929031
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2007"
+		},
+	"balance" : 415980573
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2007"
+		},
+	"balance" : 427895410
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2007"
+		},
+	"balance" : 417006578
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2007"
+		},
+	"balance" : 387673197
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2007"
+		},
+	"balance" : 367384497
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2008"
+		},
+	"balance" : 339410155
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2008"
+		},
+	"balance" : 374154116
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2008"
+		},
+	"balance" : 391376016
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2008"
+		},
+	"balance" : 398126580
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2008"
+		},
+	"balance" : 442137346
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2008"
+		},
+	"balance" : 416627620
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2008"
+		},
+	"balance" : 377541687
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2008"
+		},
+	"balance" : 388361716
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2008"
+		},
+	"balance" : 341882375
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2008"
+		},
+	"balance" : 278138673
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2008"
+		},
+	"balance" : 236355078
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2008"
+		},
+	"balance" : 259421926
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2009"
+		},
+	"balance" : 241418702
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2009"
+		},
+	"balance" : 208992564
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2009"
+		},
+	"balance" : 236931193
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2009"
+		},
+	"balance" : 279515204
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2009"
+		},
+	"balance" : 296947718
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2009"
+		},
+	"balance" : 301180550
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2009"
+		},
+	"balance" : 329991078
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2009"
+		},
+	"balance" : 348503932
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2009"
+		},
+	"balance" : 368616827
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2009"
+		},
+	"balance" : 359530747
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2009"
+		},
+	"balance" : 372010533
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2009"
+		},
+	"balance" : 391499361
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2010"
+		},
+	"balance" : 378306010
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2010"
+		},
+	"balance" : 392385795
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2010"
+		},
+	"balance" : 424183413
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2010"
+		},
+	"balance" : 426231014
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2010"
+		},
+	"balance" : 402274544
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2010"
+		},
+	"balance" : 392152089
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2010"
+		},
+	"balance" : 413710540
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2010"
+		},
+	"balance" : 398038661
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2010"
+		},
+	"balance" : 434939469
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2010"
+		},
+	"balance" : 453139678
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2010"
+		},
+	"balance" : 460849828
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2010"
+		},
+	"balance" : 489043516
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2011"
+		},
+	"balance" : 507314873
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2011"
+		},
+	"balance" : 518344444
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2011"
+		},
+	"balance" : 516696839
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2011"
+		},
+	"balance" : 532236371
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2011"
+		},
+	"balance" : 535448644
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2011"
+		},
+	"balance" : 530548802
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2011"
+		},
+	"balance" : 513751263
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2011"
+		},
+	"balance" : 483523770
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2011"
+		},
+	"balance" : 442915514
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2011"
+		},
+	"balance" : 489237497
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2011"
+		},
+	"balance" : 476385656
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2011"
+		},
+	"balance" : 480050794
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2012"
+		},
+	"balance" : 508057036
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2012"
+		},
+	"balance" : 512385434
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2012"
+		},
+	"balance" : 519106864
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2012"
+		},
+	"balance" : 506084897
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2012"
+		},
+	"balance" : 465870578
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2012"
+		},
+	"balance" : 479326767
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2012"
+		},
+	"balance" : 465865838
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2012"
+		},
+	"balance" : 469594697
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2012"
+		},
+	"balance" : 484561586
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2012"
+		},
+	"balance" : 476880480
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2012"
+		},
+	"balance" : 492855580
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2012"
+		},
+	"balance" : 504036827
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2013"
+		},
+	"balance" : 538971476
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2013"
+		},
+	"balance" : 537212423
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2013"
+		},
+	"balance" : 549789228
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2013"
+		},
+	"balance" : 544659671
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2013"
+		},
+	"balance" : 575747830
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2013"
+		},
+	"balance" : 575307290
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2013"
+		},
+	"balance" : 632560899
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2013"
+		},
+	"balance" : 608063801
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2013"
+		},
+	"balance" : 644450542
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2013"
+		},
+	"balance" : 666941177
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2013"
+		},
+	"balance" : 679583549
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2013"
+		},
+	"balance" : 704322962
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2014"
+		},
+	"balance" : 675171893
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2014"
+		},
+	"balance" : 695948142
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2014"
+		},
+	"balance" : 719751058
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2014"
+		},
+	"balance" : 697011899
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2014"
+		},
+	"balance" : 706607527
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2014"
+		},
+	"balance" : 722748558
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2014"
+		},
+	"balance" : 727985363
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2014"
+		},
+	"balance" : 736434975
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2014"
+		},
+	"balance" : 723449469
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2014"
+		},
+	"balance" : 724486187
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2014"
+		},
+	"balance" : 737523465
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2014"
+		},
+	"balance" : 759239857
+	}
+],
+"statistics" : {
+	"positives" : 1679,
+	"negatives" : 239,
+	"geometric_IRR" : 27.0635,
+	"CAGR" : 21.9641,
+	"total_return" : 759140
+}
+}

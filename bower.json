@@ -1,0 +1,21 @@
+{
+  "name": "FormulaStocks",
+  "version": "0.0.1",
+  "authors": [
+    "Lindsay <lrroberts0122@gmail.com>"
+  ],
+  "description": "Formula Stocks is an online-based company that provides investment suggestions for the Stock Market, based on private software.",
+  "homepage": "http://www.formulastocks.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.10",
+    "angular-chart.js": "~0.3.14"
+  }
+}
