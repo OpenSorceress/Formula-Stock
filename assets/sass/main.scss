@@ -1,0 +1,197 @@
+// #Config
+$px-only:false;
+
+// #Imports
+@import 'fonts.scss';
+@import 'reset.scss';
+@import 'colors.scss';
+@import 'functions.scss';
+
+// #Global
+body {
+	background-color: $formulastocks_white;
+	font-family: Lato;
+}
+
+p {
+	padding: 5px 0px;
+	color: $formulastocks_grey;
+}
+
+a:link, a:visited {
+	@include fontSize(12px);
+	color: $formulastocks_blue;
+}
+
+strong {
+	font-weight: 700;
+}
+
+.flask {
+	width: 100px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+// #Forms
+fieldset {
+	border: none;
+}
+
+legend {
+	font-weight: 800;
+	@include fontSize(20px);
+	padding: 20px 0px 10px 0px;
+}
+
+form legend, form p, form a {
+	text-align: center;
+}
+
+form p {
+	padding-bottom: 20px;
+}
+
+.form-group {
+	position: relative;
+}
+
+label {
+	position: absolute;
+	top: 22px;
+	left: 5px;
+	
+	@include fontSize(22px);
+	
+	-webkit-transition: color 300ms ease;
+    -moz-transition: color 300ms ease;
+    -o-transition: color 300ms ease;
+    transition: color 300ms ease;
+}
+
+input.form-control {
+	background: none;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	
+	min-width: 250px;
+	padding: 25px 0px 25px 50px;
+	
+	font-family: 'Lato', sans-serif;
+	@include fontSize(14px);
+}
+
+input.form-control:focus {
+	color: $formulastocks_blue;
+}
+
+.labelFocus {
+	color: $formulastocks_blue;
+}
+
+.form-group {
+	border-bottom: 1px solid $formulastocks_grey;
+}
+
+.form-group:nth-last-child(2), .form-group:last-child {
+	border-bottom: none;
+}
+
+::-webkit-input-placeholder {
+	color: $formulastocks_grey;
+}
+
+:-moz-placeholder {
+	color: $formulastocks_grey;
+}
+
+::-moz-placeholder {
+	color: $formulastocks_grey;
+}
+
+:-ms-input-placeholder {
+	color: $formulastocks_grey;
+}
+
+div.button-group a, div.button-group p {
+	@include fontSize(14px);
+}
+
+div.button-group button[type="submit"] {
+	display: block;
+	background-color: $formulastocks_green;
+	border: none;
+	outline: none;
+	
+	height: 55px;
+	width: 300px;
+	margin: 10px 0px 20px 0px;
+	
+	font-family: 'Halis', sans-serif;
+	font-weight: 800;
+	@include fontSize(20px);
+	color: $formulastocks_white;
+	text-transform: uppercase;
+	
+	-webkit-transition: background-color 300ms ease;
+    -moz-transition: background-color 300ms ease;
+    -o-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
+}
+
+div.button-group button[type="submit"]:hover {
+	background-color: $formulastocks_light_green;
+}
+
+.labelError, .inputError {
+	color: $formulastocks_red;
+}
+
+.inputError::-webkit-input-placeholder {
+	color: $formulastocks_red;
+}
+
+.inputError:-moz-placeholder {
+	color: $formulastocks_red;
+}
+
+.inputError::-moz-placeholder {
+	color: $formulastocks_red;
+}
+
+.inputError:-ms-input-placeholder {
+	color: $formulastocks_red;
+}
+
+// #Alerts
+
+// #LoginPage
+body#login div.container {
+	width: 300px;
+	padding: 10px;
+	margin: 10% auto;
+	color: $formulastocks_grey;
+}
+
+#login .alert {
+	display: none;
+	width: 290px;
+	height: 14px;
+	padding: 15px 5px;
+	text-align: center;
+	position: relative;
+	@include fontSize(14px);
+}
+
+#login .alert-danger {
+	background-color: $formulastocks_red;
+}
+
+#login .alert-danger p {
+	color: $formulastocks_white;
+	margin: 0 !important;
+	padding: 0 !important;
+	display: inline;
+}

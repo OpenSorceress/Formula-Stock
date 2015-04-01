@@ -1,0 +1,177 @@
+/*
+ * TABLE OF CONTENTS
+ * ------------------
+ * #Colors
+ *    - #FormulaStocks-Colors
+ *    - #Dashboard-Colors
+ *    - #Grey-Colors
+ * #Imports
+ * #CSS-Reset
+ * #Global-Styles
+ * #Login-Styles
+ * 
+ * #Colors
+ * 	#FormulaStocks-Colors
+ * 	Blue:	#18aed5
+ * 	Grey:	#49494a
+ * 	White:	#fafafa
+ * 	Green: 	#12d99e
+ * 	Red:	#d9124a
+ *
+ * 	#Dashboard-Colors
+ * 	#Grey-Colors
+ */
+
+ /* #Imports */
+ @import 'fonts.css';
+
+/* #CSS-Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* #Global-Styles */
+body {
+	background-color: #fafafa;
+}
+
+fieldset {
+	border: none;
+}
+
+.form-group {
+	position: relative;
+}
+
+label {
+	position: absolute;
+	top: 20px;
+}
+
+input#username::-webkit-input-placeholder::before { 
+	font-family: fontAwesome;
+	font-size: 18px;
+	content:'\f0e0'; 
+	position: absolute;
+	left: 0;
+}
+
+input#username::-moz-placeholder::before  { 
+	font-family: fontAwesome; 
+	font-size: 18px;
+	content:'\f0e0';
+	position: absolute;
+	left: 0;
+} /* firefox 19+ */
+
+input#username:-ms-input-placeholder::before  { 
+	font-family: fontAwesome;
+	font-size: 18px; 
+	content:'\f0e0'; 
+	position: absolute;
+	left: 0;
+} /* ie */
+
+input#username:-moz-placeholder::before  { 
+	font-family: fontAwesome; 
+	font-size: 18px;
+	content:'\f0e0';
+	position: absolute;
+	left: 0;
+}
+
+input#username::-webkit-input-placeholder::before:focus { 
+	color: #ff0000;
+}
+
+input#username::-moz-placeholder::before:focus  { 
+	color: #ff0000;
+} /* firefox 19+ */
+
+input#username:-ms-input-placeholder::before:focus  { 
+	color: #ff0000;
+} /* ie */
+
+input#username:-moz-placeholder::before:focus  { 
+	color: #ff0000;
+}
+
+input.form-control {
+	background: none;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid #49494a;
+
+	min-width: 330px;
+	padding: 20px 0px 20px 25px;
+
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+}
+
+input.form-control:focus {
+	color: #18aed5;
+}
+
+.form-group:nth-last-child(2) input, .form-group:nth-last-child(2) input:focus {
+	border-bottom: none;
+}
+
+::-webkit-input-placeholder {
+   color: #49494a;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #49494a;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #49494a;  
+}
+
+:-ms-input-placeholder {  
+   color: #49494a;  
+}
+
+/* #Login-Styles */

@@ -1,0 +1,174 @@
+body {
+    padding-top: 70px;
+    position: relative;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.well h1 {
+    margin-top: 0;
+}
+
+.well {
+    margin-top: 21px;
+}
+
+.home h1 {
+	font-size: 52px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.subheader {
+	color: #ccc;
+	font-size: 10px;
+	line-height: 20px;
+}
+
+th {
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #aaa;
+	font-size: 12px;
+}
+
+td p {
+	padding-top: 10px;
+}
+
+td {
+	padding: 0 10px;
+    position: relative;
+}
+
+th {
+	padding: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+}
+
+#addStock {
+    float: right;
+    width: 100%;
+}
+
+.asset_table {
+    width: 700px;
+    margin-bottom: 35px;
+    float: left;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.investment {
+    float: left;
+}
+
+.capital {
+    float: right;
+}
+
+.positive {
+    color: #18bc9c;
+}
+
+.negative, .fa-times-circle, .fa-tags {
+    color: #e74c3c;
+}
+
+.no-assets {
+    color: #ccc;
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.progress {
+    height: 10px;
+    width: 60px;
+    display: inline-block;
+    margin-top: 16px;
+    float: left;
+    border-radius: 0;
+}
+
+.allocation {
+    display: inline-block;
+    width: 55px;
+    float: left;
+}
+
+.navbar-right {
+    padding-right: 15px;
+}
+
+.tables {
+    float: left;
+}
+
+.home {
+	background-image: url('/img/mockup.png');
+	background-repeat: no-repeat;
+	background-color: #18bc9c;
+	background-size: 500px;
+	background-position: center -50%;
+}
+
+#CTA {
+	margin: 0 auto;
+}
+
+#loginButton {
+	margin-left: 20px !important;
+}
+
+.home .container-fluid {
+	background-color: #18bc9c !important;
+	position: absolute;
+	width: 100%;
+	padding: 0 20px;
+	text-align: center;
+	top: 600%;
+}
+
+.home ul.nav.navbar-nav.navbar-right li a {
+	color: #ffffff !important;
+}
+
+.home ul.nav.navbar-nav.navbar-right li a:hover {
+	background-color: #18bc9c !important;
+	color: #2c3e50 !important;
+}
+
+.home .btn-lg {
+	margin-top: 20px;
+}
+
+.home div.navbar-collapse.navbar-responsive-collapse.collapse.in, .home div.navbar-collapse.navbar-responsive-collapse.collapsing  {
+	background-color: #2c3e50 !important;
+}
+
+.home div.navbar-collapse.navbar-responsive-collapse.collapse.in a:hover, .home div.navbar-collapse.navbar-responsive-collapse.collapsing a:hover {
+	background-color: #2c3e50 !important;
+	color: #18bc9c !important;
+}
+
+.del-btn-none {
+	background: none !important;
+	border: none !important;
+	padding: none !important;
+	margin: none !important;
+}
+
+.hidden-form {
+	margin: 0;
+	padding: 0;
+}
