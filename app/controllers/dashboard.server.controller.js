@@ -64,7 +64,7 @@ exports.render = function(req, res, next) {
 					var prices = [];
 					
 					api_response.query.results.quote.forEach(function(stock) {
-						console.log(stock);
+						// console.log(stock);
 						var regex = /<b>(.*?)<\/b>/;
 						//var price = undefined;
 						// console.log(stock.LastTradeRealtimeWithTime);
@@ -197,9 +197,9 @@ exports.render = function(req, res, next) {
 						'fs_invested' : add_commas(fs_total.toFixed(2)),
 						'my_formula_stocks' : my_formula_stocks,
 						'os_invested' : add_commas(os_total.toFixed(2)),
-						'my_other_stocks' : my_other_stocks,
-						'investment_capital' : add_commas(req.user.investment_capital.toFixed(2)),
-						'capital_allocation' : ((req.user.investment_capital * 100) / (fs_total + req.user.investment_capital)).toFixed(1)
+						'my_other_stocks' : my_other_stocks
+						// 'investment_capital' : add_commas(req.user.investment_capital.toFixed(2)),
+						// 'capital_allocation' : ((req.user.investment_capital * 100) / (fs_total + req.user.investment_capital)).toFixed(1)
 					}
 					
 					// res.send(return_data);
@@ -265,7 +265,7 @@ exports.buy = function(req, res, next) {
 exports.sell = function(req, res, next) {
 	var input = req.body;
 	
-	console.log(input.ticker, req.user.id);
+	// console.log(input.ticker, req.user.id);
 	
 	Asset.find({user_id:req.user.id, ticker:input.ticker}, function(err, obj) {
 		

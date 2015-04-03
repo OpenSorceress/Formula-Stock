@@ -37,16 +37,13 @@
 		$('label').removeClass('labelFocus');
 	});
 	
-	$('#loginButton').click(function(e) {
-		console.log($('#username')[0].value);
-		
-		if($('#username')[0].value && $('#password')[0].value) {
-			console.log('The submit button was clicked.');
+	$('#loginButton').click(function(e) {		
+		if($('#username')[0].value != '' && $('#password')[0].value != '') {
+			// Submit the form.
 		} else {
 			e.preventDefault();
 			
 			if(!$('#username')[0].value) {
-				console.log($('#username')[0].value);
 				$('label[for="username"]').addClass('labelError');
 				$('#username').addClass('inputError');
 				
@@ -57,7 +54,6 @@
 			}
 			
 			if(!$('#password')[0].value) {
-				console.log($('#password')[0].value);
 				$('label[for="password"]').addClass('labelError');
 				$('#password').addClass('inputError');
 				
@@ -69,9 +65,9 @@
 		}
 	});
 	
-	$('#registerButton').click(function(e) {		
-		if($('#firstname')[0].value && $('#lastname')[0].value &&('#email')[0].value && $('#password')[0].value) {
-			console.log('The submit button was clicked');
+	$('#registerButton').click(function(e) {
+		if($('#firstname')[0].value != '' && $('#lastname')[0].value != '' &&('#email')[0].value != '' && $('#password')[0].value != '') {
+			// Submit the form.
 		} else {
 			e.preventDefault();
 			

@@ -76,6 +76,7 @@ exports.register = function(req, res, next) {
 		user.provider = 'local';
 		user.save(function(err) {
 			if (err) {
+				console.log(err);
 				var message = getErrorMessage(err);
 				req.flash('error', message);
 				return res.redirect('/register');
