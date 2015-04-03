@@ -11,9 +11,8 @@
 
     <title><%=title %></title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="/css/theme.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="/css/main.css" rel="stylesheet">
@@ -24,106 +23,74 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="//use.fonticons.com/9b071e54.js"></script>
+    <!-- <script src="//use.fonticons.com/9b071e54.js"></script> -->
+
+    <!-- jQuery & jQuery UI -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
 </head>
 
-<body>
-    <!-- Navigation -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><i class="icon icon-formula-stocks-logo icon"></i> Formula Stocks</a>
-        </div>
-
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">About Us</a><li>
-            	<li><a href="#">Contact</a></li>
-            	<li><a href="/login">Sign In</a></li>
-            	<li class="active"><a href="/register">Register</a></li>
-            </ul>
-            <!-- <form class="navbar-form navbar-left">
-                <input type="text" class="form-control col-lg-8" ng-model="asset" placeholder="Search">
-            </form> -->
-        </div>
-    </div>
-
-
+<body id="register">
     <div class="container">
-    	<div class="row">
-    		<div class="col-md-6 col-md-offset-3">
-	    	
-    		<div class="well">
-    			<% for(var i in messages) { %>
-					<div class="alert alert-dismissable alert-danger">
-						<button type="button" class="close" data-dismiss="alert">×</button>
-						<strong><i class="fa fa-exclamation-circle"></i> Registration Error!</strong> <%= messages[i] %>
-					</div>
-				<% } %>
+    			<a href="/"><img src='img/flask.svg' alt='Formula Stocks' class="flask" /></a>	
 		      	<form class="form-horizontal" action="/register" method="post">
 		      		<fieldset>
-		      			<legend>Register An Account</legend>
+		      			<legend>Let's get started.</legend>
+		      			<p>Try us for 90 days, no credit card required.</p>
+
+						<% for(var i in messages) { %>
+		                    <div class="alert alert-danger">
+		                        <p><strong><i class="fa fa-times-circle"></i> Error!</strong> <%= messages[i] %></p>
+		                    </div>
+		                <% } %>
+
+		      			<div class="form-group small firstname">
+			      			<label for="firstname" class="col-lg-4 control-label"><i class="fa fa-user"></i></label>
+			      			<input type="text" class="form-control sm-input" id="firstname" name="firstname" placeholder="First Name">
+		      			</div>
+
+		      			<div class="form-group small lastname">
+		      				<input type="text" class="form-control sm-input" id="lastname" name="lastname" placeholder="Last Name">
+		      			</div>
+
+		      			<div class="clear"></div>
+
 		      			<div class="form-group">
-			      			<label for="name" class="col-lg-4 control-label">Your Name</label>
-			      			<div class="col-lg-8">
-			      				<input type="text" class="form-control" id="name" name="name" placeholder="First and Last" required autofocus>
-			      			</div>
+		      				<label for="email" class="col-lg-4 control-label"><i class="fa fa-envelope"></i></label>
+		      				<input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
 		      			</div>
 
 		      			<div class="form-group">
-		      				<label for="email" class="col-lg-4 control-label">E-mail</label>
-		      				<div class="col-lg-8">
-		      					<input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+		      				<label for="password" class="col-lg-4 control-label"><i class="fa fa-lock"></i></label>
+		      				<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+		      			</div>
+
+		      			<div class="form-group">
+		      				<label class="subscription"><i class="fa fa-check"></i></label>
+		      				<p class="subscription"><span class="subscription">90 Day Free Trial</span> <a class="edit-sub" href="#"><i class="fa fa-sort-desc"></i></a></p>
+		      				<div class="subscription_menu">
+		      					<p class="option selected"><a class="option_item" href="trial">90 Day Free Trial - FREE</a></p>
+		      					<p class="option"><a class="option_item" href="pro_month">Pro Formula - $49.95 per Month</a></p>
+		      					<p class="option"><a class="option_item" href="premium_month">Premium Formula - $99.95 per Month</a></p>
+		      					<p class="option"><a class="option_item" href="pro_year">Pro Formula - $549.95 per Year</a></p>
+		      					<p class="option"><a class="option_item" href="premium_year">Premium Formula - $999.95 per Year</a></p>
+		      					<p class="option"><a class="option_item" href="platinum_year">Platinum Formula - $20,000.00 per Year</a></p>
 		      				</div>
 		      			</div>
 
-		      			<div class="form-group">
-		      				<label for="username" class="col-lg-4 control-label">Username</label>
-		      				<div class="col-lg-8">
-		      					<input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
-		      				</div>
-		      			</div>
-
-		      			<div class="form-group">
-		      				<label for="password" class="col-lg-4 control-label">Password</label>
-		      				<div class="col-lg-8">
-		      					<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-		      				</div>
-		      			</div>
-
-		      			<div class="form-group">
-		      				<label for="investment_capital" class="col-lg-4 control-label">Investment Capital</label>
-		      				<div class="col-lg-8">
-		      					<div class="input-group">
-			      					<span class="input-group-addon">$</span>
-			      					<input type="text" class="form-control" id="investment_capital" name="investment_capital" placeholder="0.00" required>
-		      					</div>
-		      				</div>
-		      			</div>
-
-						<div class="form-group">
-							<div class="col-lg-8 col-lg-offset-5">
-								<a href="/login">Already have an account?</a>
-								<button type="submit" id="loginButton" class="btn btn-success">Register!</button>
-							</div>
+						<div class="form-group button-group">
+							<p>By creating an account, you agree to Formula Stock's <a href="#">Terms &amp; Conditions</a>.</p>
+							<button type="submit" id="registerButton" class="btn btn-success">Register!</button>
+							<p>Already have an account? <a href="/login">Sign in.</a></p>
 						</div>
 		      		</fieldset>
 		      	</form>
 		    </div>
-		    </div>
-      	</div>
     </div>
     <!-- /.container -->
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
+    <!-- Main JavaScript -->
+    <script src="/js/main.min.js"></script>
 </body>
 
 </html>

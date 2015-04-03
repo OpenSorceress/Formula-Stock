@@ -18,6 +18,10 @@ p {
 	color: $formulastocks_grey;
 }
 
+a {
+	outline: none;
+}
+
 a:link, a:visited {
 	@include fontSize(12px);
 	color: $formulastocks_blue;
@@ -32,6 +36,14 @@ strong {
 	height: auto;
 	display: block;
 	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+small {
+	@include fontSize(11px)
 }
 
 // #Forms
@@ -55,6 +67,16 @@ form p {
 
 .form-group {
 	position: relative;
+	border-bottom: 1px solid $formulastocks_grey;
+}
+
+.form-group:nth-last-child(2), .form-group:last-child {
+	border-bottom: none;
+}
+
+.form-group.small {
+	width: 140px;
+	float: left;
 }
 
 label {
@@ -63,11 +85,11 @@ label {
 	left: 5px;
 	
 	@include fontSize(22px);
-	
-	-webkit-transition: color 300ms ease;
-    -moz-transition: color 300ms ease;
-    -o-transition: color 300ms ease;
-    transition: color 300ms ease;
+	@include transition(color 300ms ease);
+}
+
+label.subscription {
+	color: $formulastocks_green;
 }
 
 input.form-control {
@@ -76,11 +98,12 @@ input.form-control {
 	box-shadow: none;
 	border: none;
 	
-	min-width: 250px;
-	padding: 25px 0px 25px 50px;
+	min-width: 255px;
+	padding: 25px 0px 25px 45px;
 	
 	font-family: 'Lato', sans-serif;
 	@include fontSize(14px);
+	@include transition(color 300ms ease);
 }
 
 input.form-control:focus {
@@ -89,14 +112,6 @@ input.form-control:focus {
 
 .labelFocus {
 	color: $formulastocks_blue;
-}
-
-.form-group {
-	border-bottom: 1px solid $formulastocks_grey;
-}
-
-.form-group:nth-last-child(2), .form-group:last-child {
-	border-bottom: none;
 }
 
 ::-webkit-input-placeholder {
@@ -131,14 +146,11 @@ div.button-group button[type="submit"] {
 	
 	font-family: 'Halis', sans-serif;
 	font-weight: 800;
-	@include fontSize(20px);
 	color: $formulastocks_white;
 	text-transform: uppercase;
 	
-	-webkit-transition: background-color 300ms ease;
-    -moz-transition: background-color 300ms ease;
-    -o-transition: background-color 300ms ease;
-    transition: background-color 300ms ease;
+	@include fontSize(20px);
+	@include transition(background-color 300ms ease);
 }
 
 div.button-group button[type="submit"]:hover {
@@ -165,17 +177,52 @@ div.button-group button[type="submit"]:hover {
 	color: $formulastocks_red;
 }
 
+#register .small .sm-input {
+	min-width: 95px;
+	max-width: 95px;
+	width: 95px;
+}
+
+#register div.form-group.small.lastname {
+	margin-left: 20px !important;
+}
+
+#register #lastname {
+	padding: 25px 0px 25px 35px;
+	min-width: 105px;
+	max-width: 105px;
+	width: 105px;
+}
+
+#register .form-group:nth-last-child(2) {
+	border-bottom: 1px solid $formulastocks_grey;
+}
+
+#register .form-group:last-child {
+	padding-top: 20px;
+}
+
 // #Alerts
+.alert-danger {
+	background-color: $formulastocks_red;
+}
+
+.alert-danger p {
+	color: $formulastocks_white;
+	margin: 0 !important;
+	padding: 0 !important;
+	display: inline;
+}
 
 // #LoginPage
-body#login div.container {
+body#login div.container, body#register div.container {
 	width: 300px;
 	padding: 10px;
-	margin: 10% auto;
+	margin: 7% auto;
 	color: $formulastocks_grey;
 }
 
-#login .alert {
+#login .alert, #register .alert {
 	display: none;
 	width: 290px;
 	height: 14px;
@@ -185,13 +232,73 @@ body#login div.container {
 	@include fontSize(14px);
 }
 
-#login .alert-danger {
-	background-color: $formulastocks_red;
+// #RegisterPage
+p.subscription {
+	display: block;
+	padding: 25px 0px 25px 45px;
+	text-align: left;
+	height: 17px;
 }
 
-#login .alert-danger p {
-	color: $formulastocks_white;
-	margin: 0 !important;
-	padding: 0 !important;
-	display: inline;
+span.subscription {
+	@include fontSize(14px);
+	font-weight: 800;
+	cursor: pointer;
+	// line-height: 60px;
+	// padding: 0px 0px 0px 26px;
 }
+
+a.edit-sub {
+	@include fontSize(14px);
+	text-align: right;
+	display: block;
+	float: right;
+}
+
+.subscription_menu {
+	display: none;
+	width: 255px;
+	padding-left: 45px;
+}
+
+.option {
+	@include fontSize(14px);
+	width: 255px;
+	padding: 0;
+}
+
+.option a {
+	text-decoration: none;
+	display: block;
+	color: $formulastocks_grey;
+	height: 35px;
+	text-align: left;
+	@include transition(color 200ms ease);
+}
+
+.option a:hover {
+	color: $formulastocks_green;
+}
+
+.option.selected a {
+	color: $formulastocks_light_gray;
+	cursor: default;
+}
+
+p.subscription a {
+	color: $formulastocks_green;
+	@include fontSize(22px);
+	position: absolute;
+	top: 18px;
+	//top: 28px;
+	right: 0;
+}
+
+/*
+.selected::after {
+	content: ' Selected';
+	font-weight: 400;
+	font-style: italic;
+	@include fontSize(11px);
+}
+*/

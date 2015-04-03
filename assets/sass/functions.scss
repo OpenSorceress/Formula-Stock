@@ -1,9 +1,19 @@
- @function calculateRem($size) {
-	 $remSize: $size / 16px;
-	 @return #{$remSize}rem;
- }
- 
- @mixin fontSize($size) {
-	 font-size: $size; // Fallback in px
-	 font-size: calculateRem($size);
- }
+// Calculate REM
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+// Transitions
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}

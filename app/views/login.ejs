@@ -11,14 +11,11 @@
 
     <title><%=title %></title>
 
-    <!-- Bootstrap Core CSS -->
-    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
-    <!-- <link href="/css/theme.min.css" rel="stylesheet"> -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="/css/main.css" rel="stylesheet">
-    <!--<link href="/css/main.new.css" rel="stylesheet">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,91 +24,48 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- <script src="//use.fonticons.com/9b071e54.js"></script> -->
+
+    <!-- jQuery & jQuery UI -->
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
 </head>
 
 <body id="login">
-    <!-- Navigation -->
-    
-    <!--
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><i class="icon icon-formula-stocks-logo icon"></i> Formula Stocks</a>
-        </div>
+    <div class="container">	    
 
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">About Us</a><li>
-            	<li><a href="#">Contact</a></li>
-            	<li class="active"><a href="/login">Sign In</a></li>
-            	<li><a href="/register">Register</a></li>
-            </ul>
-            <form class="navbar-form navbar-left">
-                <input type="text" class="form-control col-lg-8" ng-model="asset" placeholder="Search">
-            </form>
-        </div>
-    </div>
-    -->
+        <a href="/"><img src='img/flask.svg' alt='Formula Stocks' class="flask" /></a>	
+      	<form class="form-horizontal" action="/login" method="post">
+            
 
+      		<fieldset>
+      			<legend>Sign In</legend>
+                <p>Please sign in to access your dashboard.</p>
 
-    <div class="container">
-    	<div class="row">
-    		<div class="col-md-6 col-md-offset-3">
-	    	
-    		<div class="well">
-		      	<form class="form-horizontal" action="/login" method="post">
-                    <img src='img/flask.svg' alt='Formula Stocks' class="flask" />
+                <% for(var i in messages) { %>
+                    <div class="alert alert-danger">
+                        <p><strong><i class="fa fa-times-circle"></i> Error!</strong> <%= messages[i] %></p>
+                    </div>
+                <% } %>
 
-		      		<fieldset>
-		      			<legend>Sign In</legend>
-                        <p>Please sign in to access your dashboard.</p>
+      			<div class="form-group">
+                    <label for="username" class="col-lg-3 control-label"><i class="fa fa-envelope"></i></label>
+  					<input type="text" class="form-control lg" id="username" name="username" placeholder="Email Address" tabindex="1">
+      			</div>
 
-                        <% for(var i in messages) { %>
-                            <div class="alert alert-danger">
-                                <p><strong><i class="fa fa-times-circle"></i> Error!</strong> <%= messages[i] %></p>
-                            </div>
-                        <% } %>
+      			<div class="form-group">
+                    <label for="password" class="col-lg-3 control-label"><i class="fa fa-lock"></i></label>
+  					<input type="password" class="form-control" id="password" name="password" placeholder="Password" tabindex="1">
+      			</div>
 
-		      			<div class="form-group">
-		      				<div class="col-lg-8">
-                                <label for="username" class="col-lg-3 control-label"><i class="fa fa-envelope"></i></label>
-		      					<input type="text" class="form-control lg" id="username" name="username" placeholder="Email Address" required>
-		      				</div>
-		      			</div>
-
-		      			<div class="form-group">
-		      				<div class="col-lg-8">
-                                <label for="password" class="col-lg-3 control-label"><i class="fa fa-lock"></i></label>
-		      					<input type="password" class="form-control" id="password" name="password" placeholder="Password">
-		      				</div>
-		      			</div>
-
-						<div class="form-group button-group">
-							<div class="col-sm-offset-5">
-								<button type="submit" id="loginButton" class="btn btn-primary">Sign In</button>
-                                <p><a href="#">I need to reset my password.</a></p>
-                                <p>Don't have an account? <a href="/register">Sign Up!</a></p>
-							</div>
-						</div>
-		      		</fieldset>
-		      	</form>
-		    </div>
-		    </div>
-      	</div>
+				<div class="form-group button-group">
+					<button type="submit" id="loginButton" class="btn btn-primary">Sign In</button>
+                    <p><a href="#">I need to reset my password.</a></p>
+                    <p>Don't have an account? <a href="/register">Sign Up!</a></p>
+				</div>
+      		</fieldset>
+      	</form>
     </div>
     <!-- /.container -->
-
-    <!-- jQuery Version 1.11.1 -->
-    <!-- <script src="/js/jquery.js"></script> -->
-
-    <!-- Bootstrap Core JavaScript -->
-    <!-- <script src="/js/bootstrap.min.js"></script> -->
 
     <!-- Main JavaScript -->
     <script src="/js/main.min.js"></script>

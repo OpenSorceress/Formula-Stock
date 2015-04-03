@@ -211,6 +211,9 @@ p {
   padding: 5px 0px;
   color: #49494a; }
 
+a {
+  outline: none; }
+
 a:link, a:visited {
   font-size: 12px;
   font-size: 0.75rem;
@@ -224,6 +227,13 @@ strong {
   height: auto;
   display: block;
   margin: 0 auto; }
+
+.clear {
+  clear: both; }
+
+small {
+  font-size: 11px;
+  font-size: 0.6875rem; }
 
 fieldset {
   border: none; }
@@ -241,7 +251,15 @@ form p {
   padding-bottom: 20px; }
 
 .form-group {
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #49494a; }
+
+.form-group:nth-last-child(2), .form-group:last-child {
+  border-bottom: none; }
+
+.form-group.small {
+  width: 140px;
+  float: left; }
 
 label {
   position: absolute;
@@ -251,31 +269,34 @@ label {
   font-size: 1.375rem;
   -webkit-transition: color 300ms ease;
   -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
   -o-transition: color 300ms ease;
   transition: color 300ms ease; }
+
+label.subscription {
+  color: #12d99e; }
 
 input.form-control {
   background: none;
   outline: none;
   box-shadow: none;
   border: none;
-  min-width: 250px;
-  padding: 25px 0px 25px 50px;
+  min-width: 255px;
+  padding: 25px 0px 25px 45px;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -ms-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease; }
 
 input.form-control:focus {
   color: #18aed5; }
 
 .labelFocus {
   color: #18aed5; }
-
-.form-group {
-  border-bottom: 1px solid #49494a; }
-
-.form-group:nth-last-child(2), .form-group:last-child {
-  border-bottom: none; }
 
 ::-webkit-input-placeholder {
   color: #49494a; }
@@ -303,12 +324,13 @@ div.button-group button[type="submit"] {
   margin: 10px 0px 20px 0px;
   font-family: 'Halis', sans-serif;
   font-weight: 800;
-  font-size: 20px;
-  font-size: 1.25rem;
   color: #fafafa;
   text-transform: uppercase;
+  font-size: 20px;
+  font-size: 1.25rem;
   -webkit-transition: background-color 300ms ease;
   -moz-transition: background-color 300ms ease;
+  -ms-transition: background-color 300ms ease;
   -o-transition: background-color 300ms ease;
   transition: background-color 300ms ease; }
 
@@ -330,13 +352,42 @@ div.button-group button[type="submit"]:hover {
 .inputError:-ms-input-placeholder {
   color: #d9124a; }
 
-body#login div.container {
+#register .small .sm-input {
+  min-width: 95px;
+  max-width: 95px;
+  width: 95px; }
+
+#register div.form-group.small.lastname {
+  margin-left: 20px !important; }
+
+#register #lastname {
+  padding: 25px 0px 25px 35px;
+  min-width: 105px;
+  max-width: 105px;
+  width: 105px; }
+
+#register .form-group:nth-last-child(2) {
+  border-bottom: 1px solid #49494a; }
+
+#register .form-group:last-child {
+  padding-top: 20px; }
+
+.alert-danger {
+  background-color: #d9124a; }
+
+.alert-danger p {
+  color: #fafafa;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline; }
+
+body#login div.container, body#register div.container {
   width: 300px;
   padding: 10px;
-  margin: 10% auto;
+  margin: 7% auto;
   color: #49494a; }
 
-#login .alert {
+#login .alert, #register .alert {
   display: none;
   width: 290px;
   height: 14px;
@@ -346,11 +397,68 @@ body#login div.container {
   font-size: 14px;
   font-size: 0.875rem; }
 
-#login .alert-danger {
-  background-color: #d9124a; }
+p.subscription {
+  display: block;
+  padding: 25px 0px 25px 45px;
+  text-align: left;
+  height: 17px; }
 
-#login .alert-danger p {
-  color: #fafafa;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: inline; }
+span.subscription {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  cursor: pointer; }
+
+a.edit-sub {
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-align: right;
+  display: block;
+  float: right; }
+
+.subscription_menu {
+  display: none;
+  width: 255px;
+  padding-left: 45px; }
+
+.option {
+  font-size: 14px;
+  font-size: 0.875rem;
+  width: 255px;
+  padding: 0; }
+
+.option a {
+  text-decoration: none;
+  display: block;
+  color: #49494a;
+  height: 35px;
+  text-align: left;
+  -webkit-transition: color 200ms ease;
+  -moz-transition: color 200ms ease;
+  -ms-transition: color 200ms ease;
+  -o-transition: color 200ms ease;
+  transition: color 200ms ease; }
+
+.option a:hover {
+  color: #12d99e; }
+
+.option.selected a {
+  color: #bdbdbd;
+  cursor: default; }
+
+p.subscription a {
+  color: #12d99e;
+  font-size: 22px;
+  font-size: 1.375rem;
+  position: absolute;
+  top: 18px;
+  right: 0; }
+
+/*
+.selected::after {
+	content: ' Selected';
+	font-weight: 400;
+	font-style: italic;
+	@include fontSize(11px);
+}
+*/
