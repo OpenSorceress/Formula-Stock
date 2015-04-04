@@ -11,9 +11,8 @@
 
     <title><%=title %></title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="/css/theme.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="/css/main.css" rel="stylesheet">
@@ -24,47 +23,231 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="//use.fonticons.com/9b071e54.js"></script>
+    <!-- <script src="//use.fonticons.com/9b071e54.js"></script> -->
+
+    <!-- jQuery & jQuery UI -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
 </head>
 
 <body class="home">
     <!-- Navigation -->
-    <div class="navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar" role="navigation">
+        <div class="navigation-bar"></div>
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><i class="icon icon-formula-stocks-logo icon"></i> Formula Stocks</a>
+            </button> -->
+            <a class="navbar-brand" href="/"><img src="/img/logo.svg" alt="Formula Stocks" /></a>
         </div>
 
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav navbar-right">
+        <nav class="home-nav">
+            <ul>
+                <li><a href="#our-results">Our Results</a><li>
+                <li><a href="#features-and-pricing">Features &amp; Pricing</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#get-in-touch">Get In Touch</a></li>
             <% if ( user ) { %>
-            	<li><a href="#">News</a></li>
-            	<li><a href="/portfolio">My Portfolio</a></li>
-            	<li><a href="#">My Account</a></li>
+            	<li><a href="/portfolio">Dashboard</a></li>
                 <li><a href="/logout">Logout</a></li>
             <% } else { %>
-            	<li><a href="#">About Us</a><li>
-            	<li><a href="#">Contact</a></li>
             	<li><a href="/login">Sign In</a></li>
-            	<li><a href="/register">Register</a></li>
+            	<li><a href="/register" class="cta-link">Sign Up</a></li>
             <% } %>
             </ul>
-        </div>
+        </nav>
     </div>
 
     <!-- Page Content -->
-    <div class="container-fluid">
-		<div id="CTA">
-			<h1>Beat the market.</h1>
-			<h3>Sign up now and we'll notify you when we launch. Plus <span class="label label-primary"><b>$20 OFF</b></span> your first month's subscription.</h3>
-			<a href="/register" class="btn btn-primary btn-lg">Click Here to Sign Up</a>
-		</div>
-    </div>
-    <!-- /.container -->
+    <section id="home">
+        <div class="section-container">
+            <div class="cta-image">
+                <img src="/img/mockup.jpg" alt="An image featuring the Formula Stocks dashboard." />
+            </div>
+
+            <div class="cta-text">
+                <h1 class="small">Be on the winning team.</h1>
+                <h1 class="light">Beat the market.</h1>
+                <p><i>Formula Stocks</i>  is an expert system that is based on history's best investment principles combined with groundbreaking scientific research. Get an edge over the competition.</p>
+                <a class="cta-btn-link" href="#"><button class="cta-btn">Sign Up Today</button></a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="our-results">
+        <div class="section-container">
+            <h1 class="dark">Our Results</h1>
+            <p><a href="#" class="results-link"><i class="fa fa-angle-double-left"></i> Pro Formula</a> <span class="current-results">Premium Formula</span> <a href="#" class="results-link">Platinum Formula <i class="fa fa-angle-double-right"></i></a></p>
+            <p>We started with <b>$25,000</b> in 1970.</p>
+            <p>In 45 years, our <span class="results-formula-text">Premium Formula</span> gained a total of</p>
+            <p><span class="results-gain-text">$242,949,624</span></p>
+
+            <div id="annual-return">
+                <p>26.9%</p>
+                <p>Average Annual Return</p>
+            </div>
+
+            <div id="success-rate">
+                <p>77.9%</p>
+                <p>Rate of Success</p>
+            </div>
+
+            <div id="profit">
+                <p>1,658</p>
+                <p>Stocks Made Profit</p>
+            </div>
+
+            <a href="#"><button>Check out the graph</button></a>
+            <a href="#"><button>Get started today</button></a>
+        </div>
+    </section>
+
+    <section id="features-and-pricing">
+        <div class="section-container">
+            <h1 class="dark">Features & Pricing</h1>
+
+            <div class="pricing-table">
+                <p>Great for "Getting Started"</p>
+                <div class="pt-prices">
+                    <div class="monthly">
+                        <p><sup class="pt-sup">$</sup>49<sup class="pt-sup">.95</sup></p>
+                        <p class="sub-type-text">monthly</p>
+                    </div>
+
+                    <div class="yearly">
+                        <p><sup class="pt-sup">$</sup>549<sup class="pt-sup">.95</sup></p>
+                        <p class="sub-type-tex">yearly</p>
+                    </div>
+
+                    <div class="or">
+                        <p>Or</p>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h3>Pro Formula</h3>
+                    <p><span class="info-numbers">77.9%</span> of stocks sold with profit.</p>
+                    <p><span class="info-numbers">18.2%</span> Geometric IRR</p>
+                    <p><span class="info-numbers">16.8%</span> CAGR*</p>
+                    <p><a href="#">View all features <i class="fa fa-arrow-circle-right"></i></a></p>
+                    <p>Try it FREE for 90 Days. No Credit Card Required.</p>
+                </div>
+
+                <a href="#"><button>Get Started</button></a>
+            </div>
+
+            <div class="pricing-table">
+                <p>Great for Experienced Investors</p>
+                <div class="pt-prices">
+                    <div class="monthly">
+                        <p><sup class="pt-sup">$</sup>99<sup class="pt-sup">.95</sup></p>
+                        <p class="sub-type-text">monthly</p>
+                    </div>
+
+                    <div class="yearly">
+                        <p><sup class="pt-sup">$</sup>999<sup class="pt-sup">.95</sup></p>
+                        <p class="sub-type-tex">yearly</p>
+                    </div>
+
+                    <div class="or">
+                        <p>Or</p>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h3>Premium Formula</h3>
+                    <p><span class="info-numbers">86.3%</span> of stocks sold with profit.</p>
+                    <p><span class="info-numbers">26.8%</span> Geometric IRR</p>
+                    <p><span class="info-numbers">22.6%</span> CAGR*</p>
+                    <p><a href="#">View all features <i class="fa fa-arrow-circle-right"></i></a></p>
+                </div>
+
+                <a href="#"><button>Get Started</button></a>
+            </div>
+
+            <div class="pricing-table">
+                <p>Great for Hedge Funds</p>
+                <div class="pt-prices">
+                    <div class="yearly">
+                        <p><sup class="pt-sup">$</sup>20,000<sup class="pt-sup">.00</sup></p>
+                        <p class="sub-type-tex">yearly</p>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h3>Platinum Formula</h3>
+                    <p><span class="info-numbers">95.3%</span> of stocks sold with profit.</p>
+                    <p><span class="info-numbers">50.8%</span> Geometric IRR</p>
+                    <p><span class="info-numbers">33.4%</span> CAGR*</p>
+                    <p><a href="#">View all features <i class="fa fa-arrow-circle-right"></i></a></p>
+                </div>
+
+                <a href="#"><button>Get Started</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <div class="section-container">
+            <h1 class="dark">About Us</h1>
+
+            <div class="about-block founder">
+                <p>NEEDS CONTENT</p>
+            </div>
+
+            <div class="about-block">
+                <p>Traditionally, outperforming the market and multiplying your capital requires education in financial statements or subcontracting a very expensive hedgefund which collects a large percentage of the returns.</p>
+                <p>Now, you have a third option. <i>Formula Stocks</i> provides investment ideas, backed by an expert algorithm that is based on some of history's best investors and investment principles. We maximize reward, minimize risk, and provide you an edge over the competition.</p>
+
+                <p>Be on the winning team. <b>Beat the market.</b></p>
+            </div>
+
+            <div class="about-block founder">
+                <p class="name">Mark Lyck</p>
+                <p class="title">Founder, COO</p>
+                <p>"It is possible to beat the market. Our portfolio service is the product of a decade's worth of advanced equity research. We know how to gain an edge over the market, and we want to share our results with you."</p>
+                <p>Mark Lyck is a young entrepreneur that has brought his experience and edge to Formula Stocks through collaboration with Thomas. With a background in Business Administration, he makes the vision of bringing world-class portfolios to "the winning team" a reality.</p>
+            </div>
+
+            <div class="more">
+                <p>Want to know more?</p>
+                <a href="#"><button>Start the conversation</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-in-touch">
+        <div class="section-container">
+            <h1 class="light">Let's Talk</h1>
+            <form class="form-horizontal" id="contactForm" action="/contact" method="post">
+
+                <div class="form-group small firstname">
+                    <label for="firstname" class="col-lg-4 control-label"><i class="fa fa-user"></i></label>
+                    <input type="text" class="form-control sm-input" id="firstname" name="firstname" placeholder="First Name">
+                </div>
+
+                <div class="form-group small lastname">
+                    <input type="text" class="form-control sm-input" id="lastname" name="lastname" placeholder="Last Name">
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="form-group">
+                    <label for="email" class="col-lg-4 control-label"><i class="fa fa-envelope"></i></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+                </div>
+
+                <!-- Create Message Field -->
+
+                <div class="form-group button-group">
+                    <button type="submit" id="registerButton" class="btn btn-success">Contact US</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <!-- jQuery Version 1.11.1 -->
     <script src="/js/jquery.js"></script>

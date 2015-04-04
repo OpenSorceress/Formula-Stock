@@ -10,7 +10,7 @@ module.exports = function(app) {
 	app.route('/login').get(users.renderLogin).post(passport.authenticate('local', {
 		successRedirect: '/portfolio',
 		failureRedirect: '/login',
-		failureFlash: 'Username or password is incorrect.'
+		failureFlash: 'Email or password is incorrect.'
 	}));	
 	app.get('/logout', users.logout);
 };

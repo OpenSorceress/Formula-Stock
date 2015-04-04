@@ -7,10 +7,10 @@ var getErrorMessage = function(err) {
 		switch (err.code) {
 			case 11000:
 			case 11001:
-				message = 'Email already exists';
+				message = 'Email is already in use.';
 				break;
 			default:
-				message = 'Something went wrong';
+				message = 'Something went wrong! Please try again.';
 		}
 	} else {
 		for (var errName in err.errors) {

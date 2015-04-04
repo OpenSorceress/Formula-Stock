@@ -18,6 +18,10 @@ p {
 	color: $formulastocks_grey;
 }
 
+i {
+	font-style: italic;
+}
+
 a {
 	outline: none;
 }
@@ -134,11 +138,12 @@ div.button-group a, div.button-group p {
 	@include fontSize(14px);
 }
 
-div.button-group button[type="submit"] {
+div.button-group button[type="submit"], button.cta-btn {
 	display: block;
 	background-color: $formulastocks_green;
 	border: none;
 	outline: none;
+	cursor: pointer;
 	
 	height: 55px;
 	width: 300px;
@@ -151,10 +156,10 @@ div.button-group button[type="submit"] {
 	
 	@include fontSize(20px);
 	@include transition(background-color 300ms ease);
-}
-
-div.button-group button[type="submit"]:hover {
-	background-color: $formulastocks_light_green;
+	
+	&:hover {
+		background-color: $formulastocks_light_green;
+	}
 }
 
 .labelError, .inputError {
@@ -303,3 +308,142 @@ p.subscription a {
 	@include fontSize(11px);
 }
 */
+
+// #Navigation-HomePage
+.navbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: $formulastocks_white;
+}
+
+.navigation-bar {
+	width: 100%;
+	height: 5px;
+	background-color: $formulastocks_blue;
+	@include transition(all 200ms ease);
+}
+
+a.navbar-brand img {
+	height: 35px;
+	width: auto;
+	float: left;
+	padding: 15px 0px 0px 25px;
+}
+
+.home-nav ul {
+	float: right;
+}
+
+.home-nav ul li {
+	float: left;
+}
+
+.home-nav ul li a {
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 25px;
+	@include fontSize(18px);
+	
+	&:hover {
+		color: $formulastocks_light_blue;
+	}
+	
+	@include transition(all 200ms ease);
+}
+
+.home-nav ul li a.cta-link {
+	font-weight: 800;
+	color: $formulastocks_green;
+	
+	&:hover {
+		color: $formulastocks_light_green;
+	}
+}
+
+// #HomePage
+#home section {
+	min-height: 740px;
+	clear: both;
+}
+
+.section-container {
+	max-width: 1200px;
+	min-height: 740px;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+
+#home, #get-in-touch {
+	background-color: $formulastocks_blue;
+}
+
+.cta-image {
+	float: left;
+}
+
+.cta-btn-link {
+	text-decoration: none;
+}
+
+.cta-text .cta-btn-link .cta-btn {
+	width: 100% !important;
+	height: 90px !important;
+	@include fontSize(36px);
+	
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(11, 129, 159, .35);
+	-moz-box-shadow:    5px 5px 0px 0px rgba(11, 129, 159, .35);
+	box-shadow:         5px 5px 0px 0px rgba(11, 129, 159, .35);
+	
+	&:active {
+		margin-left: 3px;
+		margin-top: 13px;
+		
+		background-color: $formulastocks_green !important;
+		
+		-webkit-box-shadow: 2px 2px 0px 0px rgba(11, 129, 159, .35);
+		-moz-box-shadow:    2px 2px 0px 0px rgba(11, 129, 159, .35);
+		box-shadow:         2px 2px 0px 0px rgba(11, 129, 159, .35);
+	}
+}
+
+.cta-text {
+	float: right;
+	width: 545px;
+	padding-top: 50px;
+}
+
+.cta-text p {
+	font-family: 'Lato', sans-serif;
+	@include fontSize(22px);
+	font-weight: 300;
+	color: $formulastocks_white;
+	line-height: 2.75rem;
+	letter-spacing: .1rem;
+	margin-bottom: 35px;
+}
+
+h1 {
+	font-family: 'Halis';
+	@include fontSize(62px);
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+h1.small {
+	font-weight: 600;
+	@include fontSize(32px);
+	color: $formulastocks_light_blue;
+}
+
+h1.light {
+	font-weight: 700;
+	color: $formulastocks_white;
+	letter-spacing: -1px;
+}
+
+.cta-text h1.light {
+	margin-bottom: 35px;
+}
