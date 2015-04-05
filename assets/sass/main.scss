@@ -8,8 +8,9 @@ $px-only:false;
 @import 'functions.scss';
 
 // #Global
+
 body {
-	background-color: $formulastocks_white;
+	background-color: $formulastocks_blue;
 	font-family: Lato;
 }
 
@@ -316,6 +317,7 @@ p.subscription a {
 	right: 0;
 	left: 0;
 	background-color: $formulastocks_white;
+	z-index: 25;
 }
 
 .navigation-bar {
@@ -376,6 +378,10 @@ a.navbar-brand img {
 	padding-top: 100px;
 }
 
+section {
+	background-color: $formulastocks_white;
+}
+
 #home, #get-in-touch {
 	background-color: $formulastocks_blue;
 }
@@ -427,6 +433,7 @@ a.navbar-brand img {
 
 h1 {
 	font-family: 'Halis';
+	font-weight: 700;
 	@include fontSize(62px);
 	text-align: center;
 	padding-bottom: 5px;
@@ -439,11 +446,192 @@ h1.small {
 }
 
 h1.light {
-	font-weight: 700;
 	color: $formulastocks_white;
-	letter-spacing: -1px;
+	letter-spacing: -.1rem;
+}
+
+h1.dark {
+	color: $formulastocks_grey;
+	letter-spacing: -.1rem;
+	padding-bottom: 55px;
 }
 
 .cta-text h1.light {
 	margin-bottom: 35px;
+}
+
+
+// #Features-and-Pricing
+.pricing-table {
+	float: left;
+	background-color: $pricingtable_light_gray;
+	margin-right: 1px;
+	position: relative;
+	min-height: 510px;
+	width: 399px;
+	min-height: 510px;
+}
+
+.pricing-table:nth-child(2) {
+	background-color: $pricingtable_dark_gray;
+}
+
+.pricing-table:nth-child(3) .yearly {
+	width: 359px;
+	padding-left: 40px;
+	padding-right: 0;
+	text-align: center;
+}
+
+.pricing-table .header {
+	background-color: $formulastocks_grey;
+	padding: 10px;
+}
+
+.pricing-table .header p {
+	text-align: center;
+	color: $formulastocks_white;
+	@include fontSize(14px);
+}
+
+.pt-prices {
+	position: relative;
+}
+
+.pt-prices p {
+	color: $formulastocks_white;
+	font-family: 'Halis';
+	font-weight: 700;
+	@include fontSize(42px);
+}
+
+.pt-prices .pt-sup {
+	@include fontSize(24px);
+	vertical-align: baseline;
+	position: relative;
+	top: -0.8rem;
+}
+
+.pt-prices .sub-type-text {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	@include fontSize(14px);
+	vertical-align: baseline;
+	position: relative;
+	top: 0rem;
+	left: -2.1rem;
+	
+}
+
+.monthly {
+	float: left;
+	border-right: 1px solid $formulastocks_white;
+	width: 153px;
+	padding: 10px;
+	padding-left: 35px;
+}
+
+.yearly {
+	float: right;
+	width: 155px;
+	padding: 10px;
+	padding-left: 35px;
+}
+
+.monthly, .yearly {
+	background-color: $formulastocks_blue;
+	cursor: pointer;
+	@include transition(background-color 200ms ease);
+	&:hover {
+		background-color: $formulastocks_blue_hover;
+	}
+}
+
+.or {
+	background-color: $formulastocks_dark_blue;
+	border-radius: 50px;
+	border: 1px solid $formulastocks_white;
+	z-index: 10;
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	left: 178px;
+	top: 14px;
+}
+
+.or p {
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	@include fontSize(14px);
+	text-align: center;
+	padding-top: 14px;
+}
+
+.info {
+	margin: 0px 40px;
+	text-align: center;
+	clear: both;
+}
+
+h3 {
+	font-family: 'Halis', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $formulastocks_grey;
+	@include fontSize(24px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+	display: block;
+	padding: 35px 0px 30px 0px;
+}
+
+.info p:nth-child(2) {
+	display: block;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	padding-top: 30px;
+}
+
+.info p {
+	color: $pricingtable_info_text;
+	font-weight: 500;
+	padding: 15px 0;
+}
+
+.info .info-numbers {
+	color: $formulastocks_blue;
+	font-weight: 900;
+}
+
+.info a {
+	@include fontSize(16px);
+	@include transition(color 200ms ease);
+	color: $formulastocks_green;
+	text-decoration: none;
+	&:hover {
+		color: $formulastocks_light_green;
+	}
+}
+
+.info p sub.trial-offer {
+	@include fontSize(14px);
+	color: $formulastocks_grey;
+	font-style: italic;
+}
+
+.pt-btn {
+	width: 100%;
+	padding: 15px;
+	background-color: $formulastocks_green;
+	border: none;
+	color: $formulastocks_white;
+	font-family: 'Halis', sans-serif;
+	@include fontSize(22px);
+	font-weight: 800;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 0;
+	@include transition(all 200ms ease);
+	cursor: pointer;
+	&:hover {
+		background-color: $formulastocks_light_green;
+	}
 }

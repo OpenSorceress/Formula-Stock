@@ -204,7 +204,7 @@ table {
   border-spacing: 0; }
 
 body {
-  background-color: #fafafa;
+  background-color: #18aed5;
   font-family: Lato; }
 
 p {
@@ -470,7 +470,8 @@ p.subscription a {
   top: 0;
   right: 0;
   left: 0;
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  z-index: 25; }
 
 .navigation-bar {
   width: 100%;
@@ -525,6 +526,9 @@ a.navbar-brand img {
   margin: 0 auto;
   padding-top: 100px; }
 
+section {
+  background-color: #fafafa; }
+
 #home, #get-in-touch {
   background-color: #18aed5; }
 
@@ -567,6 +571,7 @@ a.navbar-brand img {
 
 h1 {
   font-family: 'Halis';
+  font-weight: 700;
   font-size: 62px;
   font-size: 3.875rem;
   text-align: center;
@@ -579,9 +584,182 @@ h1.small {
   color: #78e4ff; }
 
 h1.light {
-  font-weight: 700;
   color: #fafafa;
-  letter-spacing: -1px; }
+  letter-spacing: -0.1rem; }
+
+h1.dark {
+  color: #49494a;
+  letter-spacing: -0.1rem;
+  padding-bottom: 55px; }
 
 .cta-text h1.light {
   margin-bottom: 35px; }
+
+.pricing-table {
+  float: left;
+  background-color: #f2f2f2;
+  margin-right: 1px;
+  position: relative;
+  min-height: 510px;
+  width: 399px;
+  min-height: 510px; }
+
+.pricing-table:nth-child(2) {
+  background-color: #ececec; }
+
+.pricing-table:nth-child(3) .yearly {
+  width: 359px;
+  padding-left: 40px;
+  padding-right: 0;
+  text-align: center; }
+
+.pricing-table .header {
+  background-color: #49494a;
+  padding: 10px; }
+
+.pricing-table .header p {
+  text-align: center;
+  color: #fafafa;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.pt-prices {
+  position: relative; }
+
+.pt-prices p {
+  color: #fafafa;
+  font-family: 'Halis';
+  font-weight: 700;
+  font-size: 42px;
+  font-size: 2.625rem; }
+
+.pt-prices .pt-sup {
+  font-size: 24px;
+  font-size: 1.5rem;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.8rem; }
+
+.pt-prices .sub-type-text {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  vertical-align: baseline;
+  position: relative;
+  top: 0rem;
+  left: -2.1rem; }
+
+.monthly {
+  float: left;
+  border-right: 1px solid #fafafa;
+  width: 153px;
+  padding: 10px;
+  padding-left: 35px; }
+
+.yearly {
+  float: right;
+  width: 155px;
+  padding: 10px;
+  padding-left: 35px; }
+
+.monthly, .yearly {
+  background-color: #18aed5;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  transition: background-color 200ms ease; }
+  .monthly:hover, .yearly:hover {
+    background-color: #1ebbe2; }
+
+.or {
+  background-color: #0a99bc;
+  border-radius: 50px;
+  border: 1px solid #fafafa;
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 178px;
+  top: 14px; }
+
+.or p {
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-align: center;
+  padding-top: 14px; }
+
+.info {
+  margin: 0px 40px;
+  text-align: center;
+  clear: both; }
+
+h3 {
+  font-family: 'Halis', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #49494a;
+  font-size: 24px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  display: block;
+  padding: 35px 0px 30px 0px; }
+
+.info p:nth-child(2) {
+  display: block;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 30px; }
+
+.info p {
+  color: #a2a1a1;
+  font-weight: 500;
+  padding: 15px 0; }
+
+.info .info-numbers {
+  color: #18aed5;
+  font-weight: 900; }
+
+.info a {
+  font-size: 16px;
+  font-size: 1rem;
+  -webkit-transition: color 200ms ease;
+  -moz-transition: color 200ms ease;
+  -ms-transition: color 200ms ease;
+  -o-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #12d99e;
+  text-decoration: none; }
+  .info a:hover {
+    color: #2aeab0; }
+
+.info p sub.trial-offer {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #49494a;
+  font-style: italic; }
+
+.pt-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #12d99e;
+  border: none;
+  color: #fafafa;
+  font-family: 'Halis', sans-serif;
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer; }
+  .pt-btn:hover {
+    background-color: #2aeab0; }
