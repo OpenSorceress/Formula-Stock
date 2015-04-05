@@ -204,8 +204,11 @@ table {
   border-spacing: 0; }
 
 body {
-  background-color: #18aed5;
-  font-family: Lato; }
+  font-family: Lato;
+  background-color: #fafafa; }
+
+.home {
+  background-color: #18aed5; }
 
 p {
   padding: 5px 0px;
@@ -213,6 +216,9 @@ p {
 
 i {
   font-style: italic; }
+
+b {
+  font-weight: 800; }
 
 a {
   outline: none; }
@@ -763,3 +769,54 @@ h3 {
   cursor: pointer; }
   .pt-btn:hover {
     background-color: #2aeab0; }
+
+.about-block {
+  width: 350px;
+  min-height: 380px;
+  padding: 25px;
+  float: left;
+  background-color: #f2f2f2; }
+
+.about-block:nth-child(3) {
+  background-color: #18aed5; }
+
+.about-block:nth-child(3) p {
+  color: #fafafa; }
+
+.name {
+  font-weight: 600;
+  float: left; }
+
+.title {
+  float: right;
+  font-style: italic; }
+
+.about-block.founder p:nth-child(3) {
+  clear: both; }
+
+.about-block p {
+  line-height: 1.5;
+  padding-top: 15px; }
+
+.about-block p.name, .about-block p.title {
+  padding-top: 0px !important; }
+
+.more {
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 35px;
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+.more button {
+  background-color: #12d99e;
+  font-family: 'Halis', sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  border: none;
+  color: #fafafa;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 15px 35px;
+  margin-left: 15px; }

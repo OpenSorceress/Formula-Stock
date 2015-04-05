@@ -10,8 +10,12 @@ $px-only:false;
 // #Global
 
 body {
-	background-color: $formulastocks_blue;
 	font-family: Lato;
+	background-color: $formulastocks_white;
+}
+
+.home {
+	background-color: $formulastocks_blue;
 }
 
 p {
@@ -21,6 +25,10 @@ p {
 
 i {
 	font-style: italic;
+}
+
+b {
+	font-weight: 800;
 }
 
 a {
@@ -634,4 +642,64 @@ h3 {
 	&:hover {
 		background-color: $formulastocks_light_green;
 	}
+}
+
+// #About-Us
+.about-block {
+	width: 350px;
+	min-height: 380px;
+	padding: 25px;
+	float: left;
+	background-color: $pricingtable_light_gray;
+}
+
+.about-block:nth-child(3) {
+	background-color: $formulastocks_blue;
+}
+
+.about-block:nth-child(3) p {
+	color: $formulastocks_white;
+}
+
+.name {
+	font-weight: 600;
+	float: left;
+}
+
+.title {
+	float: right;
+	font-style: italic;
+}
+
+.about-block.founder p:nth-child(3) {
+	clear: both;
+}
+
+.about-block p {
+	line-height: 1.5;
+	padding-top: 15px;
+}
+
+.about-block p.name, .about-block p.title {
+	padding-top: 0px !important;
+}
+
+.more {
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 35px;
+	@include fontSize(24px);
+}
+
+.more button {
+	background-color: $formulastocks_green;
+	font-family: 'Halis', sans-serif;
+	@include fontSize(24px);
+	border: none;
+	color: $formulastocks_white;
+	text-transform: uppercase;
+	font-weight: 800;
+	padding: 15px 35px;
+	margin-left: 15px;
 }

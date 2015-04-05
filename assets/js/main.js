@@ -155,6 +155,23 @@
 		toggle_state();
 	});
 	
+	$(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {
+		    e.preventDefault();
+			
+			console.log("menu clicked");
+			
+		    var target = this.hash;
+		    var $target = $(target);
+	
+		    $('html, body').stop().animate({
+		        'scrollTop': $target.offset().top
+		    }, 900, 'swing', function () {
+		        window.location.hash = target;
+		    });
+		});		
+	});
+	
 	function toggle_state() {
 		if($('.edit-sub').html() == '<i class="fa fa-sort-desc"></i>' || !($('.edit-sub').hasClass('activeState'))) {
 			$('.edit-sub').fadeOut(function() {
