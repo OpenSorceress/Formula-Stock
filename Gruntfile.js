@@ -8,7 +8,8 @@ module.exports = function(grunt) {
 					sourcemap: 'none'
 				},
 				files: {
-					'public/css/main.css' : 'assets/sass/main.scss'
+					'public/css/main.css' : 'assets/sass/main.scss',
+					'public/css/chartist.css' : 'assets/sass/chartist.scss'
 				}
 			}
 		},
@@ -18,7 +19,8 @@ module.exports = function(grunt) {
 			},
 			my_target: {
 				files: {
-					'public/js/main.min.js' : ['assets/js/main.js']
+					'public/js/main.min.js' : ['assets/js/main.js'],
+					'public/js/chartist.min.js' : ['assets/js/chartist.js']
 				}
 			}
 		},

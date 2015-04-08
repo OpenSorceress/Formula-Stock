@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/chartist.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,6 +29,7 @@
     <!-- jQuery & jQuery UI -->
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/chartist.min.js"></script>
 </head>
 
 <body class="home">
@@ -71,7 +73,7 @@
                 <h1 class="small">Be on the winning team.</h1>
                 <h1 class="light">Beat the market.</h1>
                 <p><i>Formula Stocks</i>  is an expert system that is based on history's best investment principles combined with groundbreaking scientific research. Get an edge over the competition.</p>
-                <a class="cta-btn-link" href="#"><button class="cta-btn">Sign Up Today</button></a>
+                <a class="cta-btn-link" href="#features-and-pricing"><button class="cta-btn">Sign Up Today</button></a>
             </div>
 
             <div class="clear"></div>
@@ -81,7 +83,10 @@
     <section id="our-results">
         <div class="section-container">
             <h1 class="dark">Our Results</h1>
-            <p><a href="#" class="results-link"><i class="fa fa-angle-double-left"></i> Pro Formula</a> <span class="current-results">Premium Formula</span> <a href="#" class="results-link">Platinum Formula <i class="fa fa-angle-double-right"></i></a></p>
+
+
+            <div id="chart" class="ct-chart ct-golden-section" />
+            <!-- <p><a href="#" class="results-link"><i class="fa fa-angle-double-left"></i> Pro Formula</a> <span class="current-results">Premium Formula</span> <a href="#" class="results-link">Platinum Formula <i class="fa fa-angle-double-right"></i></a></p>
             <p>We started with <b>$25,000</b> in 1970.</p>
             <p>In 45 years, our <span class="results-formula-text">Premium Formula</span> gained a total of</p>
             <p><span class="results-gain-text">$242,949,624</span></p>
@@ -102,7 +107,7 @@
             </div>
 
             <a href="#"><button>Check out the graph</button></a>
-            <a href="#"><button>Get started today</button></a>
+            <a href="#"><button>Get started today</button></a> -->
         </div>
     </section>
 
@@ -246,16 +251,28 @@
                 <div class="clear"></div>
 
                 <div class="form-group">
-                    <label for="email" class="col-lg-4 control-label"><i class="fa fa-envelope"></i></label>
+                    <label for="email"><i class="fa fa-envelope"></i></label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="message"><i class="fa fa-comments"></i></label>
+                    <textarea id="message" name="message" rows="1" placeholder="Message"></textarea>
                 </div>
 
                 <!-- Create Message Field -->
 
                 <div class="form-group button-group">
-                    <button type="submit" id="registerButton" class="btn btn-success">Contact US</button>
+                    <button type="submit" id="messageButton" class="cta-btn">Start the Conversation</button>
                 </div>
             </form>
+
+            <footer>
+                <p>Formula Stocks is not a broker service. We do not buy or sell stocks. Formula Stocks provides suggestions for the stock market. It is up to you to buy and sell any suggested stocks. *CAGR is determined from pas performance. Past performance does not guarantee future results. There is risk that comes with investing in the stock market. Our results are calculated from a <a href="#">scientifically unbiased testing environment</a>.</p>
+                <p>For more information, visit our <a href="#">Disclosure Library</a>.</p>
+                <p>&copy; 2015 Formula Stocks. All rights reserved.</p>
+                <p>Formula Stocks is a subsidiary of Lyck Invest ApS.</p>
+            </footer>
         </div>
     </section>
 

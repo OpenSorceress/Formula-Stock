@@ -35,6 +35,10 @@ a {
 	outline: none;
 }
 
+button {
+	outline: none;
+}
+
 a:link, a:visited {
 	@include fontSize(12px);
 	color: $formulastocks_blue;
@@ -111,7 +115,7 @@ input.form-control {
 	box-shadow: none;
 	border: none;
 	
-	min-width: 255px;
+	width: calc(100% - 45px);
 	padding: 25px 0px 25px 45px;
 	
 	font-family: 'Lato', sans-serif;
@@ -192,9 +196,12 @@ div.button-group button[type="submit"], button.cta-btn {
 }
 
 #register .small .sm-input {
+/*
 	min-width: 95px;
 	max-width: 95px;
 	width: 95px;
+*/
+	width: calc(100% - 45px);
 }
 
 #register div.form-group.small.lastname {
@@ -413,7 +420,7 @@ section {
 	
 	&:active {
 		margin-left: 3px;
-		margin-top: 13px;
+		margin-top: 38px;
 		
 		background-color: $formulastocks_green !important;
 		
@@ -702,4 +709,111 @@ h3 {
 	font-weight: 800;
 	padding: 15px 35px;
 	margin-left: 15px;
+}
+
+// #Get-In-Touch
+#get-in-touch {
+	color: $formulastocks_white;
+}
+
+#get-in-touch ::-webkit-input-placeholder {
+	color: $formulastocks_white;
+}
+
+#get-in-touch :-moz-placeholder {
+	color: $formulastocks_white;
+}
+
+#get-in-touch ::-moz-placeholder {
+	color: $formulastocks_white;
+}
+
+#get-in-touch :-ms-input-placeholder {
+	color: $formulastocks_white;
+}
+
+#get-in-touch .form-group {
+	position: relative;
+	border-bottom: 1px solid $formulastocks_white;
+	margin-bottom: 25px;
+}
+
+#get-in-touch .form-group:last-child {
+	border-bottom: none;
+}
+
+#get-in-touch input, #get-in-touch input:focus, #get-in-touch textarea {
+	color: #fafafa;
+	@include fontSize(18px);
+}
+
+#get-in-touch .firstname, 
+#get-in-touch .lastname, 
+#get-in-touch .firstname input, 
+#get-in-touch .lastname input {
+	width: 20rem;
+}
+
+#get-in-touch .firstname {
+	margin-right: 1.5rem;
+}
+
+/*
+#get-in-touch #email, 
+#get-in-touch .section-container form div:nth-child(4) {
+	width: 360px !important;
+}
+*/
+
+#get-in-touch .button-group button {
+	width: 100%;
+	@include fontSize(32px);
+	height: 75px;
+	margin-bottom: 100px;
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(11, 129, 159, .35);
+	-moz-box-shadow:    5px 5px 0px 0px rgba(11, 129, 159, .35);
+	box-shadow:         5px 5px 0px 0px rgba(11, 129, 159, .35);
+	
+	&:active {
+		margin-left: 3px;
+		margin-top: 28px;
+		margin-bottom: 97px;
+		
+		background-color: $formulastocks_green !important;
+		
+		-webkit-box-shadow: 2px 2px 0px 0px rgba(11, 129, 159, .35);
+		-moz-box-shadow:    2px 2px 0px 0px rgba(11, 129, 159, .35);
+		box-shadow:         2px 2px 0px 0px rgba(11, 129, 159, .35);
+	}
+}
+
+#get-in-touch form {
+	min-width: 300px;
+	max-width: 665px;
+	margin: 0 auto;
+}
+
+#get-in-touch label {
+	@include fontSize(26px);
+}
+
+#get-in-touch textarea {
+	background: none;
+	border: none;
+	padding: 25px 0px 25px 45px;
+	outline: none;
+	width: calc(100% - 45px);
+	resize: none;
+}
+
+footer p {
+	color: $formulastocks_white;
+	@include fontSize(12px);
+	text-align: center;
+	line-height: 1.1rem;
+}
+
+#get-in-touch footer p a {
+	color: $formulastocks_white;
+	text-decoration: underline;
 }
