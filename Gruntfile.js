@@ -20,7 +20,8 @@ module.exports = function(grunt) {
 			my_target: {
 				files: {
 					'public/js/main.min.js' : ['assets/js/main.js'],
-					'public/js/chartist.min.js' : ['assets/js/chartist.js']
+					'public/js/chartist.min.js' : ['assets/js/chartist.js'],
+					'public/js/home.min.js' : ['assets/js/home.js']
 				}
 			}
 		},

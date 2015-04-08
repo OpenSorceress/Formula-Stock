@@ -1,4 +1,5 @@
 @import "settings/chartist-settings";
+@import "colors";
 
 @mixin ct-responsive-svg-container($width: 100%, $ratio: $ct-container-ratio) {
   display: block;
@@ -50,6 +51,7 @@
 @mixin ct-chart-point($ct-point-size: $ct-point-size, $ct-point-shape: $ct-point-shape) {
   stroke-width: $ct-point-size;
   stroke-linecap: $ct-point-shape;
+  opacity: 0;
 }
 
 @mixin ct-chart-line($ct-line-width: $ct-line-width, $ct-line-dasharray: $ct-line-dasharray) {
@@ -150,4 +152,56 @@
   }
 }
 
-.tooltip{position:absolute;display:inline-block;min-width:5em;padding:.5em;background:#F4C63D;color:#453D3F;font-weight:700;text-align:center;pointer-events:none;z-index:1}.tooltip:after{content:"";position:absolute;top:100%;left:50%;width:0;height:0;margin-left:-15px;border:15px solid transparent;border-top-color:#F4C63D}
+.tooltip {
+	font-family: 'Halis', sans-serif;
+	position:absolute;
+	display:inline-block;
+	min-width:5em;
+	padding:.5em;
+	background:$formulastocks_green;
+	color:$formulastocks_white;
+	//font-weight:700;
+	text-align:center;
+	pointer-events:none;
+	z-index:1
+}
+
+.tooltip:after{
+	content:"";
+	position:absolute;
+	top:100%;
+	left:50%;
+	width:0;
+	height:0;
+	margin-left:-15px;
+	border:15px solid transparent;
+	border-top-color:$formulastocks_green
+}
+
+.tooltip-seriesName {
+	font-weight: 800;
+}
+
+.tooltip-pro {
+	background-color: #bdbdbd;
+	
+	&:after {
+		border-top-color: #bdbdbd;
+	}
+}
+
+.tooltip-premium {
+	background-color: #49494a;
+	
+	&:after {
+		border-top-color: #49494a;
+	}
+}
+
+.tooltip-platinum {
+	background-color: $formulastocks_blue;
+	
+	&:after {
+		border-top-color: $formulastocks_blue;
+	}
+}

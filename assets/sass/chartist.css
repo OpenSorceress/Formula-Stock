@@ -28,7 +28,8 @@
   stroke-dasharray: 2px; }
 .ct-chart .ct-point {
   stroke-width: 10px;
-  stroke-linecap: round; }
+  stroke-linecap: round;
+  opacity: 0; }
 .ct-chart .ct-line {
   fill: none;
   stroke-width: 4px; }
@@ -42,17 +43,17 @@
   fill: none;
   stroke-width: 60px; }
 .ct-chart .ct-series.ct-series-a .ct-point, .ct-chart .ct-series.ct-series-a .ct-line, .ct-chart .ct-series.ct-series-a .ct-bar, .ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {
-  stroke: #d70206; }
+  stroke: #bdbdbd; }
 .ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-a .ct-area {
-  fill: #d70206; }
+  fill: #bdbdbd; }
 .ct-chart .ct-series.ct-series-b .ct-point, .ct-chart .ct-series.ct-series-b .ct-line, .ct-chart .ct-series.ct-series-b .ct-bar, .ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
-  stroke: #f05b4f; }
+  stroke: #49494a; }
 .ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-b .ct-area {
-  fill: #f05b4f; }
+  fill: #49494a; }
 .ct-chart .ct-series.ct-series-c .ct-point, .ct-chart .ct-series.ct-series-c .ct-line, .ct-chart .ct-series.ct-series-c .ct-bar, .ct-chart .ct-series.ct-series-c .ct-slice.ct-donut {
-  stroke: #f4c63d; }
+  stroke: #18aed5; }
 .ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-c .ct-area {
-  fill: #f4c63d; }
+  fill: #18aed5; }
 .ct-chart .ct-series.ct-series-d .ct-point, .ct-chart .ct-series.ct-series-d .ct-line, .ct-chart .ct-series.ct-series-d .ct-bar, .ct-chart .ct-series.ct-series-d .ct-slice.ct-donut {
   stroke: #d17905; }
 .ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-d .ct-area {
@@ -443,13 +444,13 @@
     left: 0; }
 
 .tooltip {
+  font-family: 'Halis', sans-serif;
   position: absolute;
   display: inline-block;
   min-width: 5em;
   padding: 0.5em;
-  background: #F4C63D;
-  color: #453D3F;
-  font-weight: 700;
+  background: #12d99e;
+  color: #fafafa;
   text-align: center;
   pointer-events: none;
   z-index: 1; }
@@ -463,4 +464,22 @@
   height: 0;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top-color: #F4C63D; }
+  border-top-color: #12d99e; }
+
+.tooltip-seriesName {
+  font-weight: 800; }
+
+.tooltip-pro {
+  background-color: #bdbdbd; }
+  .tooltip-pro:after {
+    border-top-color: #bdbdbd; }
+
+.tooltip-premium {
+  background-color: #49494a; }
+  .tooltip-premium:after {
+    border-top-color: #49494a; }
+
+.tooltip-platinum {
+  background-color: #18aed5; }
+  .tooltip-platinum:after {
+    border-top-color: #18aed5; }
