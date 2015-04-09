@@ -42,15 +42,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button> -->
-            <a class="navbar-brand" href="#home"><img src="/img/logo.svg" alt="Formula Stocks" /></a>
+            <a class="navbar-brand scroll-link" href="#home"><img src="/img/logo.svg" alt="Formula Stocks" /></a>
         </div>
 
         <nav class="home-nav">
             <ul>
-                <li><a href="#our-results">Our Results</a><li>
-                <li><a href="#features-and-pricing">Features &amp; Pricing</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#get-in-touch">Get In Touch</a></li>
+                <li><a href="#our-results" class="scroll-link">Our Results</a><li>
+                <li><a href="#features-and-pricing" class="scroll-link">Features &amp; Pricing</a></li>
+                <li><a href="#about-us" class="scroll-link">About Us</a></li>
+                <li><a href="#get-in-touch" class="scroll-link">Get In Touch</a></li>
             <% if ( user ) { %>
             	<li><a href="/portfolio">Dashboard</a></li>
                 <li><a href="/logout">Logout</a></li>
@@ -73,7 +73,7 @@
                 <h1 class="small">Be on the winning team.</h1>
                 <h1 class="light">Beat the market.</h1>
                 <p><i>Formula Stocks</i>  is an expert system that is based on history's best investment principles combined with groundbreaking scientific research. Get an edge over the competition.</p>
-                <a class="cta-btn-link" href="#features-and-pricing"><button class="cta-btn">Sign Up Today</button></a>
+                <a class="cta-btn-link scroll-link" href="#features-and-pricing"><button class="cta-btn">Sign Up Today</button></a>
             </div>
 
             <div class="clear"></div>
@@ -83,9 +83,51 @@
     <section id="our-results">
         <div class="section-container">
             <h1 class="dark">Our Results</h1>
+            <div id="results-navigation">
+                    <ul>
+                        <li><a href="#" id="back"><i class="fa fa-angle-double-left"></i> <span id="back-formula">Pro Formula</span></a></li>
+                        <li><span id="current-formula">Premium Formula</span></li>
+                        <li><a href="#" id="next"><span id="next-formula">Platinum Formula</span> <i class="fa fa-angle-double-right"></i></a></li>
+                    </ul>
+                </div>
+            <div id="results-info">
+                <div class="clear"></div>
 
+                <div id="formula-results">
+                    <div class="results-info">
+                        <p>We started with <b>$25,000</b> in 1970.</p>
+                        <p>In <span class="years">45</span> years, our <span class="results-formula-text">Premium Formula</span> gained a total of</p>
+                        <p class="results-gain-text">$242,949,624</p>
+                    </div>
 
-            <div id="chart" class="ct-chart ct-golden-section" />
+                    <div id="statistics-group">
+                        <div id="annual-return">
+                            <p class="stats-number">26.9%</p>
+                            <p class="stats-sub-text">Average Annual Return</p>
+                        </div>
+
+                        <div id="success-rate">
+                            <p class="stats-number">77.9%</p>
+                            <p class="stats-sub-text">Rate of Success</p>
+                        </div>
+
+                        <div id="profit">
+                            <p class="stats-number">1,658</p>
+                            <p class="stats-sub-text">Stocks Made Profit</p>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div id="chart-button-group">
+                        <button class="results-graph-btn">Check out the graph</button>
+                        <button class="results-action-btn">Get started today</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chart" class="ct-chart ct-golden-section">
+                <div id="chart-overlay"></div>
+            </div>
             <!-- <p><a href="#" class="results-link"><i class="fa fa-angle-double-left"></i> Pro Formula</a> <span class="current-results">Premium Formula</span> <a href="#" class="results-link">Platinum Formula <i class="fa fa-angle-double-right"></i></a></p>
             <p>We started with <b>$25,000</b> in 1970.</p>
             <p>In 45 years, our <span class="results-formula-text">Premium Formula</span> gained a total of</p>
@@ -229,7 +271,7 @@
             </div>
 
             <div class="more">
-                <p>Want to know more? <a href="#get-in-touch"><button>Start the conversation</button></a></p>
+                <p>Want to know more? <a href="#get-in-touch" class="scroll-link"><button>Start the conversation</button></a></p>
             </div>
         </div>
     </section>

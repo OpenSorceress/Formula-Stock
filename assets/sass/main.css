@@ -489,11 +489,13 @@ p.subscription a {
   width: 100%;
   height: 5px;
   background-color: #18aed5;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease; }
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease; }
 
 a.navbar-brand img {
   height: 35px;
@@ -912,3 +914,126 @@ footer p {
 #get-in-touch footer p a {
   color: #fafafa;
   text-decoration: underline; }
+
+#our-results .section-container {
+  position: relative; }
+
+#results-info {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+  text-align: center; }
+
+#chart-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0.88);
+  z-index: 3; }
+
+#statistics-group {
+  margin: 0 auto; }
+
+#annual-return, #success-rate, #profit {
+  float: left;
+  width: 33%; }
+
+#annual-return p, #success-rate p, #profit p {
+  padding: 0; }
+
+.stats-number {
+  font-family: 'Lato', sans-serif;
+  font-size: 56px;
+  font-size: 3.5rem;
+  color: #18aed5;
+  font-weight: 600; }
+
+.stats-sub-text {
+  color: #bdbdbd;
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+.results-info p {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #bdbdbd; }
+
+.results-info .results-gain-text {
+  font-family: 'Halis', sans-serif;
+  font-size: 92px;
+  font-size: 5.75rem;
+  color: #18aed5;
+  font-weight: 800;
+  padding: 5px 50px 50px 50px;
+  letter-spacing: -0.3rem; }
+
+.results-info {
+  padding-top: 125px; }
+
+#results-navigation {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 25px; }
+
+#results-navigation ul {
+  margin: 0 auto; }
+
+#results-navigation ul li {
+  float: left;
+  display: block;
+  width: 33%;
+  color: #0a99bc;
+  font-weight: 800;
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+#results-navigation ul li a {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  color: #18aed5;
+  opacity: 0.35;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease; }
+  #results-navigation ul li a:hover {
+    opacity: 1; }
+
+#chart-button-group {
+  margin-top: 50px; }
+
+#chart-button-group button {
+  border: none;
+  color: #fafafa;
+  width: 300px;
+  padding: 10px;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: 'Halis', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(11, 129, 159, 0.35);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(11, 129, 159, 0.35);
+  box-shadow: 5px 5px 0px 0px rgba(11, 129, 159, 0.35); }
+
+#chart-button-group button:nth-child(1) {
+  margin-right: 50px; }
+
+.results-graph-btn {
+  background: #18aed5; }
+  .results-graph-btn:hover {
+    background: #1ebbe2; }
+
+.results-action-btn {
+  background: #12d99e; }
+  .results-action-btn:hover {
+    background: #2aeab0; }
+
+.results-formula-text {
+  color: #18aed5;
+  font-weight: 800; }

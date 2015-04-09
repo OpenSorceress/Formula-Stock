@@ -1,4 +1,5 @@
 (function($) {
+	
 	var api_urls = ["../api/pro/annually/2014.json", "../api/premium/annually/2014.json", "../api/platinum/annually/2014.json"];
 	
 	function getData(url) {
@@ -205,5 +206,95 @@
 			data.push({x:new Date(years[i]), y:value});
 		});
 		return data;
+	}
+	
+	$('.results-graph-btn').click(function (e) {
+		$('#formula-results').fadeToggle();
+		$('#chart-overlay').fadeToggle();
+	});
+	
+	$('#back').click(function(e) {
+		e.preventDefault();
+		
+		var back_html = $('#back-formula').html();
+		// console.log(back_html);
+		
+		$('#results-info').fadeToggle();
+		$('#results-navigation').fadeToggle(function() {
+			update_navigation(back_html);
+		});
+	});
+	
+	$('#next').click(function(e) {
+		e.preventDefault();
+		
+		var next_html = $('#next-formula').html();
+		// console.log(back_html);
+		
+		$('#results-info').fadeToggle();
+		$('#results-navigation').fadeToggle(function() {
+			update_navigation(next_html);
+		});
+	});
+	
+	function update_navigation(elem) {
+		if(elem == 'Pro Formula') {
+			$('#back-formula').html('Platinum Formula');
+			$('#current-formula').html('Pro Formula');
+			$('#next-formula').html('Premium Formula');
+			get_statistics("../api/pro/annually/2014.json", 'Pro Formula');
+		} else if(elem == 'Premium Formula') {
+			$('#back-formula').html('Pro Formula');
+			$('#current-formula').html('Premium Formula');
+			$('#next-formula').html('Platinum Formula');
+			get_statistics("../api/premium/annually/2014.json", 'Premium Formula');
+		} else if(elem == 'Platinum Formula') {
+			$('#back-formula').html('Premium Formula');
+			$('#current-formula').html('Platinum Formula');
+			$('#next-formula').html('Pro Formula');
+			get_statistics("../api/platinum/annually/2014.json", 'Platinum Formula');
+		}
+	}
+	
+	function get_statistics(url, name) {
+		$.getJSON(url, function(data) {
+			// console.log(data.statistics);
+			var total_return = Number(data.logs[data.logs.length - 1].balance);
+			var CAGR = data.statistics.CAGR;
+			
+			var positives = data.statistics.positives;
+			var negatives = data.statistics.negatives;
+			
+			// Calculate Success Rate
+			var success = (positives * 100 / (positives + negatives)).toFixed(2);
+			
+			// Calculate amount of years.
+			var last_year = Number(data.logs[data.logs.length - 1].date.year);
+			var first_year = Number(data.logs[0].date.year);
+			var years = last_year - first_year + 1;
+			
+			
+			console.log("Years: " + years);
+			console.log("Total Return: " + total_return);
+			console.log("Average Annual Return: " + CAGR);
+			console.log("Successful Stocks: " + positives);
+			console.log("Success Rate: " + success + '%');
+			
+			$('#total_years').html(years);
+			$('#start_year').html(first_year);
+			$('.results-formula-text').html(name);
+			$('.results-gain-text').html('$' + format_price(total_return));
+			$('#annual-return .stats-number').html(CAGR + '%');
+			$('#success-rate .stats-number').html(success + '%');
+			$('#proft .stats-number').html(format_price(positives));
+			
+		}).done(function() {
+			if(!$('#chart-overlay').is(':visible')) {
+				$('#chart-overlay').fadeToggle();
+				$('#formula-results').fadeToggle();
+			}
+			$('#results-info').fadeToggle();
+			$('#results-navigation').fadeToggle();
+		});
 	}
 })(jQuery);

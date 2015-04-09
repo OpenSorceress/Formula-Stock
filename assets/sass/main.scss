@@ -339,7 +339,9 @@ p.subscription a {
 	width: 100%;
 	height: 5px;
 	background-color: $formulastocks_blue;
-	@include transition(all 200ms ease);
+	position: absolute;
+	left: 0;
+	@include transition(all 500ms ease);
 }
 
 a.navbar-brand img {
@@ -816,4 +818,148 @@ footer p {
 #get-in-touch footer p a {
 	color: $formulastocks_white;
 	text-decoration: underline;
+}
+
+// #Our-Results
+#our-results .section-container {
+	position: relative;
+}
+
+#results-info {
+	position: absolute;
+	width: 100%;
+	z-index: 4;
+	// height: calc(100% - 450px);
+	// background: rgba(250,250,250,.75);
+	text-align: center;
+	// padding: 100px 50px;
+}
+
+#chart-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(250,250,250,0.88);
+	z-index: 3;
+}
+
+#statistics-group {
+	margin: 0 auto;
+}
+
+#annual-return, #success-rate, #profit {
+	float: left;
+	width: 33%;
+}
+
+#annual-return p, #success-rate p, #profit p {
+	padding: 0;
+}
+
+.stats-number {
+	font-family: 'Lato', sans-serif;
+	@include fontSize(56px);
+	color: $formulastocks_blue;
+	font-weight: 600;
+}
+
+.stats-sub-text {
+	color: $formulastocks_light_gray;
+	@include fontSize(24px);
+}
+
+.results-info p {
+	font-family: 'Lato', sans-serif;
+	@include fontSize(24px);
+	color: $formulastocks_light_gray;
+}
+
+.results-info .results-gain-text {
+	font-family: 'Halis', sans-serif;
+	@include fontSize(92px);
+	color: $formulastocks_blue;
+	font-weight: 800;
+	padding: 05px 50px 50px 50px;
+	letter-spacing: -.3rem;
+}
+
+.results-info {
+	padding-top: 125px;
+}
+
+#results-navigation {
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+#results-navigation ul {
+	margin: 0 auto;
+}
+
+#results-navigation ul li {
+	float: left;
+	display: block;
+	width: 33%;
+	color: $formulastocks_dark_blue;
+	font-weight: 800;
+	@include fontSize(24px);
+}
+
+#results-navigation ul li a {
+	@include fontSize(24px);
+	font-family: 'Lato', sans-serif;
+	color: $formulastocks_blue;
+	opacity: 0.35;
+	font-weight: 600;
+	text-decoration: none;
+	@include transition(all 200ms ease);
+	
+	&:hover {
+		opacity: 1;
+	}
+}
+
+#chart-button-group {
+	margin-top: 50px;
+}
+
+#chart-button-group button {
+	border:none;
+	color: $formulastocks_white;
+	width: 300px;
+	padding: 10px;
+	@include fontSize(20px);
+	font-family: 'Halis', sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(11, 129, 159, .35);
+	-moz-box-shadow:    5px 5px 0px 0px rgba(11, 129, 159, .35);
+	box-shadow:         5px 5px 0px 0px rgba(11, 129, 159, .35);
+}
+
+#chart-button-group button:nth-child(1) {
+	margin-right: 50px;
+}
+
+.results-graph-btn {
+	background: $formulastocks_blue;
+	
+	&:hover {
+		background: $formulastocks_blue_hover;
+	}
+}
+
+.results-action-btn {
+	background: $formulastocks_green;
+	
+	&:hover {
+		background: $formulastocks_light_green;
+	}
+}
+
+.results-formula-text {
+	color: $formulastocks_blue;
+	font-weight: 800;
 }

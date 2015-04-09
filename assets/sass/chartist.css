@@ -483,3 +483,6 @@
   background-color: #18aed5; }
   .tooltip-platinum:after {
     border-top-color: #18aed5; }
+
+line.ct-point:hover {
+  opacity: 1; }
