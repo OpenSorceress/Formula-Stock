@@ -1,0 +1,41 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'functions.scss';
+
+.container-fluid {
+	padding: 0px;
+}
+
+.navbar-header {
+	background-color: $formulastocks_blue;
+	padding: 0px;
+}
+
+.container-fluid .navbar-header .navbar-brand {
+	// text-align: center;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px 0px;
+	width: 100%;
+	font-family: 'Halis', sans-serif;
+	color: $formulastocks_white;
+	
+	text-transform: uppercase;
+	font-weight: 800;
+	@include fontSize(24px);
+}
+
+.sidebar-heading {
+	padding: 10px 20px;
+}
+
+.navbar-right {
+	display: none;
+}
+
+@media(max-width:768px) {
+	.navbar-right {
+		display: block;
+		width: calc(100% - 50px);
+	}
+}
