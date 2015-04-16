@@ -324,10 +324,10 @@
 
 .allocation {
   font-family: 'Halis', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   color: #18aed5;
-  font-size: 26px;
-  font-size: 1.625rem; }
+  font-size: 32px;
+  font-size: 2rem; }
 
 .weight {
   text-transform: uppercase;
@@ -346,12 +346,72 @@
 
 .pie-chart {
   position: relative;
-  width: 125px; }
+  float: left;
+  width: 125px;
+  margin-right: 25px; }
 
 .chart-data {
   position: absolute;
   top: 55px;
-  left: 35px; }
+  left: 30px; }
+
+.action-text {
+  text-transform: uppercase;
+  font-weight: 800; }
+
+.action-text-buy {
+  color: #18aed5; }
+
+.muted-text {
+  color: #bdbdbd;
+  font-size: 16px;
+  font-size: 1rem; }
+
+.statistics-number {
+  font-family: 'Halis', sans-serif;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: 800; }
+
+.statistics div > p {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+.suggested-price-container {
+  float: left; }
+
+.last-price-container {
+  float: right; }
+
+.suggested-price-container, .last-price-container {
+  padding: 0px 50px; }
+
+.last-price-negative {
+  color: #12d99e; }
+
+.last-price-positive {
+  color: #d9124a; }
+
+.suggested-price {
+  color: #18aed5; }
+
+.reccomendation {
+  clear: both; }
+
+.reccomendation p {
+  font-size: 32px;
+  font-size: 2rem; }
+
+.statistics {
+  width: 350px;
+  float: left;
+  margin-top: 25px; }
+
+.historicalData {
+  max-width: 600px;
+  width: 600px;
+  float: right; }
 
 @media (max-width: 768px) {
   .navbar-right {
