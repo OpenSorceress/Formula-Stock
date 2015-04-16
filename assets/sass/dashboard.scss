@@ -2,8 +2,31 @@
 @import 'fonts.scss';
 @import 'functions.scss';
 
+.clear {
+	clear: both;
+}
+
 .container-fluid {
 	padding: 0px;
+}
+
+#navbar, body {
+	background-color: $formulastocks_white;
+}
+
+.logo {
+	display: block;
+	height: 30px;
+	width: auto;
+	margin: 15px auto 0px auto;
+}
+
+.main {
+	background-color: $formulastocks_white;
+}
+
+.container-fluid {
+	overflow-x: hidden;
 }
 
 .navbar-header {
@@ -33,9 +56,169 @@
 	display: none;
 }
 
+.suggestion {
+	background-color: #fff;
+	border: 1px solid $border_color;
+	border-radius: 3px;
+}
+
+.suggestionTitle {
+	padding: 10px 15px;
+	border-bottom: 1px solid $border_color;
+}
+
+.infoBar {
+	padding: 5px 15px;
+	border-bottom: 1px solid $border_color;
+}
+
+.suggestion h1 {
+	font-family: 'Halis', sans-serif;
+	font-weight: 800;
+	@include fontSize(32px);
+	letter-spacing: -0.05em;
+	text-transform: uppercase;
+	float: left;
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+.new, .action, .symbol {
+	margin: 0;
+	margin-top: 5px;
+	display: block;
+	padding: 3px 5px;
+	background-color: $formulastocks_blue;
+	color: $formulastocks_white;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	@include fontSize(14px);
+	font-weight: 600;
+	float: left;
+	border-radius: 3px;
+}
+
+.action, .symbol {
+	@include fontSize(18px);
+	margin: 0;
+	margin-right: 10px;
+}
+
+.last-updated {
+	font-family: 'Lato', sans-serif;
+	font-style: italic;
+	color: $formulastocks_light_gray;
+	float: right;
+	margin: 0;
+}
+
+.buy {
+	background-color: $formulastocks_blue;
+}
+
+.sell {
+	background-color: $formulastocks_red;
+}
+
+.symbol {
+	background-color: $formulastocks_light_gray
+}
+
+.adv-data-btn {
+	background: $formulastocks_blue;
+	color: $formulastocks_white;
+	border: none;
+	border-radius: 3px;
+	font-family: 'Lato', sans-serif;
+	@include fontSize(22px);
+	padding: 5px 10px;
+	float: right;
+	outline: none;
+}
+
+.sidebar {
+	background-color: $dashboard_menu;
+	border: none;
+	top: 50px;
+}
+
+.sidebar a {
+	color: $dashboard_menu_link;
+	font-family: 'Lato', sans-serif;
+}
+
+.sidebar a:hover {
+	background-color: $dashboard_menu_active !important;	
+}
+
+.sidebar-heading {
+	color:  $dashboard_menu_heading;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.active {
+	border-left: 5px solid $formulastocks_blue;
+	font-weight: 600;
+}
+
+.nav-sidebar > .active a, .nav>li>a:focus, .nav>li>a:hover, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+	background-color: $dashboard_menu_active;
+}
+
+.ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {
+	stroke: #18aed5 !important;
+}
+
+.ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
+	stroke: #e6e6e6 !important;
+}
+
+.allocation {
+	font-family: 'Halis', sans-serif;
+	font-weight: 600;
+	color: $formulastocks_blue;
+	@include fontSize(26px);
+}
+
+.weight {
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	font-weight: 800;
+	@include fontSize(18px);
+}
+
+.allocation, .weight {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.suggestionData {
+	padding: 0px 15px;
+}
+
+.pie-chart {
+	position: relative;
+	width: 125px;
+}
+
+.chart-data {
+	position: absolute;
+	top: 55px;
+	left: 35px;
+}
+
 @media(max-width:768px) {
 	.navbar-right {
 		display: block;
 		width: calc(100% - 50px);
+	}
+	
+	.navbar-brand {
+		width: calc(100% - 60px) !important;
 	}
 }
