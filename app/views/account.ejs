@@ -36,7 +36,7 @@
     <script src="/js/suggestions.js"></script>
 </head>
 
-<body>
+<body id="account">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header col-sm-3 col-md-2">
@@ -64,7 +64,7 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="sidebar-heading"><i class="fa fa-flask"></i> Suggestions</li>
-            <li class="active"><a href="#">Pro Suggestions <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Pro Suggestions <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Premium Suggestions</a></li>
             <li><a href="#">Platinum Suggestions</a></li>
           </ul>
@@ -76,61 +76,94 @@
           </ul>
           <ul class="nav nav-sidebar">
             <li class="sidebar-heading"><i class="fa fa-user"></i> Firstname Lastname</li>
-            <li><a href="#">My Portfolio</a></li>
-            <li><a href="/account">My Account</a></li>
+            <li><a href="/portfolio">My Portfolio</a></li>
+            <li class="active"><a href="/account">My Account</a></li>
             <li><a href="#">Sign Out</a></li>
           </ul>
         </div>
 
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <div class="suggestion">
-            <div class="suggestionTitle">
-                <h1>Nu Skin Enterprises</h1>
-                <p class="new">New!</p>
-                <button class="adv-data-btn">Advanced</button>
-                <div class="clear"></div>
-            </div>
-
-            <div class="infoBar">
-                <p class="action buy">BUY</p>
-                <p class="symbol">SMBL</p>
-                <p class="last-updated">Last updated <span class="update">a day ago.</span></p>
-                <div class="clear"></div>
-            </div>
-
-            <div class="suggestionData">
-                <div class="pie-chart">
-                    <div class="chart-data">
-                        <p class="allocation">22.22%</p>
-                        <p class="weight">Weight</p>
-                    </div>
-                    <div id="donut-chart"></div>
+            <div id="account-information" class="col-sm-5 col-sm-offset-3 col-md-5 col-md-offset-2 main">
+              <div class="suggestion">
+                <div class="suggestionTitle">
+                    <h1>Account Information</h1>
+                    <button class="adv-data-btn"><i class="fa fa-pencil-square-o"></i></button>
+                    <div class="clear"></div>
                 </div>
 
-                <div class="statistics">
-                    <div class="suggested-price-container">
-                        <p class="muted-text">Suggested Price</p>
-                        <p class="statistics-number suggested-price">$45.06</p>
+                <div class="suggestionData">
+                    <div class="inner-content">
+                        <p><b>NAME</b><br />
+                        Firstname Lastname</p>
+
+                        <p><b>EMAIL</b><br />
+                        firstname@emailexample.com</p>
                     </div>
 
-                    <div class="last-price-container">
-                        <p class="muted-text">Last Price</p>
-                        <p class="statistics-number last-price-positive">$59.29</p>
-                    </div>
+                    <div class="clear"></div>
+                </div>
+              </div>
 
-                    <div class="reccomendation">
-                        <p>We reccomend to <span class="action-text action-text-buy">BUY</span> this stock.</p>
-                    </div>
+              <div class="suggestion">
+                <div class="suggestionTitle">
+                    <h1>Change My Password</h1>
+                    <div class="clear"></div>
                 </div>
 
-                <div class="historicalData">
-                    <div id="line-chart"></div>
-                </div>
+                <div class="suggestionData">
+                    <div class="inner-content">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="old_password" class="col-lg-3 control-label"><i class="fa fa-unlock"></i></label>
+                                    <input type="password" class="form-control lg" id="old_password" name="old_password" placeholder="Old Password" tabindex="1">
+                                </div>
 
-                <div class="clear"></div>
+                                <div class="form-group">
+                                    <label for="new_password" class="col-lg-3 control-label"><i class="fa fa-unlock-alt"></i></label>
+                                    <input type="password" class="form-control lg" id="new_password" name="new_password" placeholder="New Password" tabindex="2">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirm_password" class="col-lg-3 control-label"><i class="fa fa-lock"></i></label>
+                                    <input type="password" class="form-control lg" id="confirm_password" name="confirm_password" placeholder="Confirm Password" tabindex="3">
+                                </div>
+
+                                <div class="form-group button-group">
+                                    <button type="submit" id="changePassword" class="dashboard-btn">Change Password</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+
+            <div id="subscription-information" class="col-sm-4 col-md-5 main">
+              <div class="suggestion">
+                <div class="suggestionTitle">
+                    <h1>My Subscription</h1>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="suggestionData">
+                    <div class="inner-content">
+                        <p><b><span class="billing-formula">PLATINUM FORMULA</span></b><br />
+                        <span class="billing-rate">$20,000.00 Annually</span></p>
+
+                        <p><b>Status:</b> <span class="billing-status billing-status-active">Active</span></p>
+                        <p><b>Next Billing Date:</b> <span class="billing-date">March 17, 2016</span></p>
+
+                        <button class="dashboard-btn">Edit My Subscription</button>
+                        <button class="dashboard-btn bad-action">Cancel My Account</button>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+        
       </div>
     </div>
 
@@ -143,7 +176,7 @@
     <script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
     <script type="text/javascript" src="http://www.amcharts.com/lib/3/pie.js"></script>
     <script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
-
+    <script src="/js/main.min.js"></script>
 </body>
 
 </html>

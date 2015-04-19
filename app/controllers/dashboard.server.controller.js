@@ -22,7 +22,20 @@ function add_commas(nStr) {
 	return x1 + x2;
 }
 
-exports.render = function(req, res, next) {
+exports.render_account = function(req, res, next) {
+	var user = {
+		"firstname" : req.user.firstname,
+		"lastname" : req.user.lastname,
+		"email" : req.user.email
+	}
+	
+	res.render('account', {
+		title: 'Formula Stocks - My Account',
+		data: user
+	});
+}
+
+exports.render_portfolio = function(req, res, next) {
 	var url = 'http://api.formulastocks.com/json/weekly.json';
 	get_json(url, function(weekly_response) {
 		var weekly_json = weekly_response;

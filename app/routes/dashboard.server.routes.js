@@ -10,7 +10,16 @@ module.exports = function(app) {
 			req.flash('error', 'You must be logged in to do that.');
 			res.redirect('/login');
 		}
-	}, dashboard.render);
+	}, dashboard.render_portfolio);
+	
+	app.get('/account', function(req, res, next) {
+		if(req.isAuthenticated()) {
+			return next();
+		} else {
+			req.flash('error', 'You must be logged in to do that.');
+			res.redirect('/login');
+		}
+	}, dashboard.render_account);
 	
 	app.post('/assets/buy', function(req, res, next) {
 		if(req.isAuthenticated()) {
