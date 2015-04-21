@@ -1,0 +1,177 @@
+input {
+	font-family: 'Lato', sans-serif;
+}
+
+/* Basic Inputs */
+.form-control[type="text"],
+.form-control[type="email"],
+.form-control[type="password"],
+textarea.form-control {
+	outline: none;
+	box-shadow: none!important;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid $darkest_gray;
+	background: transparent;
+	
+	font-size: 16px;
+	padding-left: 40px;
+	padding-bottom: 16px;
+	margin-top: 35px;
+	
+	-webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;    
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: $darkest_gray!important;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: $darkest_gray!important;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: $darkest_gray!important;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: $darkest_gray!important;
+    transition: all .35s;
+}
+
+textarea.form-control {
+	resize: none;
+}
+
+.form-control[type="text"]:focus,
+.form-control[type="email"]:focus,
+.form-control[type="password"]:focus,
+textarea.form-control:focus {
+	border-color: $blue;
+	color: $blue;
+	
+	+ label {
+		color: $blue;
+	}
+	
+	&::-webkit-input-placeholder { /* WebKit browsers */
+	    color: transparent!important;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color: transparent!important;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color: transparent!important;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		color: transparent!important;
+	}
+}
+
+.form-group {
+	position: relative;
+}
+
+label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 22px;
+	
+	-webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+
+/* Font Awesome Checkboxes */
+input[type="checkbox"], 
+input[type="radio"] {
+	visibility: hidden;
+}
+
+input[type="checkbox"]:checked:after, 
+input[type="checkbox"]:after,
+input[type="radio"]:checked:after, 
+input[type="radio"]:after {
+  visibility: visible;
+  font-family: FontAwesome;
+  font-size:22px;
+
+  position: relative;
+  top: -5px;
+  left: -10px;
+  background-color:#FFF;
+  display: inline-block;
+  
+  -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+input[type="checkbox"]:checked:after,
+input[type="radio"]:checked:after {
+  content: '\f058';
+}
+
+input[type="checkbox"]:after,
+input[type="radio"]:after {
+  content: '\f10c';
+}
+
+.checkbox-label {
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700!important;
+	padding-left: 10px;
+}
+
+.subscription-group {
+	border-bottom: 1px solid $darkest_gray!important;
+}
+
+.subscription {
+	padding-left: 40px;
+	margin-bottom: 8px;
+	margin-top: 35px;
+	text-align: left;
+}
+
+.subscription:hover {
+	cursor: pointer;
+}
+
+.subscription_menu {
+	display: none;
+}
+
+.edit-sub {
+	position: absolute;
+	right: 0px;
+	top: -10px;
+	font-size: 22px;
+}
+
+.option {
+	text-align: left;
+	padding-left: 40px;
+	margin: 0;
+	padding: 10px 0 10px 40px;
+}
+
+.selected a {
+	color: $gray!important;
+	cursor: default;
+	text-decoration: none;
+}

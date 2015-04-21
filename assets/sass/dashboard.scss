@@ -1,7 +1,9 @@
+// #Config
+$px-only:false;
+
 @import 'colors.scss';
 @import 'fonts.scss';
 @import 'functions.scss';
-@import 'forms.scss';
 
 .clear {
 	clear: both;

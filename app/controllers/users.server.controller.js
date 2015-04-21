@@ -1,4 +1,5 @@
 var User = require('mongoose').model('User'),
+	Plan = require('mongoose').model('Plan'),
 	passport = require('passport');
 
 var getErrorMessage = function(err) {
@@ -44,10 +45,38 @@ exports.login = function(req, res, next) {
 
 exports.renderRegister = function(req, res, next) {
 	if (!req.user) {
-		res.render('register', {
-			title: 'Register Form',
-			messages: req.flash('error')
-		});
+		if(req.query.p) {
+			var param = req.query.p;
+			
+			if(param == 'platinum' || param == 'premium' || param == 'pro') {
+				// Render With Plan
+				Plan.findByName(param, function(err, selected_plan) {
+					if(err) {
+						res.render('register', {
+							title: 'Sign Up for Formula Stocks',
+							messages: req.flash('error')
+						});
+					} else {
+						res.render('register', {
+							title: 'Sign Up for Formula Stocks',
+							subscription: selected_plan,
+							messages: req.flash('error')
+						});
+					}
+				});
+			} else {
+				// Render With Trial
+				res.render('register', {
+					title: 'Sign Up for Formula Stocks',
+					messages: req.flash('error')
+				});
+			}
+		} else {
+			res.render('register', {
+				title: 'Sign Up for Formula Stocks',
+				messages: req.flash('error')
+			});	
+		}
 	} else {
 		return res.redirect('/portfolio');
 	}

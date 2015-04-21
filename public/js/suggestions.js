@@ -9,6 +9,7 @@
 		// Make Line Chart
 		var chartData = generatechartData();
 
+
 		function generatechartData() {
 		    var chartData = [];
 		    var firstDate = new Date();
@@ -30,6 +31,34 @@
 		    }
 		    return chartData;
 		}
+/*
+		var tuesday = new Date('04-21-2015');
+		var monday = new Date('04-20-2015');
+		var friday = new Date('04-17-2015');
+		var thursday = new Date('04-16-2015');
+		var wednesday = new Date('04-15-2015');
+		
+		var chartData = [{
+			date: wednesday,
+			visits: 58.29
+		},
+		{
+			date: thursday,
+			visits: 51.26
+		},
+		{
+			date: friday,
+			visits: 45.29
+		},
+		{
+			date: monday,
+			visits: 39.21
+		},
+		{
+			date: tuesday,
+			visits: 42.78
+		}];
+*/
 
 
 		var line_chart = AmCharts.makeChart("line-chart", {
@@ -56,7 +85,8 @@
 		        "lineThickness": 2,
 		        "lineColor": "#d9124a",
 		        "negativeLineColor": "#12d99e",
-		        "valueField": "visits"
+		        "valueField": "visits",
+		        "negativeBase":45.06
 		    }],
 		    "chartScrollbar": {
 				"dragIconHeight":50,

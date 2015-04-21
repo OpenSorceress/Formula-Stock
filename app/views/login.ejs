@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="/css/font-awesome.min.css">
 
   <!-- Custom CSS -->
-  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/portal.min.css" rel="stylesheet">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,40 +31,39 @@
 </head>
 
 <body id="login">
+<section>
     <div class="container">
-        <!-- Logo -->
-        <a href="/"><img src='img/flask.svg' alt='Formula Stocks' class="flask" /></a>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <a href="/"><img src='img/flask.svg' alt='Formula Stocks' class="flask" /></a>
 
-        <!-- Login Form -->
-        <form class="form-horizontal" action="/login" method="post">
-            <fieldset>
-                <legend>Sign In</legend>
-                <p>Please sign in to access your dashboard.</p>
+                <form class="text-center" action="/login" method="post">
+                    <h2 class="form-signin-heading">Please sign in</h2>
 
-                <% for(var i in messages) { %>
-                    <div class="alert alert-danger">
-                        <p><strong><i class="fa fa-times-circle"></i> Error!</strong> <%= messages[i] %></p>
+                    <% for(var i in messages) { %>
+                        <div class="alert alert-danger">
+                            <p><strong><i class="fa fa-times-circle"></i> Error!</strong> <%= messages[i] %></p>
+                        </div>
+                    <% } %>
+
+                    <div class="form-group">
+                        <input type="email" id="username" name="username" class="form-control" placeholder="Email address" required="">
+                        <label for="username"><i class="fa fa-envelope"></i></label>
                     </div>
-                <% } %>
 
-                <div class="form-group">
-                    <label for="username" class="col-lg-3 control-label"><i class="fa fa-envelope"></i></label>
-                    <input type="text" class="form-control lg" id="username" name="username" placeholder="Email Address" tabindex="1">
-                </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+                        <label for="password"><i class="fa fa-lock"></i></label>
+                    </div>
 
-                <div class="form-group">
-                    <label for="password" class="col-lg-3 control-label"><i class="fa fa-lock"></i></label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" tabindex="1">
-                </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
-                <div class="form-group button-group">
-                    <button type="submit" id="loginButton" class="btn btn-primary">Sign In</button>
-                    <p><a href="#">I need to reset my password.</a></p>
                     <p>Don't have an account? <a href="/register">Sign Up!</a></p>
-                </div>
-            </fieldset>
-        </form>
-    </div> <!-- /.container -->
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Main JavaScript -->
     <script src="/js/main.min.js"></script>

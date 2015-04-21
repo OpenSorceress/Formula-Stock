@@ -10,19 +10,22 @@ module.exports = function(grunt) {
 				files: {
 					'public/css/main.css' : 'assets/sass/main.scss',
 					'public/css/dashboard.css' : 'assets/sass/dashboard.scss',
-					'public/css/chartist.css' : 'assets/sass/chartist.scss'
+					'public/css/home.min.css' : 'assets/sass/layouts/home.scss',
+					'public/css/portal.min.css' : 'assets/sass/layouts/portal.scss'
 				}
 			}
 		},
 		uglify: {
 			options: {
-				banner: '/* &copy; 2014 Lindsay Roberts http://www.designbyfish.com/ */\n'
+				banner: '/* &copy; 2015 Lindsay Roberts http://www.designbyfish.com/ */\n'
 			},
 			my_target: {
 				files: {
 					'public/js/main.min.js' : ['assets/js/main.js'],
 					'public/js/chartist.min.js' : ['assets/js/chartist.js'],
-					'public/js/home.min.js' : ['assets/js/home.js']
+					'public/js/home.min.js' : ['assets/js/home.js'],
+					'public/js/results.min.js' : ['assets/js/results.js'],
+					'public/js/forms.min.js' : ['assets/js/forms.js']
 				}
 			}
 		},
@@ -35,7 +38,12 @@ module.exports = function(grunt) {
 				}
 			},
 			css: {
-	            files: ['assets/sass/*.scss'],
+	            files: ['assets/sass/*.scss',
+	            		'assets/sass/base/*.scss',
+	            		'assets/sass/components/*.scss',
+	            		'assets/sass/layouts/*.scss',
+	            		'assets/sass/mixins/*.scss',
+	            		'assets/sass/modules/*.scss'],
 	            tasks: ['sass'],
 	            options: {
 	                spawn: false

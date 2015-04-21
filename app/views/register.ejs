@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/portal.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,68 +31,164 @@
 </head>
 
 <body id="register">
+<section>
 	<div class="container">
-		<!-- Logo -->
-		<a href="/"><img src='img/flask.svg' alt='Formula Stocks' class="flask" /></a>	
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2">
+				<a href="/"><img src="img/flask.svg" alt="Formula Stocks" class="flask" /></a>
 
-		<!-- Register Form -->
-		<form class="form-horizontal" id="registerForm" action="/register" method="post">
-			<fieldset>
-				<legend>Let's get started.</legend>
-				<p>Try us for 90 days, no credit card required.</p>
+				<form class="text-center" action="/register" method="post">
+					<h2>Sign Up Today</h2>
 
-				<% for(var i in messages) { %>
-					<div class="alert alert-danger">
-						<p><strong><i class="fa fa-times-circle"></i> Error!</strong> <%= messages[i] %></p>
+					<% for(var i in messages) { %>
+						<div class="alert alert-danger">
+							<p><strong><i class="fa fa-times-circle"></i> Error!</strong><%= messages[i] %></p>
+						</div>
+					<% } %>
+
+					<div class="col-lg-6 col-sm-6">
+						<div class="form-group">
+							<input type="text" id="firstname" name="firstname" class="form-control" placeholder="First name" required="">
+							<label for="firstname"><i class="fa fa-user"></i></label>
+						</div>
 					</div>
-				<% } %>
 
-				<div class="form-group small firstname">
-					<label for="firstname" class="col-lg-4 control-label"><i class="fa fa-user"></i></label>
-					<input type="text" class="form-control sm-input" id="firstname" name="firstname" placeholder="First Name">
-				</div>
-
-				<div class="form-group small lastname">
-					<input type="text" class="form-control sm-input" id="lastname" name="lastname" placeholder="Last Name">
-				</div>
-
-				<div class="clear"></div>
-
-				<div class="form-group">
-					<label for="email" class="col-lg-4 control-label"><i class="fa fa-envelope"></i></label>
-					<input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
-				</div>
-
-				<div class="form-group">
-					<label for="password" class="col-lg-4 control-label"><i class="fa fa-lock"></i></label>
-					<input type="password" class="form-control" id="password" name="password" placeholder="Password">
-				</div>
-
-				<div class="form-group">
-					<label class="subscription"><i class="fa fa-check"></i></label>
-					<p class="subscription"><span class="subscription">90 Day Free Trial</span> <a class="edit-sub" href="#"><i class="fa fa-sort-desc"></i></a></p>
-					<div class="subscription_menu">
-						<p class="option selected"><a class="option_item" href="trial">90 Day Free Trial</a></p>
-						<p class="option"><a class="option_item" href="pro_month">Pro Formula $49.95 Monthly</a></p>
-						<p class="option"><a class="option_item" href="premium_month">Premium Formula $99.95 Monthly</a></p>
-						<p class="option"><a class="option_item" href="pro_year">Pro Formula $549.95 Annually</a></p>
-						<p class="option"><a class="option_item" href="premium_year">Premium Formula $999.95 Annually</a></p>
-						<p class="option"><a class="option_item" href="platinum_year">Platinum Formula $20,000 Annually</a></p>
+					<div class="col-lg-6 col-sm-6">
+						<div class="form-group">
+							<input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last name" required="">
+							<label for="firstname"><i class="fa fa-user"></i></label>
+						</div>
 					</div>
-					<input type="hidden">
-				</div>
 
-				<div class="form-group button-group">
-					<p>By creating an account, you agree to Formula Stock's <a href="#">Terms &amp; Conditions</a>.</p>
-					<button type="submit" id="registerButton" class="btn btn-success">Sign Up!</button>
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<input type="email" id="email" name="email" class="form-control" placeholder="Email address" required="">
+							<label for="email"><i class="fa fa-envelope"></i></label>
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+							<label for="email"><i class="fa fa-lock"></i></label>
+						</div>
+
+						<div class="form-group">
+							<input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Confirm password" required="">
+							<label for="confirm_password"><i class="fa fa-lock"></i></label>
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group subscription-group">
+							<label><i class="fa fa-check"></i></label>
+							
+							<p class="subscription">
+								<span class="current-subscription">
+									<% if(locals.subscription) { %>
+										<%=subscription.display_name%>
+									<% } else { %>
+										90 Day Free Trial
+									<% } %>
+								</span> 
+								<a class="edit-sub" href="#">
+									<i class="fa fa-sort-desc"></i>
+								</a>
+							</p>
+							<div class="subscription_menu">
+								<% if(!locals.subscription) { %>
+								<p class="option selected"><a class="option_item" href="trial">90 Day Free Trial</a></p>
+								<% } else { %>
+								<p class="option"><a class="option_item" href="trial">90 Day Free Trial</a></p>
+								<% } %>
+
+								<% if(locals.subscription && locals.subscription.name == 'pro') { %>
+									<p class="option selected"><a class="option_item" href="pro">Pro Formula</a></p>
+								<% } else { %> 
+									<p class="option"><a class="option_item" href="pro">Pro Formula</a></p>
+								<% } %>
+								
+								<% if(locals.subscription && locals.subscription.name == 'premium') { %> 
+									<p class="option selected"><a class="option_item" href="premium">Premium Formula</a></p>
+								<% } else { %> 
+									<p class="option"><a class="option_item" href="premium">Premium Formula</a></p>
+								<% } %>
+								
+								<% if(locals.subscription && locals.subscription.name == 'platinum') {%>
+									<p class="option selected"><a class="option_item" href="platinum">Platinum Formula</a></p>
+								<%} else {%>
+									<p class="option"><a class="option_item" href="platinum">Platinum Formula</a></p>
+								<%}%>
+								
+							</div>
+							<input type="hidden">
+						</div>
+					</div>
+
+					<% if(locals.subscription) { %>
+						<% if(subscription.name == 'platinum') { %>
+							<div class="billing-radio-group" style="display: none;">
+						<% } else { %>
+							<div class="billing-radio-group">
+						<% } %>
+					<% } else { %>
+						<div class="billing-radio-group" style="display: none;">
+					<% } %>
+					
+						<div class="col-lg-12 col-sm-12">
+							<p class="billing-text">Do you want to make payments on a monthly or yearly billing cycle?</p>
+						</div>
+
+						<div class="col-lg-6 col-sm-6">
+							<div class="form-group">
+								<label class="checkbox-label text-center">
+									<input type="radio" id="checkbox_monthly" name="subscription_checkbox" checked="true" /> &nbsp;Monthly Billing
+								</label>
+							</div><br />
+						</div>
+
+						<div class="col-lg-6 col-sm-6">
+							<div class="form-group">
+								<label class="checkbox-label text-center">
+									<input type="radio" id="checkbox_yearly" name="subscription_checkbox" /> &nbsp;Yearly Billing
+								</label>
+							</div><br />
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-sm-12">
+						<p class="total-label 
+						<% if(locals.subscription) { %>
+							<% if(subscription.name != 'platinum') { %>
+								show-border
+							<% } %>
+						<% } %>
+						">Total Amount Due:<br/> <span class="total">$<span class="amount-due">
+							<% if(locals.subscription) { %>
+								<% if(subscription.name == 'platinum') { %>
+									<%= subscription.price.yearly %>.00
+								<% } else { %>
+									<%= subscription.price.monthly %>.00
+								<% } %>
+							<% } else { %>
+								0.00
+							<% } %>
+						</span></span></p>
+					</div>
+
+					<p class="agreement">By creating an account, you agree to Formula Stock's <a href="#">Terms &amp; Conditions</a>.</p>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+
 					<p>Already have an account? <a href="/login">Sign in.</a></p>
-				</div>
-			</fieldset>
-		</form>
-	</div> <!-- /.container -->
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
 
 	<!-- Main JavaScript -->
-	<script src="/js/main.min.js"></script>
+	<!-- <script src="/js/main.min.js"></script> -->
+	<script src="/js/forms.min.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@ module.exports = function(app) {
 	app.param('userId', users.userByID);
 	
 	app.route('/register').get(users.renderRegister).post(users.register);
+	
 	app.route('/login').get(users.renderLogin).post(passport.authenticate('local', {
 		successRedirect: '/portfolio',
 		failureRedirect: '/login',

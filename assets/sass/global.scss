@@ -1,0 +1,189 @@
+// #Config
+$px-only:false;
+
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'functions.scss';
+@import 'reset.scss';
+
+.clear {
+	clear: both;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: $formulastocks_white;
+}
+
+
+// Buttons
+button {
+	outline: none;
+}
+
+// Form Elements
+fieldset {
+	border: none;
+}
+
+legend {
+	font-weight: 800;
+	@include fontSize(20px);
+	padding: 20px 0px 10px 0px;
+}
+
+form legend, form p, form a {
+	text-align: center;
+}
+
+form p {
+	padding-bottom: 20px;
+}
+
+.form-group {
+	position: relative;
+	border-bottom: 1px solid $formulastocks_grey;
+}
+
+.form-group:nth-last-child(2), .form-group:last-child {
+	border-bottom: none;
+}
+
+.form-group.small {
+	width: 140px;
+	float: left;
+}
+
+label {
+	position: absolute;
+	top: 22px;
+	left: 5px;
+	
+	@include fontSize(22px);
+	@include transition(color 300ms ease);
+}
+
+label.subscription {
+	color: $formulastocks_green;
+}
+
+input.form-control {
+	background: none;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	
+	width: calc(100% - 45px);
+	padding: 25px 0px 25px 45px;
+	
+	font-family: 'Lato', sans-serif;
+	@include fontSize(14px);
+	@include transition(color 300ms ease);
+}
+
+input.form-control:focus {
+	color: $formulastocks_blue;
+}
+
+.labelFocus {
+	color: $formulastocks_blue;
+}
+
+::-webkit-input-placeholder {
+	color: $formulastocks_grey;
+}
+
+:-moz-placeholder {
+	color: $formulastocks_grey;
+}
+
+::-moz-placeholder {
+	color: $formulastocks_grey;
+}
+
+:-ms-input-placeholder {
+	color: $formulastocks_grey;
+}
+
+div.button-group a, div.button-group p {
+	@include fontSize(14px);
+}
+
+div.button-group button[type="submit"], button.cta-btn {
+	display: block;
+	background-color: $formulastocks_green;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	
+	height: 55px;
+	width: 300px;
+	margin: 10px 0px 20px 0px;
+	
+	font-family: 'Halis', sans-serif;
+	font-weight: 800;
+	color: $formulastocks_white;
+	text-transform: uppercase;
+	
+	@include fontSize(20px);
+	@include transition(background-color 300ms ease);
+	
+	&:hover {
+		background-color: $formulastocks_light_green;
+	}
+}
+
+.labelError, .inputError {
+	color: $formulastocks_red;
+}
+
+.inputError::-webkit-input-placeholder {
+	color: $formulastocks_red;
+}
+
+.inputError:-moz-placeholder {
+	color: $formulastocks_red;
+}
+
+.inputError::-moz-placeholder {
+	color: $formulastocks_red;
+}
+
+.inputError:-ms-input-placeholder {
+	color: $formulastocks_red;
+}
+
+#register .small .sm-input {
+	width: calc(100% - 45px);
+}
+
+#register div.form-group.small.lastname {
+	margin-left: 20px !important;
+}
+
+#register #lastname {
+	padding: 25px 0px 25px 35px;
+	min-width: 105px;
+	max-width: 105px;
+	width: 105px;
+}
+
+#register .form-group:nth-last-child(2) {
+	border-bottom: 1px solid $formulastocks_grey;
+}
+
+#register .form-group:last-child {
+	padding-top: 20px;
+}
+
+// Alerts
+.alert-danger {
+	background-color: $formulastocks_red;
+}
+
+.alert-danger p {
+	color: $formulastocks_white;
+	margin: 0 !important;
+	padding: 0 !important;
+	display: inline;
+}
