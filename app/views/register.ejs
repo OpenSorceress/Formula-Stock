@@ -37,7 +37,7 @@
 			<div class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2">
 				<a href="/"><img src="img/flask.svg" alt="Formula Stocks" class="flask" /></a>
 
-				<form class="text-center" action="/register" method="post">
+				<form id="signup" class="text-center" action="/register" method="post">
 					<h2>Sign Up Today</h2>
 
 					<% for(var i in messages) { %>
@@ -125,59 +125,90 @@
 						</div>
 					</div>
 
-					<% if(locals.subscription) { %>
-						<% if(subscription.name == 'platinum') { %>
-							<div class="billing-radio-group" style="display: none;">
-						<% } else { %>
-							<div class="billing-radio-group">
-						<% } %>
-					<% } else { %>
-						<div class="billing-radio-group" style="display: none;">
-					<% } %>
+					<div class="billing-radio-group">
 					
 						<div class="col-lg-12 col-sm-12">
 							<p class="billing-text">Do you want to make payments on a monthly or yearly billing cycle?</p>
 						</div>
 
-						<div class="col-lg-6 col-sm-6">
-							<div class="form-group">
-								<label class="checkbox-label text-center">
-									<input type="radio" id="checkbox_monthly" name="subscription_checkbox" checked="true" /> &nbsp;Monthly Billing
-								</label>
-							</div><br />
-						</div>
+						<%
+						if(locals.subscription) {
+							if(subscription.name == 'platinum') {
+								%>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<label class="checkbox-label text-center">
+											<input type="radio" id="checkbox_monthly" name="subscription_checkbox" value="monthly" disabled="true" /><span>Monthly Billing</span>
+										</label>
+									</div><br />
+								</div>
 
-						<div class="col-lg-6 col-sm-6">
-							<div class="form-group">
-								<label class="checkbox-label text-center">
-									<input type="radio" id="checkbox_yearly" name="subscription_checkbox" /> &nbsp;Yearly Billing
-								</label>
-							</div><br />
-						</div>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<label class="checkbox-label text-center">
+											<input type="radio" id="checkbox_yearly" name="subscription_checkbox" value="yearly" checked="true" /><span>Yearly Billing</span>
+										</label>
+									</div><br />
+								</div>
+								<%
+							} else {
+								%>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<label class="checkbox-label text-center">
+											<input type="radio" id="checkbox_monthly" name="subscription_checkbox" value="monthly" checked="true" /> &nbsp;<span>Monthly Billing</span>
+										</label>
+									</div><br />
+								</div>
+
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<label class="checkbox-label text-center">
+											<input type="radio" id="checkbox_yearly" name="subscription_checkbox" value="yearly" /> &nbsp;<span>Yearly Billing</span>
+										</label>
+									</div><br />
+								</div>
+								<%
+							}
+						} else {
+							%>
+							<div class="col-lg-6 col-sm-6">
+								<div class="form-group">
+									<label class="checkbox-label text-center">
+										<input type="radio" id="checkbox_monthly" name="subscription_checkbox" value="monthly" disabled="true" /><span>&nbsp;Monthly Billing</span>
+									</label>
+								</div><br />
+							</div>
+
+							<div class="col-lg-6 col-sm-6">
+								<div class="form-group">
+									<label class="checkbox-label text-center">
+										<input type="radio" id="checkbox_yearly" name="subscription_checkbox" value="yearly" disabled="true" /><span>&nbsp;Yearly Billing</span>
+									</label>
+								</div><br />
+							</div>
+							<%
+						}
+						%>
+						
+
+
+
 					</div>
 
 					<div class="col-lg-12 col-sm-12">
-						<p class="total-label 
-						<% if(locals.subscription) { %>
-							<% if(subscription.name != 'platinum') { %>
-								show-border
-							<% } %>
-						<% } %>
-						">Total Amount Due:<br/> <span class="total">$<span class="amount-due">
-							<% if(locals.subscription) { %>
-								<% if(subscription.name == 'platinum') { %>
-									<%= subscription.price.yearly %>.00
-								<% } else { %>
-									<%= subscription.price.monthly %>.00
-								<% } %>
-							<% } else { %>
-								0.00
-							<% } %>
+						<p class="total-label show-border">Total Amount Due:<br/> <span class="total">$<span class="amount-due"><%if(locals.subscription){%><%if(subscription.name=='platinum'){%>20,000.00<%}else{%><%=subscription.price.monthly%>.00<%}}else{%>0.00<%}%>
 						</span></span></p>
 					</div>
 
 					<p class="agreement">By creating an account, you agree to Formula Stock's <a href="#">Terms &amp; Conditions</a>.</p>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+					
+					<% if(locals.subscription) {%>
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Next</button>
+					<% } else { %>
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+					<% } %>
+					
 
 					<p>Already have an account? <a href="/login">Sign in.</a></p>
 				</form>

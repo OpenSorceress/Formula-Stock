@@ -1,5 +1,8 @@
 (function($) {
+	var gtn = false;
+	
 	$(document).ready(function() {
+		check_for_next();
 		
 		/* TEXTAREA AUTO EXPAND FUNCTIONALITY */
 		$("textarea").mousemove(function(e) {
@@ -36,7 +39,6 @@
 		
 		
 		/* SUBSCRIPTION DROP DOWN FUNCTIONALITY */
-
 		$('.selected a').click(function(e) {
 			e.preventDefault();
 		});
@@ -56,16 +58,32 @@
 				
 				if($(this).attr('href') == 'trial') {
 					$('span.current-subscription').html('90 Day Free Trial');
+					disable_buttons();
+					update_button('signup');
 				} else if($(this).attr('href') == 'pro') {
 					$('span.current-subscription').html('Pro Formula');
+					enable_buttons();
 				} else if($(this).attr('href') == 'premium') {
 					$('span.current-subscription').html('Premium Formula');
+					enable_buttons();
 				} else if($(this).attr('href') == 'platinum') {
 					$('span.current-subscription').html('Platinum Formula');
+					disable_month_only();
+					
 				}
-						
+				
+				update_price();
 				toggle_state();
 			}
+		});
+		
+		$("input:radio[name ='subscription_checkbox']").change(function () {
+			update_price();
+		});
+		
+		$('#signup button[type="submit"]').click(function(e) {
+			e.preventDefault();
+			console.log(gtn);
 		});
 	});
 	
@@ -90,7 +108,111 @@
 		});
 	}
 	
-	function update_price() {
+	function check_for_next() {
+		if($('.option.selected a').attr("href") == 'trial') {
+			console.log($('.option.selected a').attr("href"));
+			gtn = false;
+			update_button('signup');
+		} else {
+			gtn = true;
+			update_button('next');
+		}
+	}
+	
+	function update_button(action) {
+		if(action == 'signup') {
+			// Signup Button
+			$('button[type="submit"]').html('Sign Up');
+			gtn = false;
+		} else if(action == 'next') {
+			// Next Button
+			$('button[type="submit"]').html('Next');
+			gtn = true;
+		}
+	}
+	
+	function disable_buttons() {
+		$('#checkbox_monthly').attr("disabled", true);
+		$('#checkbox_yearly').attr("disabled", true);
 		
+		if($('#checkbox_monthly').is(':checked')) {
+			$('#checkbox_monthly').prop("checked", false);
+		}
+		
+		if($('#checkbox_yearly').is(':checked')) {
+			$('#checkbox_yearly').prop("checked", false);
+		}
+	}
+	
+	function enable_buttons() {
+		$('#checkbox_monthly').attr("disabled", false);
+		$('#checkbox_yearly').attr("disabled", false);
+		
+		if($('#checkbox_monthly').is(':checked') || $('#checkbox_yearly').is(':checked')) {
+			// Do nothing...
+		} else {
+			// No buttons are checked... Check one.
+			$('#checkbox_monthly').prop("checked", true);
+		}
+	}
+	
+	function disable_month_only() {
+		if($('#checkbox_yearly').is(':disabled')) {
+			// Enable the Yearly Checkbox
+			$('#checkbox_yearly').attr("disabled", false);
+		}
+		
+		if($('#checkbox_monthly').is(':disabled')) {
+			// Do Nothing
+		} else {
+			// Disable the monthly checkbox
+			$('#checkbox_monthly').attr("disabled", true);
+		}
+		
+		if($('#checkbox_monthly').is(':checked')) {
+			$('#checkbox_monthly').prop("checked", false);
+		}
+		
+		if($('#checkbox_yearly').is(':checked')) {
+			// Do Nothing
+		} else {
+			$('#checkbox_yearly').prop("checked", true);
+		}
+	}
+	
+	function update_price() {
+		var amount_due = $('.amount-due');
+		
+		if($('.current-subscription').html() == '90 Day Free Trial') {
+			// Free!
+			var price = "0.00";
+			amount_due.html(price);
+		} else if($('.current-subscription').html() == 'Platinum Formula') {
+			// Only get yearly price.
+			get_price({name: 'platinum', cycle: 'yearly'}, function(pr) {
+				amount_due.html(pr);
+			});
+		} else {
+			var cycle = $("input:radio[name ='subscription_checkbox']:checked").val();
+			console.log(cycle);
+			// Get price of selected term.
+			if($('.current-subscription').html() == 'Premium Formula') {
+				get_price({name: 'premium', cycle: cycle}, function(pr) {
+					amount_due.html(pr);
+				});				
+			} else if($('.current-subscription').html() == 'Pro Formula') {
+				get_price({name: 'pro', cycle: cycle}, function(pr) {
+					amount_due.html(pr);
+				});
+			}
+		}
+		
+		check_for_next();
+	}
+	
+	function get_price(parameters, callback) {
+		$.get('/price', parameters, function(data) {
+			callback(data.price);
+		});
 	}
 })(jQuery);

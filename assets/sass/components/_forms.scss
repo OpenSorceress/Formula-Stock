@@ -130,6 +130,14 @@ input[type="radio"]:after {
   content: '\f10c';
 }
 
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+	color: $gray!important;
+	+ span {
+		color: $gray!important;
+	}
+}
+
 .checkbox-label {
 	font-size: 16px;
 	font-family: 'Lato', sans-serif;
@@ -174,4 +182,18 @@ input[type="radio"]:after {
 	color: $gray!important;
 	cursor: default;
 	text-decoration: none;
+}
+
+.option a:hover {
+	text-decoration: none;
+}
+
+.option:hover {
+	background-color: $light_gray;
+	cursor: pointer;
+}
+
+.option.selected:hover {
+	background-color: $lightest_gray!important;
+	cursor: default!important;
 }

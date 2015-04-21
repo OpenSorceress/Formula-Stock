@@ -514,6 +514,17 @@ input[type="checkbox"]:after, input[type="radio"]:after {
   cursor: default;
   text-decoration: none; }
 
+.option.selected {
+  background-color: none !important;
+  cursor: default !important; }
+
+.option a:hover {
+  text-decoration: none; }
+
+.option:hover {
+  background-color: #FAFAFA;
+  cursor: pointer; }
+
 .alert {
   border-radius: 3px;
   background-color: #19B8E2;
@@ -531,7 +542,8 @@ input[type="checkbox"]:after, input[type="radio"]:after {
   border-color: #10BF8B; }
 
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  background-color: #FAFAFA; }
 
 .flask {
   max-width: 75px;

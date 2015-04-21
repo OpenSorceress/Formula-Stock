@@ -56,10 +56,15 @@ exports.renderRegister = function(req, res, next) {
 							title: 'Sign Up for Formula Stocks',
 							messages: req.flash('error')
 						});
-					} else {
+					} else if(selected_plan) {
 						res.render('register', {
 							title: 'Sign Up for Formula Stocks',
 							subscription: selected_plan,
+							messages: req.flash('error')
+						});
+					} else {
+						res.render('register', {
+							title: 'Sign Up for Formula Stocks',
 							messages: req.flash('error')
 						});
 					}
