@@ -2,42 +2,19 @@
 	var gtn = false;
 	
 	$(document).ready(function() {
+		$('.express-error').slideDown();
+		
 		check_for_next();
 		
-		/* TEXTAREA AUTO EXPAND FUNCTIONALITY */
-		$("textarea").mousemove(function(e) {
-			var position = $(this).offset();
-			position.bottom = $(this).offset().top + $(this).outerHeight();
-			position.right	= $(this).offset().left + $(this).outerWidth();
-			
-			if(	position.bottom > e.pageY && 
-				e.pageY > position.bottom - 16 &&
-				position.right > e.pageX &&
-				e.pageX > position.right - 16) {
-				$(this).css({
-					cursor: "nw-resize"
-				});
-			} else {
-				$(this).css({
-					cursor: ""
-				});
-			}
-		})
-		// The following makes the textarea auto-expand as it is typed in. 
-		.keyup(function(e) {
-			// This checks to see if a backspace or delete was pressed. 
-			// If so, it resets the height of the box so it can be resized properly.
-			if(e.which == 8 || e.which == 46) {
-				$(this).height(parseFloat($(this).css("min-height")) != 0 ? parseFloat($(this).css("min-height")) : parseFloat($(this).css("font-size")));
-			}
-			
-			// This will help the textarea expand as typing takes place.
-			while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
-				$(this).height($(this).height() + 1);
+		/* REMOVE ERRORS ON FOCUS */
+		$('input').focus(function() {
+			if($(this).hasClass('error')) {
+				$(this).removeClass('error');
+				if($('.validation').is(':visible')) {
+					$('.validation').slideToggle();
+				}
 			}
 		});
-		
-		
 		/* SUBSCRIPTION DROP DOWN FUNCTIONALITY */
 		$('.selected a').click(function(e) {
 			e.preventDefault();
@@ -69,8 +46,9 @@
 				} else if($(this).attr('href') == 'platinum') {
 					$('span.current-subscription').html('Platinum Formula');
 					disable_month_only();
-					
 				}
+				
+				$('#selected_plan').val($(this).attr('href'));
 				
 				update_price();
 				toggle_state();
@@ -79,11 +57,6 @@
 		
 		$("input:radio[name ='subscription_checkbox']").change(function () {
 			update_price();
-		});
-		
-		$('#signup button[type="submit"]').click(function(e) {
-			e.preventDefault();
-			console.log(gtn);
 		});
 	});
 	
@@ -110,7 +83,6 @@
 	
 	function check_for_next() {
 		if($('.option.selected a').attr("href") == 'trial') {
-			console.log($('.option.selected a').attr("href"));
 			gtn = false;
 			update_button('signup');
 		} else {
@@ -126,7 +98,7 @@
 			gtn = false;
 		} else if(action == 'next') {
 			// Next Button
-			$('button[type="submit"]').html('Next');
+			$('button[type="submit"]').html('Continue to Billing');
 			gtn = true;
 		}
 	}
@@ -187,20 +159,19 @@
 			// Free!
 			var price = "0.00";
 			amount_due.html(price);
-		} else if($('.current-subscription').html() == 'Platinum Formula') {
+		} else if($('.current-subscription').html().trim() == 'Platinum Formula') {
 			// Only get yearly price.
 			get_price({name: 'platinum', cycle: 'yearly'}, function(pr) {
 				amount_due.html(pr);
 			});
 		} else {
 			var cycle = $("input:radio[name ='subscription_checkbox']:checked").val();
-			console.log(cycle);
 			// Get price of selected term.
-			if($('.current-subscription').html() == 'Premium Formula') {
+			if($('.current-subscription').html().trim() == 'Premium Formula') {
 				get_price({name: 'premium', cycle: cycle}, function(pr) {
 					amount_due.html(pr);
 				});				
-			} else if($('.current-subscription').html() == 'Pro Formula') {
+			} else if($('.current-subscription').html().trim() == 'Pro Formula') {
 				get_price({name: 'pro', cycle: cycle}, function(pr) {
 					amount_due.html(pr);
 				});

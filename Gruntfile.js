@@ -25,13 +25,14 @@ module.exports = function(grunt) {
 					'public/js/chartist.min.js' : ['assets/js/chartist.js'],
 					'public/js/home.min.js' : ['assets/js/home.js'],
 					'public/js/results.min.js' : ['assets/js/results.js'],
-					'public/js/forms.min.js' : ['assets/js/forms.js']
+					'public/js/forms.min.js' : ['assets/js/forms.js'],
+					'public/js/validation/user_registration.min.js' : ['assets/js/validation/user_registration.js']
 				}
 			}
 		},
 		watch: {
 			scripts: {
-				files: ['assets/js/*.js'],
+				files: ['assets/js/*.js', 'assets/js/validation/*.js'],
 				tasks: ['uglify'],
 				options: {
 					spawn: false

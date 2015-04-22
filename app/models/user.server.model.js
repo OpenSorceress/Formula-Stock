@@ -23,6 +23,8 @@ var UserSchema = new Schema({
 	password: String,
 	usertype: Number,
 	subtype: Number,
+	trial_exp: Date,
+	sub_renew: Date,
 	provider: String,
 	providerId: String,
 	todos: {}

@@ -105,24 +105,87 @@ exports.renderRegister = function(req, res, next) {
  */
 exports.register = function(req, res, next) {
 	if (!req.user) {
-		var user = new User(req.body);
 		var message = null;
-		user.provider = 'local';
-		user.save(function(err) {
-			if (err) {
-				console.log(err);
-				var message = getErrorMessage(err);
-				req.flash('error', message);
-				return res.redirect('/register');
+				
+		if(req.body.selected_plan === 'trial') {
+			var trial_exp = new Date();
+			trial_exp.setDate(trial_exp.getDate() + 90);			
+			
+			var user_obj = {
+				firstname: req.body.firstname,
+				lastname: req.body.lastname,
+				email: req.body.email,
+				password: req.body.password,
+				usertype: 1, // 0 - Inactive User / 1 - Active User / 2 - Admin
+				subtype: 0, // 0 - Trial / 1 - Pro / 2 - Prem / 3 - Plat
+				trial_exp: trial_exp
 			}
 			
-			req.login(user, function(err) {
-				if (err)
-					return next(err);
+			var user = new User(user_obj);
+			user.provider = 'local';
+			
+			user.save(function(err) {
+				if(err) {
+					console.log(err);
+					var message = getErrorMessage(err);
+					req.flash('error', message);
+					return res.redirect('/register');
+				}
 				
-				return res.redirect('/portfolio');
+				req.login(user, function(err) {
+					if (err)
+						return next(err);
+					
+					return res.redirect('/portfolio');
+				});
 			});
-		});
+		} else {
+			var subtype = 0;
+			var subscription_length = new Date();
+			
+			if(req.body.selected_plan == 'platinum') {
+				subtype = 1;
+			} else if(req.body.selected_plan = "premium") {
+				subtype = 2;
+			} else if(req.body.selected_plan = "pro") {
+				subtype = 3;
+			}
+			
+			if(req.body.subscription_checkbox === 'monthly') {
+				subscription_length.setDate(subscription_length.getDate() + 30);
+			} else if(req.body.subscription_checkbox === 'yearly') {
+				subscription_length.setDate(subscription_length.getDate() + 365);
+			}
+			
+			var user_obj = {
+				firstname: req.body.firstname,
+				lastname: req.body.lastname,
+				email: req.body.email,
+				password: req.body.password,
+				usertype: 1,
+				subtype: subtype,
+				sub_renew: subscription_length
+			}
+			
+			var user = new User(user_obj);
+			user.provider = 'local';
+			
+			user.save(function(err) {
+				if (err) {
+					console.log(err);
+					var message = getErrorMessage(err);
+					req.flash('error', message);
+					return res.redirect('/register');
+				}
+				
+				req.login(user, function(err) {
+					if (err) 
+						return next(err);
+						
+					return res.redirect('/portfolio');
+				});
+			});
+		}
 	} else {
 		return res.redirect('/portfolio');
 	}
