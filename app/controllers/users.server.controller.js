@@ -10,6 +10,8 @@ var getErrorMessage = function(err) {
 			case 11001:
 				message = 'Email is already in use.';
 				break;
+			case 11002:
+				message = 'There was an error sending the form data. Please try again.';
 			default:
 				message = 'Something went wrong! Please try again.';
 		}
@@ -22,6 +24,10 @@ var getErrorMessage = function(err) {
 	
 	return message;
 };
+
+String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
 
 /* This just renders the login screen... */
 exports.renderLogin = function(req, res, next) {
@@ -50,6 +56,9 @@ exports.renderRegister = function(req, res, next) {
 			
 			if(param == 'platinum' || param == 'premium' || param == 'pro') {
 				// Render With Plan
+				// * Note: Add a field to verify that payment was successfully submitted.
+				// When a success response is received from Stripe, it should add a value to a hidden
+				// field of "Payment Success: TRUE" so that a user can't cleverly circumvent the payment process.
 				Plan.findByName(param, function(err, selected_plan) {
 					if(err) {
 						res.render('register', {
@@ -81,6 +90,37 @@ exports.renderRegister = function(req, res, next) {
 				title: 'Sign Up for Formula Stocks',
 				messages: req.flash('error')
 			});	
+		}
+	} else {
+		return res.redirect('/portfolio');
+	}
+};
+
+exports.renderBilling = function(req, res, next) {
+	if(!req.user) {
+		if(!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.password || !req.body.selected_plan || !req.body.subscription_checkbox || !req.body.total_price) {
+			// Redirect with failure
+			console.log(req.body);
+			req.flash('error', 'Something went wrong submitting the form. Please try again.');
+			return res.redirect('/register');
+		} else {
+			var form_data = {
+				firstname: req.body.firstname,
+				lastname: req.body.lastname,
+				email: req.body.email,
+				password: req.body.password,
+				selected_plan: req.body.selected_plan,
+				subscription_checkbox: req.body.subscription_checkbox,
+				cycle: req.body.subscription_checkbox.capitalizeFirstLetter(),
+				plan: req.body.selected_plan.capitalizeFirstLetter(),
+				total_price: req.body.total_price
+			}
+			
+			res.render('billing', {
+				title: 'Sign Up for Formula Stocks',
+				form_data: form_data,
+				messages: req.flash('error')
+			});
 		}
 	} else {
 		return res.redirect('/portfolio');

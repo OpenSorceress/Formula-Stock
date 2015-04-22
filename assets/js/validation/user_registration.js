@@ -62,7 +62,7 @@ var _signup_bot_check			= undefined;
 								console.log("...");
 								console.log("...cycle ok");
 								console.log("...redirecting to checkout...");
-								register();
+								continue_to_billing();
 							} else {
 								// Return error: "Please select a cycle."
 								$('.validation').toggleSlide();
@@ -116,7 +116,8 @@ var _signup_bot_check			= undefined;
 	
 	function continue_to_billing() {
 		$("#signup").attr("action", "/register/billing");
-		console.log($("#signup").attr("action"));
+		$("#total_price").val($('.amount-due').html());
+		$("#signup").submit();
 	}
 	
 	function has_cycle() {

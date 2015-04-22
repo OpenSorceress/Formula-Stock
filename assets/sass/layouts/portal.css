@@ -419,7 +419,8 @@ input {
   transition: all 0.35s; }
 
 textarea.form-control {
-  resize: none; }
+  resize: none;
+  padding-top: 0px; }
 
 .form-control[type="text"]:focus, .form-control[type="email"]:focus, .form-control[type="password"]:focus, textarea.form-control:focus {
   border-color: #18AED5;
@@ -438,6 +439,12 @@ textarea.form-control {
   .form-control[type="text"]:focus:-ms-input-placeholder, .form-control[type="email"]:focus:-ms-input-placeholder, .form-control[type="password"]:focus:-ms-input-placeholder, textarea.form-control:focus:-ms-input-placeholder {
     /* Internet Explorer 10+ */
     color: transparent !important; }
+
+.form-control.error {
+  color: #D91249 !important;
+  border-color: #D91249 !important; }
+  .form-control.error + label {
+    color: #D91249 !important; }
 
 .form-group {
   position: relative; }
@@ -476,11 +483,17 @@ input[type="checkbox"]:checked:after, input[type="radio"]:checked:after {
 input[type="checkbox"]:after, input[type="radio"]:after {
   content: '\f10c'; }
 
+input[type="checkbox"]:disabled, input[type="radio"]:disabled {
+  color: #ECECEC !important; }
+  input[type="checkbox"]:disabled + span, input[type="radio"]:disabled + span {
+    color: #ECECEC !important; }
+
 .checkbox-label {
   font-size: 16px;
   font-family: 'Lato', sans-serif;
   font-weight: 700 !important;
-  padding-left: 10px; }
+  padding-left: 10px;
+  width: auto !important; }
 
 .subscription-group {
   border-bottom: 1px solid #49494A !important; }
@@ -514,16 +527,16 @@ input[type="checkbox"]:after, input[type="radio"]:after {
   cursor: default;
   text-decoration: none; }
 
-.option.selected {
-  background-color: none !important;
-  cursor: default !important; }
-
 .option a:hover {
   text-decoration: none; }
 
 .option:hover {
-  background-color: #FAFAFA;
+  background-color: #F2F2F2;
   cursor: pointer; }
+
+.option.selected:hover {
+  background-color: #FAFAFA !important;
+  cursor: default !important; }
 
 .alert {
   border-radius: 3px;
@@ -540,6 +553,9 @@ input[type="checkbox"]:after, input[type="radio"]:after {
 .alert-success {
   background-color: #12D99E;
   border-color: #10BF8B; }
+
+.express-error, .validation {
+  display: none; }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -581,8 +597,8 @@ form .col-lg-12 {
   padding-left: 0px !important;
   padding-right: 0px !important; }
 
-form .col-lg-6:nth-child(2) {
+.no-padding-left {
   padding-left: 0px !important; }
 
-form .col-lg-6:nth-child(3) {
+.no-padding-right {
   padding-right: 0px !important; }
