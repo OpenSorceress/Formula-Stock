@@ -1,36 +1,13 @@
+/* Dependencies */
 var User = require('mongoose').model('User'),
 	Plan = require('mongoose').model('Plan'),
 	Stripe = require('stripe')("sk_test_9Z5AY0rUOLbtMMYQ4T5eOH1O"),
 	passport = require('passport');
 
-var getErrorMessage = function(err) {
-	var message = '';
-	if (err.code) {
-		switch (err.code) {
-			case 11000:
-			case 11001:
-				message = 'Email is already in use.';
-				break;
-			case 11002:
-				message = 'There was an error sending the form data. Please try again.';
-			default:
-				message = 'Something went wrong! Please try again.';
-		}
-	} else {
-		for (var errName in err.errors) {
-			if (err.errors[errName].message)
-				message = err.errors[errName].message;
-		}
-	}
-	
-	return message;
-};
-
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-}
-
-/* This just renders the login screen... */
+/* -------------------------------------------------
+   RENDER LOGIN SCREEN
+   -------------------------------------------------
+ */
 exports.renderLogin = function(req, res, next) {
 	if (!req.user) {
 		res.render('login', {
@@ -42,24 +19,23 @@ exports.renderLogin = function(req, res, next) {
 	}
 };
 
-exports.login = function(req, res, next) {
-	req.login(user, function(err) {
-		if (err) { return next(err); }
-		console.log(req.user);
-		return res.redirect('/portfolio');
-	});
-}
-
+/* -------------------------------------------------
+   RENDER REGISTER METHOD
+   -------------------------------------------------
+   This method renders the register page. It checks
+   for parameters to see if it should autofill some
+   data, such as when the user clicks on a plan from
+   the home page. It will then return the plan the
+   user selected, which is used to populate the
+   selected plan, its starting cycle, and the price.
+   -------------------------------------------------
+ */
 exports.renderRegister = function(req, res, next) {
 	if (!req.user) {
 		if(req.query.p) {
 			var param = req.query.p;
 			
 			if(param == 'platinum' || param == 'premium' || param == 'pro') {
-				// Render With Plan
-				// * Note: Add a field to verify that payment was successfully submitted.
-				// When a success response is received from Stripe, it should add a value to a hidden
-				// field of "Payment Success: TRUE" so that a user can't cleverly circumvent the payment process.
 				Plan.findByName(param, function(err, selected_plan) {
 					if(err) {
 						res.render('register', {
@@ -97,6 +73,15 @@ exports.renderRegister = function(req, res, next) {
 	}
 };
 
+/* -------------------------------------------------
+   RENDER BILLING METHOD
+   -------------------------------------------------
+   This method renders the billing page after it
+   verifies the POST data from the HTTP request. If
+   the request fails, they are redirected to the
+   register page.
+   -------------------------------------------------
+ */
 exports.renderBilling = function(req, res, next) {
 	if(!req.user) {
 		if(!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.password || !req.body.selected_plan || !req.body.subscription_checkbox || !req.body.total_price) {
@@ -132,11 +117,12 @@ exports.renderBilling = function(req, res, next) {
    REGISTER METHOD
    -------------------------------------------------
    This method uses the User model to create new
-   users, so that is first creates a user object
-   from the HTTP request body. Then, it tries to
+   users, so that is gets the user form data
+   from the HTTP request body and creates a new user
+   with Stripe that simultaneously charges the credit
+   card. Once payment has been verified it then tries to
    save it to MongoDB and if an error occurs, the 
-   register() method will use the getErrorMessage()
-   method to fetch the errors. If the user was 
+   register() method will fetch the errors. If the user was 
    created successfully, the user session will be
    created using the req.login() method provided by
    the Passport module. After the login operation
@@ -158,7 +144,8 @@ exports.register = function(req, res, next) {
 				email: req.body.email,
 				password: req.body.password,
 				usertype: 1, // 0 - Inactive User / 1 - Active User / 2 - Admin
-				subtype: 0, // 0 - Trial / 1 - Pro / 2 - Prem / 3 - Plat
+				plan: "trial",
+				status: "trial",
 				trial_exp: trial_exp
 			}
 			
@@ -191,6 +178,9 @@ exports.register = function(req, res, next) {
 				plan: sub_plan,
 				email: req.body.email
 			}, function(err, customer) {
+				console.log("Error: " + err);
+				console.log("Customer: " + customer);
+				
 				if(err) {
 					var form_data = {
 						firstname: req.body.firstname,
@@ -203,100 +193,76 @@ exports.register = function(req, res, next) {
 						plan: req.body.selected_plan.capitalize(),
 						total_price: req.body.total_price
 					}
-					
-					console.log(err);
-					
+										
 					res.render('billing', {
 						title: 'Sign Up for Formula Stocks',
 						form_data: form_data,
 						messages: req.flash('error', err.message)
 					});
 				} else {
-					// Create a new customer object.
+					// Create a new USER object.
 					// Store customer.id
 					
-					console.log(customer.data);
+					var unix_timestamp = customer.subscriptions.data[0].current_period_end;
+					var renew_date = new Date(unix_timestamp*1000);
+					
+					var user_obj = {
+						firstname: req.body.firstname,
+						lastname: req.body.lastname,
+						email: req.body.email,
+						password: req.body.password,
+						usertype: 1,
+						plan: customer.subscriptions.data[0].plan.id,
+						status: customer.subscriptions.data[0].status,
+						sub_renew: renew_date,
+						stripe_id: customer.id
+					};
+					
+					var user = new User(user_obj);
+					user.provider = 'local';
+					
+					user.save(function(err) {
+						if(err) {
+							console.log(err);
+							var message = getErrorMessage(err);
+							req.flash('error', 'Your payment was successfully processed, but there was a critical error creating your account. Please contact support with the following message.<br /><code>' + message + '</code>');
+							return res.redirect('/register');
+						} else {
+							req.login(user, function(err) {
+								if (err)
+									return next(err);
+								return res.redirect('/portfolio');
+							})
+						}
+					});	
 				}
 			});
-			
-/*
-			var charge = Stripe.charges.create({
-				amount: 
-			});
-*/
-			
-/*
-			var subtype = 0;
-			var subscription_length = new Date();
-			
-			if(req.body.selected_plan == 'platinum') {
-				subtype = 1;
-			} else if(req.body.selected_plan = "premium") {
-				subtype = 2;
-			} else if(req.body.selected_plan = "pro") {
-				subtype = 3;
-			}
-			
-			if(req.body.subscription_checkbox === 'monthly') {
-				subscription_length.setDate(subscription_length.getDate() + 30);
-			} else if(req.body.subscription_checkbox === 'yearly') {
-				subscription_length.setDate(subscription_length.getDate() + 365);
-			}
-			
-			var user_obj = {
-				firstname: req.body.firstname,
-				lastname: req.body.lastname,
-				email: req.body.email,
-				password: req.body.password,
-				usertype: 1,
-				subtype: subtype,
-				sub_renew: subscription_length
-			}
-			
-			var user = new User(user_obj);
-			user.provider = 'local';
-			
-			user.save(function(err) {
-				if (err) {
-					console.log(err);
-					var message = getErrorMessage(err);
-					req.flash('error', message);
-					return res.redirect('/register');
-				}
-				
-				req.login(user, function(err) {
-					if (err) 
-						return next(err);
-						
-					return res.redirect('/portfolio');
-				});
-			});
-*/
 		}
 	} else {
 		return res.redirect('/portfolio');
 	}
 };
 
+/* -------------------------------------------------
+   LOG IN USER
+   -------------------------------------------------
+ */
+exports.login = function(req, res, next) {
+	req.login(user, function(err) {
+		if (err) { return next(err); }
+		console.log(req.user);
+		return res.redirect('/portfolio');
+	});
+}
+
+/* -------------------------------------------------
+   LOGOUT USER
+   -------------------------------------------------
+ */
 exports.logout = function(req, res) {
 	req.logout();
 	res.redirect('/');
 }
-
-/* -------------------------------------------------
-   CREATE USER
-   -------------------------------------------------
- */
-exports.create = function(req, res, next) {	
-	var user = new User(req.body);
-	user.save(function(err) {
-		if (err) {
-			return next(err);
-		} else {
-			res.json(user);
-		}
-	});
-};
 
 /* -------------------------------------------------
    GET ALL USERS
@@ -362,25 +328,38 @@ exports.update = function(req, res, next) {
 		}
 	});
 };
-
-/* -------------------------------------------------
-   DELETE USER
-   -------------------------------------------------
-   Mongoose also has several available methods to
-   delete an existing document:
-   
-   remove(), findOneAndRemove(), findByIdAndRemove()
-   
-   Since the userById() method is already in use,
-   use the findByIdAndRemove() method.
+ 
+ /* -------------------------------------------------
+   GET ERROR MESSAGE METHOD
    -------------------------------------------------
  */
-exports.delete = function(req, res, next) {
-	req.user.remove(function(err) {
-		if (err) {
-			 return next(err);
-		} else {
-			 res.json(req.user);
+var getErrorMessage = function(err) {
+	var message = '';
+	if (err.code) {
+		switch (err.code) {
+			case 11000:
+			case 11001:
+				message = 'Email is already in use.';
+				break;
+			case 11002:
+				message = 'There was an error sending the form data. Please try again.';
+			default:
+				message = 'Something went wrong! Please try again.';
 		}
-	});
- };
+	} else {
+		for (var errName in err.errors) {
+			if (err.errors[errName].message)
+				message = err.errors[errName].message;
+		}
+	}
+	
+	return message;
+};
+
+/* -------------------------------------------------
+   CAPITALIZE METHOD
+   -------------------------------------------------
+ */
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}

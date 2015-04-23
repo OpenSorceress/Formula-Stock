@@ -22,7 +22,8 @@ var UserSchema = new Schema({
 	},
 	password: String,
 	usertype: Number,
-	subtype: Number,
+	plan: String,
+	status: String,
 	trial_exp: Date,
 	sub_renew: Date,
 	stripe_id: String,
@@ -66,7 +67,7 @@ UserSchema.methods.authenticate = function(password) {
 };
 
 /* -------------------------------------------------
-   FIND UNIQUE USERNAME STATIC METHOD
+   FIND UNIQUE EMAIL STATIC METHOD
    -------------------------------------------------
    This is used to find an available unique username
    for new users.

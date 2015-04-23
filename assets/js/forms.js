@@ -2,10 +2,11 @@
 	var gtn = false;
 	
 	$(document).ready(function() {
+		/* SHOW ERRORS IF ANY EXIST */
 		$('.express-error').slideDown();
 		
+		/* CHECK TO SEE IF PLAN REQUIRES NEXT */
 		if($('body#register').length > 0) {
-			console.log("register exists");
 			check_for_next();
 		}
 		
@@ -13,9 +14,10 @@
 		$('input').focus(function() {
 			if($(this).hasClass('error')) {
 				$(this).removeClass('error');
-				if($('.validation').is(':visible')) {
-					$('.validation').slideToggle();
-				}
+			}
+			
+			if($('.validation').is(':visible')) {
+				$('.validation').slideToggle();
 			}
 		});
 		/* SUBSCRIPTION DROP DOWN FUNCTIONALITY */
@@ -23,11 +25,13 @@
 			e.preventDefault();
 		});
 		
+		/* TOGGLE DROPDOWN */
 		$('.subscription').click(function(e) {
 			e.preventDefault();
 			toggle_state();
 		});
 		
+		/* PLAN DROPDOWN FUNCTIONALITY */ 
 		$('.option_item').click(function(e) {
 			e.preventDefault();
 			if($(this).parent().hasClass('selected')) {
@@ -58,11 +62,13 @@
 			}
 		});
 		
+		/* UPDATE PRICE WHEN RADIO VALUE CHANGES */
 		$("input:radio[name ='subscription_checkbox']").change(function () {
 			update_price();
 		});
 	});
 	
+	/* CHANGE STATE OF DROPDOWN */
 	function toggle_state() {
 		if($('.edit-sub').html() == '<i class="fa fa-sort-desc"></i>' || !($('.edit-sub').hasClass('activeState'))) {
 			$('.edit-sub').fadeOut(function() {
@@ -84,6 +90,7 @@
 		});
 	}
 	
+	/* CHANGE STATE OF REGISTER BUTTON */
 	function check_for_next() {
 		if($('.option.selected a').attr("href") == 'trial') {
 			gtn = false;
@@ -94,6 +101,7 @@
 		}
 	}
 	
+	/* UPDATE THE REGISTER BUTTON */
 	function update_button(action) {
 		if(action == 'signup') {
 			// Signup Button
@@ -106,6 +114,7 @@
 		}
 	}
 	
+	/* DISABLE ALL RADIO BUTTONS */
 	function disable_buttons() {
 		$('#checkbox_monthly').attr("disabled", true);
 		$('#checkbox_yearly').attr("disabled", true);
@@ -119,6 +128,7 @@
 		}
 	}
 	
+	/* ENABLE ALL RADIO BUTTONS */
 	function enable_buttons() {
 		$('#checkbox_monthly').attr("disabled", false);
 		$('#checkbox_yearly').attr("disabled", false);
@@ -131,6 +141,7 @@
 		}
 	}
 	
+	/* DISABLE MONTHLY RADIO BUTTON */
 	function disable_month_only() {
 		if($('#checkbox_yearly').is(':disabled')) {
 			// Enable the Yearly Checkbox
@@ -155,6 +166,7 @@
 		}
 	}
 	
+	/* UPDATE TOTAL PRICE VALUE */
 	function update_price() {
 		var amount_due = $('.amount-due');
 		
@@ -184,6 +196,7 @@
 		check_for_next();
 	}
 	
+	/* GET CURRENT PRICE OF PLAN FROM DATABASE */
 	function get_price(parameters, callback) {
 		$.get('/price', parameters, function(data) {
 			callback(data.price);

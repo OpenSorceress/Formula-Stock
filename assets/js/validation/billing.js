@@ -3,6 +3,7 @@
 	Stripe.setPublishableKey('pk_test_hh5vsZ7wNnMi80XJgzHVanEm');
 	
 	$(document).ready(function() {
+		/* REGISTER BUTTON CLICK FUNCTIONALITY */
 		$('button[type="submit"]').click(function(e) {
 			e.preventDefault();
 			
@@ -23,9 +24,10 @@
 				exp_year: $('#exp-year').val(),
 				plan: getPlan($("#selected_plan").val(), $("#subscription_checkbox").val())
 			}, stripeResponseHandler);
-		});
+		});		
 	});
 	
+	/* STRIPE RESPONSE HANDLER */
 	function stripeResponseHandler(status, response) {
 		var $form = $('#billing-form');
 		
@@ -33,6 +35,18 @@
 			$('.validation .error-message').html(response.error.message);
 			$('.validation').slideToggle();
 			console.log("Stripe payment was an error!");
+			
+			if(response.error.code == "invalid_cvc") {
+				$('#cvc').addClass("error");
+			}
+			
+			if(response.error.code == "incorrect_number") {
+				$('#number').addClass("error");
+			}
+			
+			if(response.error.code == "invalid_expiry_year") {
+				$('#exp-date').addClass("error");
+			}			
 		} else {
 			var token = response.id;
 			$form.append($('<input type="hidden" name="stripeToken" />').val(token));
@@ -41,6 +55,7 @@
 		}
 	}
 	
+	/* USED TO GET VALUES FROM EXPIRATION DATE INPUT FIELD */
 	function splitPath(str) {
 	    var rawParts = str.split("/"), parts = [];
 	    for (var i = 0, len = rawParts.length, part; i < len; ++i) {
@@ -53,6 +68,7 @@
 	    return parts;
 	}
 	
+	/* RETURNS THE PLAN THAT THE USER IS TRYING TO SUBSCRIBE TO */
 	function getPlan(plan, cycle) {
 		return plan + "_" + cycle;
 	}

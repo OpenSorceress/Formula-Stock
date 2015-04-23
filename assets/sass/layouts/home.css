@@ -315,219 +315,68 @@ blockquote p {
 .text-muted {
   color: #B9B9B9; }
 
-/*
- * COLOR USES
- * ----------
- * 	BLUE:	Used for informational links, buttons, and other branding elements.
- * 	SLATE:	Used for dashboard menu links and subtitles.
- * 	NAVY:	Used for dashboard menu background and hover states.
- * 	BLACK:	Used mostly for headings, body copy and typography in general.
- * 	WHITE:	Used primarily as a background color.
- * 	GRAY:	Used for headings, body copy, muted text, and typography in general, borders, 
- *			background color, and other discreet elements, depending on the shade of gray.
- * 	GREEN:	Used as a call-to-action, representational stock information, and other
- *			essential or positive data.
- */
-/*
- * TABLE OF CONTENTS
- * ------------------
- * #Halis
- * #Lato
- * #Lora
- */
-/* HALIS FONT WEIGHTS:			LATO FONT WEIGHTS:			LORA FONT WEIGHTS:
- * 100 (Thin)					100 (Hairline)
- * 200 (Extra Light)			200 (Thin)
- * 300 (Light)					300 (Light)
- * 400 (Regular)				400 (Regular)				400 (Regular)
- * 500 (Book)					500 (Medium)
- * 600 (Medium)					600 (Semibold)
- * 700 (Bold)					700 (Bold)					700 (Bold)
- * 800 (Black)					800 (Heavy)
- *								900 (Black)
- */
-/* #Halis */
-@font-face {
-  font-family: 'Halis';
-  src: url('../fonts/halis/HalisR-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal; }
+/* Buttons */
+.btn-default {
+  border-color: #1599BB;
+  color: #FAFAFA !important;
+  background-color: #18AED5;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s; }
 
-@font-face {
-  font-family: 'Halis';
-  src: url('../fonts/halis/HalisR-ExtraLight.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal; }
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+  border-color: #ededed;
+  color: #FAFAFA;
+  background-color: #1599BB; }
 
-@font-face {
-  font-family: 'Halis';
-  src: url('../fonts/halis/HalisR-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal; }
+.btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+  background-image: none; }
 
-@font-face {
-  font-family: 'Halis';
-  src: url('../fonts/halis/HalisR-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal; }
+.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled.focus, .btn-default[disabled].focus, fieldset[disabled] .btn-default.focus, .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active {
+  border-color: #FAFAFA;
+  background-color: #FAFAFA; }
 
-@font-face {
-  font-family: 'Halis';
-  src: url('../fonts/halis/HalisR-Book.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal; }
+.btn-default .badge {
+  color: #FAFAFA;
+  background-color: #49494A; }
 
-@font-face {
-  font-family: 'Halis';
-  src: url('../fonts/halis/HalisR-Medium.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal; }
+.btn-primary {
+  border-color: #1599BB;
+  color: #FAFAFA;
+  background-color: #18AED5;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s; }
 
-@font-face {
-  font-family: 'Halis';
-  src: url('../fonts/halis/HalisR-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  border-color: #1599BB;
+  color: #FAFAFA;
+  background-color: #1599BB; }
 
-@font-face {
-  font-family: 'Halis';
-  src: url('../fonts/halis/HalisR-Black.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal; }
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background-image: none; }
 
-/* #Lato */
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Hairline.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal; }
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+  border-color: #B9B9B9;
+  background-color: #D3D3D3; }
 
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-HairlineItalic.ttf') format('truetype');
-  font-weight: 100;
-  font-style: italic; }
+.btn-primary .badge {
+  color: #18AED5;
+  background-color: #FAFAFA; }
 
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Thin.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal; }
+.btn {
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; }
 
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-ThinItalic.ttf') format('truetype');
-  font-weight: 200;
-  font-style: italic; }
+.btn-xl {
+  padding: 15px 30px;
+  width: 300px; }
 
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-SemiboldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Heavy.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-HeavyItalic.ttf') format('truetype');
-  font-weight: 800;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../fonts/lato/Lato-BlackItalic.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic; }
-
-/* #Lora */
-@font-face {
-  font-family: 'Lora';
-  src: url('../fonts/lora/Lora-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lora';
-  src: url('../fonts/lora/Lora-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Lora';
-  src: url('../fonts/lora/Lora-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lora';
-  src: url('../fonts/lora/Lora-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic; }
+code {
+  font-family: Courier, monospace; }
 
 input {
   font-family: 'Lato', sans-serif; }
@@ -548,37 +397,33 @@ input {
   -moz-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s; }
-  .form-control[type="text"]::-webkit-input-placeholder, .form-control[type="email"]::-webkit-input-placeholder, .form-control[type="password"]::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder {
-    /* WebKit browsers */
-    color: #49494A;
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    -o-transition: all 0.35s;
-    transition: all 0.35s; }
-  .form-control[type="text"]:-moz-placeholder, .form-control[type="email"]:-moz-placeholder, .form-control[type="password"]:-moz-placeholder, textarea.form-control:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: #49494A;
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    -o-transition: all 0.35s;
-    transition: all 0.35s; }
-  .form-control[type="text"]::-moz-placeholder, .form-control[type="email"]::-moz-placeholder, .form-control[type="password"]::-moz-placeholder, textarea.form-control::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: #49494A;
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    -o-transition: all 0.35s;
-    transition: all 0.35s; }
-  .form-control[type="text"]:-ms-input-placeholder, .form-control[type="email"]:-ms-input-placeholder, .form-control[type="password"]:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder {
-    /* Internet Explorer 10+ */
-    color: #49494A;
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    -o-transition: all 0.35s;
-    transition: all 0.35s; }
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #49494A !important;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #49494A !important;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #49494A !important;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #49494A !important;
+  transition: all 0.35s; }
 
 textarea.form-control {
-  resize: none; }
+  resize: none;
+  padding-top: 0px; }
 
 .form-control[type="text"]:focus, .form-control[type="email"]:focus, .form-control[type="password"]:focus, textarea.form-control:focus {
   border-color: #18AED5;
@@ -587,16 +432,22 @@ textarea.form-control {
     color: #18AED5; }
   .form-control[type="text"]:focus::-webkit-input-placeholder, .form-control[type="email"]:focus::-webkit-input-placeholder, .form-control[type="password"]:focus::-webkit-input-placeholder, textarea.form-control:focus::-webkit-input-placeholder {
     /* WebKit browsers */
-    color: #18AED5; }
+    color: transparent !important; }
   .form-control[type="text"]:focus:-moz-placeholder, .form-control[type="email"]:focus:-moz-placeholder, .form-control[type="password"]:focus:-moz-placeholder, textarea.form-control:focus:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: #18AED5; }
+    color: transparent !important; }
   .form-control[type="text"]:focus::-moz-placeholder, .form-control[type="email"]:focus::-moz-placeholder, .form-control[type="password"]:focus::-moz-placeholder, textarea.form-control:focus::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-    color: #18AED5; }
+    color: transparent !important; }
   .form-control[type="text"]:focus:-ms-input-placeholder, .form-control[type="email"]:focus:-ms-input-placeholder, .form-control[type="password"]:focus:-ms-input-placeholder, textarea.form-control:focus:-ms-input-placeholder {
     /* Internet Explorer 10+ */
-    color: #18AED5; }
+    color: transparent !important; }
+
+.form-control.error {
+  color: #D91249 !important;
+  border-color: #D91249 !important; }
+  .form-control.error + label {
+    color: #D91249 !important; }
 
 .form-group {
   position: relative; }
@@ -612,16 +463,16 @@ label {
   transition: all 0.35s; }
 
 /* Font Awesome Checkboxes */
-input[type="checkbox"] {
+input[type="checkbox"], input[type="radio"] {
   visibility: hidden; }
 
-input[type="checkbox"]:checked:after, input[type="checkbox"]:after {
+input[type="checkbox"]:checked:after, input[type="checkbox"]:after, input[type="radio"]:checked:after, input[type="radio"]:after {
   visibility: visible;
   font-family: FontAwesome;
-  font-size: 18px;
+  font-size: 22px;
   position: relative;
   top: -5px;
-  left: 0px;
+  left: -10px;
   background-color: #FFF;
   display: inline-block;
   -webkit-transition: all 0.35s;
@@ -629,16 +480,66 @@ input[type="checkbox"]:checked:after, input[type="checkbox"]:after {
   -o-transition: all 0.35s;
   transition: all 0.35s; }
 
-input[type="checkbox"]:checked:after {
+input[type="checkbox"]:checked:after, input[type="radio"]:checked:after {
   content: '\f058'; }
 
-input[type="checkbox"]:after {
+input[type="checkbox"]:after, input[type="radio"]:after {
   content: '\f10c'; }
 
+input[type="checkbox"]:disabled, input[type="radio"]:disabled {
+  color: #ECECEC !important; }
+  input[type="checkbox"]:disabled + span, input[type="radio"]:disabled + span {
+    color: #ECECEC !important; }
+
 .checkbox-label {
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Lato', sans-serif;
-  font-weight: 700 !important; }
+  font-weight: 700 !important;
+  padding-left: 10px;
+  width: auto !important; }
+
+.subscription-group {
+  border-bottom: 1px solid #49494A !important; }
+
+.subscription {
+  padding-left: 40px;
+  margin-bottom: 8px;
+  margin-top: 35px;
+  text-align: left; }
+
+.subscription:hover {
+  cursor: pointer; }
+
+.subscription_menu {
+  display: none; }
+
+.edit-sub {
+  position: absolute;
+  right: 0px;
+  top: -10px;
+  font-size: 22px; }
+
+.option {
+  text-align: left;
+  padding-left: 40px;
+  margin: 0;
+  padding: 10px 0 10px 40px; }
+
+.selected a {
+  color: #ECECEC !important;
+  cursor: default;
+  text-decoration: none; }
+
+.option a:hover {
+  text-decoration: none; }
+
+.option:hover {
+  background-color: #F2F2F2;
+  cursor: pointer; }
+
+.option.selected:hover {
+  background-color: #FAFAFA !important;
+  cursor: default !important; }
 
 /*!
  * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
@@ -982,7 +883,8 @@ body {
   color: #49494A; }
 
 #contact, footer {
-  background: #FAFAFA; }
+  background: #FAFAFA;
+  padding-bottom: 50px; }
 
 footer p {
   font-size: 10px !important;
