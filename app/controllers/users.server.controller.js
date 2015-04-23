@@ -1,5 +1,6 @@
 var User = require('mongoose').model('User'),
 	Plan = require('mongoose').model('Plan'),
+	Stripe = require('stripe')("sk_test_9Z5AY0rUOLbtMMYQ4T5eOH1O"),
 	passport = require('passport');
 
 var getErrorMessage = function(err) {
@@ -25,7 +26,7 @@ var getErrorMessage = function(err) {
 	return message;
 };
 
-String.prototype.capitalizeFirstLetter = function() {
+String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
@@ -111,8 +112,8 @@ exports.renderBilling = function(req, res, next) {
 				password: req.body.password,
 				selected_plan: req.body.selected_plan,
 				subscription_checkbox: req.body.subscription_checkbox,
-				cycle: req.body.subscription_checkbox.capitalizeFirstLetter(),
-				plan: req.body.selected_plan.capitalizeFirstLetter(),
+				cycle: req.body.subscription_checkbox.capitalize(),
+				plan: req.body.selected_plan.capitalize(),
 				total_price: req.body.total_price
 			}
 			
@@ -180,6 +181,51 @@ exports.register = function(req, res, next) {
 				});
 			});
 		} else {
+			var stripeToken = req.body.stripeToken;
+			console.log(stripeToken);
+
+			var sub_plan = req.body.selected_plan + "_" + req.body.subscription_checkbox;
+				
+			Stripe.customers.create({
+				source: stripeToken,
+				plan: sub_plan,
+				email: req.body.email
+			}, function(err, customer) {
+				if(err) {
+					var form_data = {
+						firstname: req.body.firstname,
+						lastname: req.body.lastname,
+						email: req.body.email,
+						password: req.body.password,
+						selected_plan: req.body.selected_plan,
+						subscription_checkbox: req.body.subscription_checkbox,
+						cycle: req.body.subscription_checkbox.capitalize(),
+						plan: req.body.selected_plan.capitalize(),
+						total_price: req.body.total_price
+					}
+					
+					console.log(err);
+					
+					res.render('billing', {
+						title: 'Sign Up for Formula Stocks',
+						form_data: form_data,
+						messages: req.flash('error', err.message)
+					});
+				} else {
+					// Create a new customer object.
+					// Store customer.id
+					
+					console.log(customer.data);
+				}
+			});
+			
+/*
+			var charge = Stripe.charges.create({
+				amount: 
+			});
+*/
+			
+/*
 			var subtype = 0;
 			var subscription_length = new Date();
 			
@@ -225,6 +271,7 @@ exports.register = function(req, res, next) {
 					return res.redirect('/portfolio');
 				});
 			});
+*/
 		}
 	} else {
 		return res.redirect('/portfolio');

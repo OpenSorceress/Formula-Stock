@@ -4,7 +4,10 @@
 	$(document).ready(function() {
 		$('.express-error').slideDown();
 		
-		check_for_next();
+		if($('body#register').length > 0) {
+			console.log("register exists");
+			check_for_next();
+		}
 		
 		/* REMOVE ERRORS ON FOCUS */
 		$('input').focus(function() {

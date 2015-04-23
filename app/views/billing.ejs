@@ -37,7 +37,7 @@
 			<div class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2">
 				<a href="/"><img src="../img/flask.svg" alt="Formula Stocks" class="flask" /></a>
 
-				<form id="signup" class="text-center" method="post">
+				<form id="billing-form" class="text-center" method="post">
 					<h2>Billing Information</h2>
 
 					<% for(var i in messages) { %>
@@ -46,9 +46,12 @@
 						</div>
 					<% } %>
 
-					<p><b>Name:</b> <%=form_data.firstname%> <%=form_data.lastname%></p>
-					<p><b>Email:</b> <%=form_data.email%></p>
-					<p><b>Plan:</b> <%=form_data.plan%> Formula <%=form_data.cycle%> Subscription</p>
+					<p>
+						<br />
+						<b>Name:</b> <%=form_data.firstname%> <%=form_data.lastname%><br />
+						<b>Email:</b> <%=form_data.email%><br />
+						<b>Plan:</b> <%=form_data.plan%> Formula <%=form_data.cycle%> Subscription
+					</p>
 
 					<div class="col-lg-12 col-sm-12">
 						<div class="form-group">
@@ -68,7 +71,7 @@
 
 					<div class="col-lg-6 col-sm-6 no-padding-right">
 						<div class="form-group">
-							<input type="password" id="cvc" name="cvc" data-stripe="cvc" class="form-control" placeholder="CVC code" required="">
+							<input type="text" id="cvc" name="cvc" data-stripe="cvc" class="form-control" placeholder="CVC code" required="">
 							<label for="cvc"><i class="fa fa-ellipsis-h"></i></label>
 						</div>
 					</div>
@@ -79,17 +82,21 @@
 						</span></span></p>
 					</div>
 
-					<input type="hidden" value="" id="bot-check" />
+					<input type="hidden" id="firstname" name="firstname" value="<%=form_data.firstname%>" />
+					<input type="hidden" id="lastname" name="lastname" value="<%=form_data.lastname%>" />
+					<input type="hidden" id="email" name="email" value="<%=form_data.email%>" />
+					<input type="hidden" id="password" name="password" value="<%=form_data.password%>" />
+					<input type="hidden" id="selected_plan" name="selected_plan" value="<%=form_data.selected_plan%>" />
+					<input type="hidden" id="subscription_checkbox" name="subscription_checkbox" value="<%=form_data.subscription_checkbox%>" />
+					<input type="hidden" id="verification_code" name="verification_code" />
 
-					<p class="agreement">By creating an account, you agree to Formula Stock's <a href="#">Terms &amp; Conditions</a>.</p>
-
-					<div class="alert alert-danger validation" style="display: none;">
-						<p><strong><i class="fa fa-times-circle"></i> Error!</strong> <span class="error-message"></span></p>
+					<div class="col-lg-12 col-sm-12">
+						<div class="alert alert-danger validation" style="display: none;">
+							<p><strong><i class="fa fa-times-circle"></i> Error!</strong> <span class="error-message"></span></p>
+						</div>
 					</div>
 					
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit Payment &amp; Sign Up</button>					
-
-					<p>Already have an account? <a href="/login">Sign in.</a></p>
 				</form>
 			</div>
 		</div>
@@ -99,6 +106,8 @@
 	<!-- Main JavaScript -->
 	<!-- <script src="/js/main.min.js"></script> -->
 	<script src="/js/forms.min.js"></script>
+	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+	<script type="text/javascript" src="/js/validation/billing.min.js"></script>
 </body>
 
 </html>

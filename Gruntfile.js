@@ -26,7 +26,8 @@ module.exports = function(grunt) {
 					'public/js/home.min.js' : ['assets/js/home.js'],
 					'public/js/results.min.js' : ['assets/js/results.js'],
 					'public/js/forms.min.js' : ['assets/js/forms.js'],
-					'public/js/validation/user_registration.min.js' : ['assets/js/validation/user_registration.js']
+					'public/js/validation/user_registration.min.js' : ['assets/js/validation/user_registration.js'],
+					'public/js/validation/billing.min.js' : ['assets/js/validation/billing.js']
 				}
 			}
 		},

@@ -25,6 +25,7 @@ var UserSchema = new Schema({
 	subtype: Number,
 	trial_exp: Date,
 	sub_renew: Date,
+	stripe_id: String,
 	provider: String,
 	providerId: String,
 	todos: {}
