@@ -374,3 +374,6 @@ blockquote p {
 .btn-xl {
   padding: 15px 30px;
   width: 300px; }
+
+code {
+  font-family: Courier, monospace; }
