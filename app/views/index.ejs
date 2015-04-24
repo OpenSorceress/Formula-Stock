@@ -55,9 +55,12 @@
                     <li><a class="page-scroll" href="#features-and-pricing">Features &amp; Pricing</a></li>
                     <li><a class="page-scroll" href="#about-us">About Us</a></li>
                     <li><a class="page-scroll" href="#contact">Get In Touch</a></li>
-                    <li></li>
-                    <li><a href="/login">Sign In</a></li>
-                    <li><a href="/register">Sign Up</a></li>
+                    <% if(locals.user) { %>
+                        <li class="signout"><a class="signout" href="/logout">Sign Out <i class="fa fa-sign-out"></i></a></li>
+                    <% } else { %>
+                        <li class="signin"><a class="signin" href="/login">Sign In <i class="fa fa-sign-in"></i></a></li>
+                        <li class="signup"><a class="signup" href="/register">Sign Up <i class="fa fa-sign-out fa-rotate-270"></i></a></li>
+                    <% } %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -73,7 +76,7 @@
                 <hr>
                 <p><i>Formula Stocks</i> is an expert system that is based on history's best investment principles combined with groundbreaking research... And we have the answer.</p>
                 <a id="read_more" href="#formula-stocks" class="btn btn-primary btn-xl page-scroll">Find Out Now</a>
-                <a href="/register" class="btn btn-primary btn-xl">Sign Up for Free</a>
+                <a id="signup-a-btn" href="/register" class="btn btn-primary btn-xl">Sign Up for Free</a>
             </div>
         </div>
     </header>
@@ -203,7 +206,7 @@
                         <p>Access to all of our system's features</p>
                         <p>Cancel or Upgrade at any time</p>
                         <p><strong>No Credit Card Required</strong></p>
-                        <a href="/register" class="btn btn-primary">Sign Up Today</a>
+                        <a href="/register" class="btn btn-primary signup-a-btn">Sign Up Today</a>
                     </div>
                 </div>
 
@@ -220,7 +223,7 @@
                         <p><strong>79.7%</strong> of stocks sold with profit</p>
                         <p><strong>19.88%</strong> Geometric IRR</p>
                         <p><strong>17.91%</strong> CAGR</p>
-                        <a href="/register?p=pro" class="btn btn-primary">Sign Up Today</a>
+                        <a href="/register?p=pro" class="btn btn-primary signup-a-btn">Sign Up Today</a>
                     </div>
                 </div>
 
@@ -254,7 +257,7 @@
                         <p><strong>95.6%</strong> of stocks sold with profit</p>
                         <p><strong>50.8%</strong> Geometric IRR</p>
                         <p><strong>33.4%</strong> CAGR</p>
-                        <a href="/register?p=platinum" class="btn btn-primary">Sign Up Today</a>
+                        <a href="/register?p=platinum" class="btn btn-primary signup-a-btn">Sign Up Today</a>
                     </div>
                 </div>
     		</div>

@@ -577,6 +577,7 @@ aside {
   background-color: #FAFAFA;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
+  -o-transition: all 0.35s;
   transition: all 0.35s; }
 
 .navbar-default .navbar-header .navbar-brand {
@@ -745,6 +746,7 @@ header .header-content .header-content-inner #read_more {
   background: rgba(24, 174, 213, 0.9);
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
+  -o-transition: all 0.35s;
   transition: all 0.35s; }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
@@ -821,9 +823,10 @@ body {
 .pricing-option {
   padding: 0;
   margin: 25px 0;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease; }
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease; }
 
 .pricing-option.active {
   background: #1E1E26;
@@ -860,8 +863,8 @@ body {
   border: 3px solid #FAFAFA !important;
   background: transparent; }
   .pricing-option.active .btn-primary:hover {
-    border: 3px solid #1599BB !important;
-    background-color: #1599BB; }
+    border: 3px solid #10BF8B !important;
+    background-color: #10BF8B; }
 
 .dollar {
   position: relative;
@@ -890,6 +893,44 @@ footer p {
   font-size: 10px !important;
   padding: 0 10%;
   color: #B9B9B9; }
+
+a.signout {
+  color: #D91249 !important; }
+  a.signout:hover {
+    color: #FAFAFA !important; }
+
+a.signup {
+  color: #12D99E !important; }
+  a.signup:hover {
+    color: #FAFAFA !important; }
+
+a.signin {
+  color: #18AED5 !important; }
+  a.signin:hover {
+    color: #FAFAFA !important; }
+
+li.signout, li.signup, li.signin, a.signout, a.signup, a.signin {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s; }
+
+li.signout:hover {
+  background-color: #D91249 !important; }
+
+li.signup:hover {
+  background-color: #12D99E !important; }
+
+li.signin:hover {
+  background-color: #18AED5 !important; }
+
+#signup-a-btn, .signup-a-btn {
+  background-color: #12D99E;
+  border: 3px solid #12D99E !important; }
+
+#signup-a-btn:hover, .signup-a-btn:hover {
+  background-color: #10BF8B;
+  border: 3px solid #10BF8B !important; }
 
 @media (max-width: 400px) {
   #log-scale {

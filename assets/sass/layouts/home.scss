@@ -47,6 +47,7 @@ aside {
     background-color: $lightest_gray;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
+    -o-transition: all .35s;
     transition: all .35s;
 }
 
@@ -267,6 +268,7 @@ header .header-content .header-content-inner #read_more {
     background: rgba(24,174,213,.9);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
+    -o-transition: all .35s;
     transition: all .35s;
 }
 
@@ -362,9 +364,10 @@ body {
 .pricing-option {
 	padding: 0;
 	margin: 25px 0;
-	transition: all 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
+	-webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
 }
 
 .pricing-option.active {
@@ -413,8 +416,8 @@ body {
 	background: transparent;
 	
 	&:hover {
-		border: 3px solid $dark_blue!important;
-		background-color: $dark_blue;
+		border: 3px solid $dark_green!important;
+		background-color: $dark_green;
 	}
 }
 
@@ -449,6 +452,61 @@ footer p {
 	font-size: 10px!important;
 	padding: 0 10%;
 	color: $dark_gray;	
+}
+
+a.signout {
+	color: $red!important;
+	
+	
+	&:hover {
+		color: $lightest_gray!important;
+	}
+}
+
+a.signup {
+	color: $green!important;
+	
+	&:hover {
+		color: $lightest_gray!important;
+	}
+}
+
+a.signin {
+	color: $blue!important;
+	
+	&:hover {
+		color: $lightest_gray!important;
+	}
+}
+
+li.signout, li.signup, li.signin,
+a.signout, a.signup, a.signin {
+	-webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+li.signout:hover {
+	background-color: $red!important;
+}
+
+li.signup:hover {
+	background-color: $green!important;
+}
+
+li.signin:hover {
+	background-color: $blue!important;
+}
+
+#signup-a-btn, .signup-a-btn {
+	background-color: $green;
+	border: 3px solid $green!important;
+}
+
+#signup-a-btn:hover, .signup-a-btn:hover {
+	background-color: $dark_green;
+	border: 3px solid $dark_green!important;
 }
 
 @media(max-width:400px) {
