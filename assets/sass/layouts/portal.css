@@ -375,6 +375,9 @@ blockquote p {
   padding: 15px 30px;
   width: 300px; }
 
+code {
+  font-family: Courier, monospace; }
+
 input {
   font-family: 'Lato', sans-serif; }
 

@@ -210,7 +210,12 @@ exports.render_portfolio = function(req, res, next) {
 						'fs_invested' : add_commas(fs_total.toFixed(2)),
 						'my_formula_stocks' : my_formula_stocks,
 						'os_invested' : add_commas(os_total.toFixed(2)),
-						'my_other_stocks' : my_other_stocks
+						'my_other_stocks' : my_other_stocks,
+						'user' : {
+							'firstname' : req.user.firstname,
+							'lastname' : req.user.lastname,
+							'plan' : req.user.plan
+						}
 						// 'investment_capital' : add_commas(req.user.investment_capital.toFixed(2)),
 						// 'capital_allocation' : ((req.user.investment_capital * 100) / (fs_total + req.user.investment_capital)).toFixed(1)
 					}

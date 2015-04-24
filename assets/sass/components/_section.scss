@@ -1,0 +1,32 @@
+.section {
+	background-color: $white;
+	border: 1px solid $gray;
+	border-radius: 3px;
+	margin-top: 35px;
+	padding: 0;
+}
+
+.section-header {
+	border-bottom: 1px solid $gray;
+	padding: 15px 20px;
+}
+
+.sub-section p {
+	color: $dark_gray;
+	font-size: 12px;
+	
+	border-bottom: 1px solid $gray;
+	padding: 7px 20px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}

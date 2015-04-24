@@ -11,7 +11,8 @@ module.exports = function(grunt) {
 					'public/css/main.css' : 'assets/sass/main.scss',
 					'public/css/dashboard.css' : 'assets/sass/dashboard.scss',
 					'public/css/home.min.css' : 'assets/sass/layouts/home.scss',
-					'public/css/portal.min.css' : 'assets/sass/layouts/portal.scss'
+					'public/css/portal.min.css' : 'assets/sass/layouts/portal.scss',
+					'public/css/dashboard.min.css' : 'assets/sass/layouts/dashboard.scss'
 				}
 			}
 		},
@@ -26,6 +27,7 @@ module.exports = function(grunt) {
 					'public/js/home.min.js' : ['assets/js/home.js'],
 					'public/js/results.min.js' : ['assets/js/results.js'],
 					'public/js/forms.min.js' : ['assets/js/forms.js'],
+					'public/js/dashboard.min.js' : ['assets/js/dashboard.js'],
 					'public/js/validation/user_registration.min.js' : ['assets/js/validation/user_registration.js'],
 					'public/js/validation/billing.min.js' : ['assets/js/validation/billing.js']
 				}
