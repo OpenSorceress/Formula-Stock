@@ -36,7 +36,8 @@ var _signup_bot_check			= undefined;
 						} else {
 							if(has_cycle()) {
 								// Go to next page.
-								continue_to_billing();
+								register();
+								// continue_to_billing();
 							} else {
 								// Return error: "Please select a cycle."
 								$('.validation').toggleSlide();
@@ -67,12 +68,13 @@ var _signup_bot_check			= undefined;
 	/* Registers User */
 	function register() {
 		$("#signup").attr("action", "/register");
+		$("#total_price").val($('.amount-due').html());
 		$("#signup").submit();
 	}
 	
 	/* Takes user to billing */
 	function continue_to_billing() {
-		$("#signup").attr("action", "/register/billing");
+		$("#signup").attr("action", "/billing");
 		$("#total_price").val($('.amount-due').html());
 		$("#signup").submit();
 	}

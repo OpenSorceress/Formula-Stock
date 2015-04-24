@@ -54,9 +54,7 @@
 					$('span.current-subscription').html('Platinum Formula');
 					disable_month_only();
 				}
-				
-				$('#selected_plan').val($(this).attr('href'));
-				
+				update_plan();
 				update_price();
 				toggle_state();
 			}
@@ -65,6 +63,7 @@
 		/* UPDATE PRICE WHEN RADIO VALUE CHANGES */
 		$("input:radio[name ='subscription_checkbox']").change(function () {
 			update_price();
+			update_plan();
 		});
 	});
 	
@@ -201,5 +200,9 @@
 		$.get('/price', parameters, function(data) {
 			callback(data.price);
 		});
+	}
+	
+	function update_plan() {
+		$('#selected_plan').val($('.selected a').attr("href") + "_" + $("input:radio[name ='subscription_checkbox']:checked").val());
 	}
 })(jQuery);

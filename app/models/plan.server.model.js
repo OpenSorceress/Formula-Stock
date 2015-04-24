@@ -3,11 +3,9 @@ var mongoose = require('mongoose'),
 
 var PlanSchema = new Schema({
 	name: String,
-	display_name: String,
-	price: {
-		monthly: Number,
-		yearly: Number
-	}
+	formula: String,
+	cycle: String,
+	price: Number
 });
 
 PlanSchema.statics.findByName = function(param, callback) {

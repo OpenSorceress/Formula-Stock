@@ -14,7 +14,7 @@
 			$('#exp-month').val(exp[0]);
 			$('#exp-year').val(exp[1]);
 			
-			var customer_name = $('#firstname').val() + " " + $('#lastname').val();
+			var customer_name = $('#name').val();
 			
 			Stripe.card.createToken({
 				name: customer_name,
@@ -50,7 +50,7 @@
 		} else {
 			var token = response.id;
 			$form.append($('<input type="hidden" name="stripeToken" />').val(token));
-			$form.attr("action", "/register");
+			$form.attr("action", "/billing");
 			$form.get(0).submit();
 		}
 	}

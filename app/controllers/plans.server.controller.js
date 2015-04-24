@@ -8,14 +8,11 @@ exports.getPrice = function(req, res) {
 	var param_name = req.query.name;
 	var param_cycle = req.query.cycle;
 	
-	Plan.findByName(param_name, function(err, selected_plan) {
-		if(param_cycle == 'yearly') {
-			var formatted_price = format_price(selected_plan.price.yearly) + '.00';
-			res.send({price: formatted_price});
-		} else if(param_cycle == 'monthly') {
-			var formatted_price = format_price(selected_plan.price.monthly) + '.00';
-			res.send({price: formatted_price});
-		}
+	var query = param_name + "_" + param_cycle;
+	
+	Plan.findByName(query, function(err, selected_plan) {
+		var formatted_price = format_price(selected_plan.price) + '.00';
+		res.send({price: formatted_price});
 	});
 }
 

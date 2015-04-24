@@ -5,7 +5,7 @@ var users = require('../../app/controllers/users.server.controller'),
 module.exports = function(app) {
 	/* User Registration Routes */
 	app.route('/register').get(users.renderRegister).post(users.register);
-	app.route('/register/billing').post(users.renderBilling);
+	app.route('/billing').get(users.renderBilling).post(users.billing);
 	
 	/* User Login Route */
 	app.route('/login').get(users.renderLogin).post(passport.authenticate('local', {

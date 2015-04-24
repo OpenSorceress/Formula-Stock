@@ -24,8 +24,8 @@ var UserSchema = new Schema({
 	usertype: Number,
 	plan: String,
 	status: String,
-	trial_exp: Date,
-	sub_renew: Date,
+	trial_expires: Date,
+	expires: Date,
 	stripe_id: String,
 	provider: String,
 	providerId: String,
@@ -92,5 +92,27 @@ UserSchema.statics.findUniqueEmail = function(email, suffix, callback) {
 		}
 	);
 };
+
+UserSchema.statics.getPlan = function(email, callback) {
+	var _this = this;
+	
+	_this.findOne({
+		email: email
+	}, function(error, user) {
+		if(!error) {
+			var data = {
+				plan: user.plan,
+				status: user.status
+			};
+			
+			callback(null, data);
+		} else {
+			var error = {
+				message: "User does not exist."
+			}
+			callback(error, null);
+		}
+	});
+}
 
 mongoose.model('User', UserSchema);
