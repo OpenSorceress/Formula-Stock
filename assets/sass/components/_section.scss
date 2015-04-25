@@ -19,6 +19,21 @@
 	padding: 7px 20px;
 }
 
+.section-content {
+	padding: 0 20px;
+	padding-bottom: 20px;
+}
+
+.section-expansion {
+	border-top: 1px solid $gray;
+	padding: 0px 20px;
+	clear: both;
+}
+
+.inner-section {
+	padding: 15px 0px;
+}
+
 .left {
 	float: left;
 }

@@ -56,6 +56,7 @@
                     <li><a class="page-scroll" href="#about-us">About Us</a></li>
                     <li><a class="page-scroll" href="#contact">Get In Touch</a></li>
                     <% if(locals.user) { %>
+                        <li class="signin"><a class="signin" href="/portfolio">Dashboard <i class="fa fa-tachometer"></i></a></li>
                         <li class="signout"><a class="signout" href="/logout">Sign Out <i class="fa fa-sign-out"></i></a></li>
                     <% } else { %>
                         <li class="signin"><a class="signin" href="/login">Sign In <i class="fa fa-sign-in"></i></a></li>
@@ -365,6 +366,7 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
 
+    <!-- Plugin AmCharts -->
     <script type="text/javascript" src="js/amcharts.js"></script>
 	<script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
 	<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
