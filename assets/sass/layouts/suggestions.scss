@@ -2,3 +2,47 @@
 @import '../components/section.scss';
 @import '../components/allocation.scss';
 @import '../components/history.scss';
+
+
+.suggestion-data {
+	text-align: center;
+	padding: 15px 0px;
+	margin-bottom: 20px;
+}
+
+.suggestion-data.green {
+	background-color: $green;
+}
+
+.suggestion-data.blue {
+	background-color: $blue;
+}
+
+.suggestion-data.navy {
+	background-color: $navy;
+}
+
+.suggestion-data p {
+	color: $white;
+	margin: 0;
+	padding: 0;
+}
+
+.suggestion-data .value {
+	font-size: 26px;
+	font-weight: 900;
+	line-height: 26px;
+}
+
+.suggestion-data .label {
+	margin-top: -25px;
+	font-weight: 500;
+}
+
+i.value-icon {
+	font-size: 100px;
+	position: absolute;
+	left: 7%;
+	top: -20%;
+	opacity: 0.2;
+}

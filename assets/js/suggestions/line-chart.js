@@ -9,7 +9,7 @@
 				},
 				"name" : "CARBO CERAMICS      ",
 				"ticker" : "CRR",
-				"action" : "BUY",
+				"action" : "SELL",
 				"suggested_price" : 31.19,
 				"percentage_weight" : 99.9983,
 				"advanced_data" : [
@@ -145,7 +145,7 @@
 						// Format Chart Data
 						var chart_data = format_chart_data(promises[j], suggestions[j].suggested_price);
 						var chart_data = chart_data.reverse();
-						var chart_conf = get_chart_config(chart_data, suggestions[j].suggested_price);
+						var chart_conf = get_chart_config(chart_data, suggestions[j].suggested_price, suggestions[j].action);
 						
 						var jq_elem = "#line-chart-" + j;
 						var am_elem = "line-chart-" + j;
@@ -164,13 +164,21 @@
 		next();
 	}
 	
-	function get_chart_config(chart_data, suggested_price) {
+	function get_chart_config(chart_data, suggested_price, action) {
+		var positive_color = "#D9124A";
+		var negative_color = "#12D99E";
+		
+		if(action == "SELL") {
+			positive_color = "#12D99E";
+			negative_color = "#D9124A";
+		}
+		
 		return {
 			"type" : "serial",
 			"theme" : "light",
-			"marginTop" : 9,
-			"marginRight" : 17,
-			"marginLeft" : 16,
+			"marginTop" : 0,
+			"marginRight" : 0,
+			"marginLeft" : 0,
 			"marginBottom" : 25,
 			"autoMargins" : false,
 			"pathToImages" : "/js/amcharts/images/",
@@ -186,20 +194,37 @@
 				"bulletBorderColor": "#FFFFFF",
 				"hideBulletsCount" : 50,
 				"lineThickness" : 2,
-				"lineColor" : "#D9124A",
-				"negativeLineColor": "#12D99E",
+				"lineColor" : positive_color,
+				"negativeLineColor": negative_color,
 				"valueField" : "value",
 				"negativeBase" : suggested_price
 			}],
-			"chartScrollbar" : {},
+			"chartScrollbar" : {
+				"enabled" : false
+			},
 			"chartCursor" : {},
 			"categoryField" : "date",
 			"categoryAxis" : {
 				"parseDates": true,
 				"axisAlpha": 0,
 				"minHorizontalGap": 55
-			}
+			},
+			"valueAxis" : {
+				"labelFunction" : format_label	
+			},
+			"guides": [{
+					"value" : suggested_price,
+					"lineColor" : "#18AED5",
+					"lineAlpha": 1,
+					"lineThickness": 2,
+					"position" : "right"
+			}]
 		};
+	}
+	
+	function format_label(value, valueString, axis) {
+		valueString = "$" + value + ".00";
+		return valueString;
 	}
 	
 	function format_chart_data(response, suggested_price) {
@@ -208,7 +233,7 @@
 		response.data.forEach(function(data) {
 			chartData.push({
 				date: new Date(data[0]),
-				price: formatPrice(data[4]),
+				price: formatPrice(data[4].toFixed(2)),
 				value: data[4]
 				// percent: (((data[4] / suggested_price) * 100) - 100)
 			});

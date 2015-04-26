@@ -11,16 +11,25 @@
 	padding: 15px 20px;
 }
 
+.section-header h1 {
+	font-size: 24px;
+	padding-top: 5px;
+}
+
+.sub-section {
+	border-bottom: 1px solid $gray;
+	padding: 7px 20px;
+	margin-bottom: 20px;
+}
+
 .sub-section p {
 	color: $dark_gray;
 	font-size: 12px;
-	
-	border-bottom: 1px solid $gray;
-	padding: 7px 20px;
+	margin-bottom: 0;
 }
 
 .section-content {
-	padding: 0 20px;
+	padding: 0 5px;
 	padding-bottom: 20px;
 }
 
