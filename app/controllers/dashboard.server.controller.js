@@ -22,16 +22,132 @@ function add_commas(nStr) {
 	return x1 + x2;
 }
 
-exports.render_account = function(req, res, next) {
-	var user = {
-		"firstname" : req.user.firstname,
-		"lastname" : req.user.lastname,
-		"email" : req.user.email
+exports.render_account = function(req, res, next) {	
+	var plan = {};
+	var years = [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December"
+	];
+	
+	if(req.user.plan == "platinum_yearly") {
+		var expires = req.user.expires;
+		var yyyy = expires.getFullYear();
+		var mm = Number(expires.getMonth());
+		var dd = expires.getDay();
+		
+		var month = years[mm - 1];
+		var expires_str = month + " " + dd + ", " + yyyy;
+		
+		plan = {
+			formula: "Platinum Formula",
+			rate: "$20,000 Annually",
+			expires: expires_str,
+			status: req.user.status
+		};
+	} else if(req.user.plan == "premium_yearly") {
+		var expires = req.user.expires;
+		var yyyy = expires.getFullYear();
+		var mm = Number(expires.getMonth());
+		var dd = expires.getDay();
+		
+		var month = years[mm - 1];
+		var expires_str = month + " " + dd + ", " + yyyy;
+		
+		plan = {
+			formula: "Premium Formula",
+			rate: "$1,100 Annually",
+			expires: expires_str,
+			status: req.user.status
+		};
+	} else if (req.user.plan == "premium_monthly") {
+		var expires = req.user.expires;
+		var yyyy = expires.getFullYear();
+		var mm = Number(expires.getMonth());
+		var dd = expires.getDay();
+		
+		var month = years[mm - 1];
+		var expires_str = month + " " + dd + ", " + yyyy;
+		
+		plan = {
+			formula: "Premium Formula",
+			rate: "$100 Monthly",
+			expires: expires_str,
+			status: req.user.status
+		};
+	} else if (req.user.plan == "pro_yearly") {
+		var expires = req.user.expires;
+		var yyyy = expires.getFullYear();
+		var mm = Number(expires.getMonth());
+		var dd = expires.getDay();
+		
+		var month = years[mm - 1];
+		var expires_str = month + " " + dd + ", " + yyyy;
+		
+		plan = {
+			formula: "Pro Formula",
+			rate: "$550 Annually",
+			expires: expires_str,
+			status: req.user.status
+		};
+	} else if (req.user.plan == "pro_monthly") {
+		var expires = req.user.expires;
+		var yyyy = expires.getFullYear();
+		var mm = Number(expires.getMonth());
+		var dd = expires.getDay();
+		
+		var month = years[mm - 1];
+		var expires_str = month + " " + dd + ", " + yyyy;
+		
+		plan = {
+			formula: "Pro Formula",
+			rate: "$50 Monthly",
+			expires: expires_str,
+			status: req.user.status
+		};
+	} else if (req.user.plan == "trial") {
+		var expires = req.user.trial_expires;
+		var yyyy = expires.getFullYear();
+		var mm = Number(expires.getMonth());
+		var dd = expires.getDay();
+		
+		var month = years[mm - 1];
+		var expires_str = month + " " + dd + ", " + yyyy;
+		
+		plan = {
+			formula: "Pro Formula",
+			rate: "$0",
+			expires: expires_str,
+			status: req.user.status
+		}
 	}
+	
+	var data = {
+		user: {
+			"firstname" : req.user.firstname,
+			"lastname" : req.user.lastname,
+			"email" : req.user.email,
+			"plan" : req.user.plan
+		},
+		plan: plan
+	}
+	
+	
+	
+	console.log(req.user.expires);
 	
 	res.render('account', {
 		title: 'Formula Stocks - My Account',
-		data: user
+		data: data
 	});
 }
 

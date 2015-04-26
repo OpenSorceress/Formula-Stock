@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Application Metadata -->
+	<meta chartset="utf-8">
+	<meta name="language" content="english">
+	<meta name="subject" content="">
+	<meta name="description" content="">
+	<meta name="subtitle" content="Be on the winning team. Beat the market.">
+	<meta name="keywords" content="">
+	<meta name="copyright" content="Lyck Invest ApS">
+	
+	<!-- Credits -->
+	<meta name="designer" content="Lindsay Roberts, Lindsay.Roberts@protonmail.com">
+
+	<!-- Apple Meta Tags -->
+	<meta name="apple-mobile-web-app-title" content="Formula Stocks">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Internet Explorer Meta Tags -->
+	<meta name="application-name" content="Formula Stocks">
+	<meta name="msapplication-tooltip" content="Formula Stocks">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Bootstrap Core CSS -->
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link href="/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="/css/dashboard.min.css" rel="stylesheet">
+	<link href="/css/suggestions.min.css" rel="stylesheet">
+	<!-- <link href="/css/account.min.css" rel="stylesheet"> -->
+
+	<!-- IE10 Viewport Bug Fix -->
+	<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+	<!-- jQuery & jQuery UI -->
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">Hello, <%= data.user.firstname %></li>
+				<li class="sidebar-heading"><i class="fa fa-flask"></i> Suggestions</li>
+				<li><a href="/suggestions/pro">Pro Suggestions <span class="sr-only">(current)</span></a></li>
+				<% if(data.user.plan == 'premium_monthly' || data.user.plan == 'premium_yearly' || data.user.plan == 'platinum_yearly') { %>
+					<li><a href="/suggestions/premium">Premium Suggestions</a></li>
+				<% } %>
+				
+				<% if(data.user.plan == 'platinum_yearly') { %>
+					<li><a href="/suggestions/platinum">Platinum Suggestions</a></li>
+				<% } %>
+
+				<li class="sidebar-heading"><i class="fa fa-line-chart"></i> Our Portfolios</li>
+				<li><a href="/portfolio/pro">Pro Portfolio</a></li>
+				<% if(data.user.plan == 'premium_monthly' || data.user.plan == 'premium_yearly' || data.user.plan == 'platinum_yearly') { %>
+					<li><a href="/portfolio/premium">Premium Portfolio</a></li>
+				<% } %>
+				
+				<% if(data.user.plan == 'platinum_yearly') { %>
+					<li><a href="/portfolio/platinum">Platinum Portfolio</a></li>
+				<% } %>
+
+				<% if(data.user.type == 2) { %>
+					<li class="sidebar-heading"><i class="fa fa-user"></i> Administration</li>
+					<li><a href="/admin/upload">Upload JSON Documents</a></li>
+				<% } %>
+
+				<li class="sidebar-heading"><i class="fa fa-user"></i> <%= data.user.firstname %> <%= data.user.lastname %></li>
+				<li><a href="/portfolio/user">Review My Portfolio</a></li>
+				<li><a href="/account">Manage My Account</a></li>
+				<li><a href="/logout">Sign Out</a></li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars"></i></a>
+			<div class="logo-container">
+				<a href="/"><img id="logo" src="/img/logo.svg" alt="Formula Stocks"></a>
+			</div>
+			
+			<div class="container-fluid">
+				<div class="row">
+					<!-- Insert Views Here -->
+					<div class="col-lg-12 section">
+						<div class="section-header">
+							<div class="left">
+								<h1>Nu Skin enterprises</h1>
+							</div>
+							
+							<div class="right">
+								<button class="btn-xs btn-primary" data-toggle="collapse" data-target="#advanced-data-2">Show Advanced</button>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+
+						<div class="sub-section">
+								<p class="left"><i>Ticker: NUS</i></p>
+								<p class="right"><i>Last updated 4 days ago.</i></p>
+								<div class="clear"></div>
+						</div>
+
+						<div class="section-content">
+							<div class="col-lg-4">
+								<div class="suggestion-data green">
+									<p class="value"><i class="fa fa-tags value-icon"></i>SELL</p>
+									<p class="label">Suggested Action</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<div class="suggestion-data blue">
+									<p class="value"><i class="fa fa-flask value-icon"></i>$31.19</p>
+									<p class="label">Suggested Price</p>
+								</div>
+							</div>
+							
+							<div class="col-lg-4">
+								<div class="suggestion-data navy">
+									<p class="value"><i class="fa fa-arrow-up value-icon"></i>$31.60</p>
+									<p class="label">Last Price</p>
+								</div>
+							</div>
+
+							<div class="col-lg-8 bg-test-2">
+								<div id="line-chart-0" class="line-chart">
+									<p class="load-chart">
+										<i class="fa fa-spinner fa-lg fa-pulse"></i>
+										<br />Loading Data
+									</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4 bg-test-1">
+								<div id="pie-chart-0" class="pie-chart"></div>
+								<div class="pie-chart-data">
+									<p class="allocation">99.9%</p>
+									<p class="subtext">Allocation</p>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+						
+						<div id="advanced-data-2" class="collapse section-expansion">
+							<div class="inner-section">
+								<p>Lots of tests.</p>
+								<p>Lots of tests.</p>
+								<p>Lots of tests.</p>
+								<p>Lots of tests.</p>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="col-lg-12 section">
+						<div class="section-header">
+							<div class="left">
+								<h1>THE SECOND TEST</h1>
+							</div>
+							
+							<div class="right">
+								<button class="btn-xs btn-primary" data-toggle="collapse" data-target="#advanced_data1">Show Advanced</button>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+
+						<div class="sub-section">
+							<p><i>Last updated 4 days ago.</i></p>
+						</div>
+
+						<div class="section-content">
+							<div class="col-lg-4">
+								<div class="suggestion-data green">
+									<p class="value"><i class="fa fa-tags value-icon"></i>BUY</p>
+									<p class="label">Suggested Action</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<div class="suggestion-data blue">
+									<p class="value"><i class="fa fa-flask value-icon"></i>$60.11</p>
+									<p class="label">Suggested Price</p>
+								</div>
+							</div>
+							
+							<div class="col-lg-4">
+								<div class="suggestion-data navy">
+									<p class="value"><i class="fa fa-arrow-down value-icon"></i>$58.44</p>
+									<p class="label">Last Price</p>
+								</div>
+							</div>
+
+							<div class="col-lg-8 bg-test-2">
+								<div id="line-chart-1" class="line-chart">
+									<p class="load-chart">
+										<i class="fa fa-spinner fa-lg fa-pulse"></i>
+										<br />Loading Data
+									</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4 bg-test-1">
+								<div id="pie-chart-1" class="pie-chart"></div>
+								<div class="pie-chart-data">
+									<p class="allocation">23.9%</p>
+									<p class="subtext">Allocation</p>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+						
+						<div id="advanced_data1" class="collapse section-expansion">
+							<div class="inner-section">
+								<p>Lots of tests.</p>
+								<p>Lots of tests.</p>
+								<p>Lots of tests.</p>
+								<p>Lots of tests.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /#page-content-wrapper -->
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="/js/bootstrap.min.js"></script>
+
+	<!-- Plugin AmCharts -->
+	<script src="/js/amcharts.js"></script>
+	<script src="/js/amcharts/serial.js"></script>
+	<script src="/js/amcharts/pie.js"></script>
+	<script src="/js/amcharts/themes/light.js"></script>
+
+	<!-- Custom JavaScript -->
+	<script src="/js/dashboard.min.js"></script>
+	<script src="/js/suggestions/pie-chart.min.js"></script>
+	<script src="/js/suggestions/line-chart.min.js"></script>
+</body>
+
+</html>

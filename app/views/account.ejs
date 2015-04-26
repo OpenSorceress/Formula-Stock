@@ -2,177 +2,196 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="description" content="">
-    <meta name="author" content="Lindsay Roberts">
+	<!-- Application Metadata -->
+	<meta chartset="utf-8">
+	<meta name="language" content="english">
+	<meta name="subject" content="">
+	<meta name="description" content="">
+	<meta name="subtitle" content="Be on the winning team. Beat the market.">
+	<meta name="keywords" content="">
+	<meta name="copyright" content="Lyck Invest ApS">
+	
+	<!-- Credits -->
+	<meta name="designer" content="Lindsay Roberts, Lindsay.Roberts@protonmail.com">
 
-    <title><%=title %></title>
+	<!-- Apple Meta Tags -->
+	<meta name="apple-mobile-web-app-title" content="Formula Stocks">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.dashboard.css">
-    <link rel="stylesheet" href="/css/dashboard.css">
+	<!-- Internet Explorer Meta Tags -->
+	<meta name="application-name" content="Formula Stocks">
+	<meta name="msapplication-tooltip" content="Formula Stocks">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="//use.fonticons.com/9b071e54.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="/js/jquery-ui.min.js"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Bootstrap Core CSS -->
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link href="/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="/css/dashboard.min.css" rel="stylesheet">
+	<link href="/css/account.min.css" rel="stylesheet">
+
+	<!-- IE10 Viewport Bug Fix -->
+	<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+	<!-- jQuery & jQuery UI -->
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 </head>
 
-<body id="account">
-    <!-- Mobile Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header col-sm-3 col-md-2">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+<body>
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">Hello, <%= data.user.firstname %></li>
+				<li class="sidebar-heading"><i class="fa fa-flask"></i> Suggestions</li>
+				<li><a href="/suggestions/pro">Pro Suggestions <span class="sr-only">(current)</span></a></li>
+				<% if(data.user.plan == 'premium_monthly' || data.user.plan == 'premium_yearly' || data.user.plan == 'platinum_yearly') { %>
+					<li><a href="/suggestions/premium">Premium Suggestions</a></li>
+				<% } %>
+				
+				<% if(data.user.plan == 'platinum_yearly') { %>
+					<li><a href="/suggestions/platinum">Platinum Suggestions</a></li>
+				<% } %>
 
-                <a class="navbar-brand" href="#"><%= data.firstname %> <%= data.lastname %></a>
-            </div>
+				<li class="sidebar-heading"><i class="fa fa-line-chart"></i> Our Portfolios</li>
+				<li><a href="/portfolio/pro">Pro Portfolio</a></li>
+				<% if(data.user.plan == 'premium_monthly' || data.user.plan == 'premium_yearly' || data.user.plan == 'platinum_yearly') { %>
+					<li><a href="/portfolio/premium">Premium Portfolio</a></li>
+				<% } %>
+				
+				<% if(data.user.plan == 'platinum_yearly') { %>
+					<li><a href="/portfolio/platinum">Platinum Portfolio</a></li>
+				<% } %>
 
-            <div id="navbar" class="navbar-collapse collapse">
-                <img class="logo" src="/img/logo.svg" />
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Pro Suggestions</a></li>
-                    <li><a href="#">Premium Suggestions</a></li>
-                    <li><a href="#">Platinum Suggestions</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav> <!-- End Mobile Navigation -->
+				<% if(data.user.type == 2) { %>
+					<li class="sidebar-heading"><i class="fa fa-user"></i> Administration</li>
+					<li><a href="/admin/upload">Upload JSON Documents</a></li>
+				<% } %>
 
-    <div class="container-fluid">
-        <div class="row">
+				<li class="sidebar-heading"><i class="fa fa-user"></i> <%= data.user.firstname %> <%= data.user.lastname %></li>
+				<li><a href="/portfolio/user">Review My Portfolio</a></li>
+				<li><a href="/account">Manage My Account</a></li>
+				<li><a href="/logout">Sign Out</a></li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
 
-            <!-- Sidebar Navigation -->
-            <div class="col-sm-3 col-md-2 sidebar">
-                <ul class="nav nav-sidebar">
-                    <li class="sidebar-heading"><i class="fa fa-flask"></i> Suggestions</li>
-                    <li><a href="#">Pro Suggestions <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Premium Suggestions</a></li>
-                    <li><a href="#">Platinum Suggestions</a></li>
-                </ul>
-                <ul class="nav nav-sidebar">
-                    <li class="sidebar-heading"><i class="fa fa-line-chart"></i> Our Portfolios</li>
-                    <li><a href="#">Pro Portfolio</a></li>
-                    <li><a href="#">Premium Portfolio</a></li>
-                    <li><a href="#">Platinum Portfolio</a></li>
-                </ul>
-                <ul class="nav nav-sidebar">
-                    <li class="sidebar-heading"><i class="fa fa-user"></i> Firstname Lastname</li>
-                    <li><a href="/portfolio">My Portfolio</a></li>
-                    <li class="active"><a href="/account">My Account</a></li>
-                    <li><a href="/logout">Sign Out</a></li>
-                </ul>
-            </div>
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars"></i></a>
+			<div class="logo-container">
+				<a href="/"><img id="logo" src="/img/logo.svg" alt="Formula Stocks"></a>
+			</div>
+			
+			<div class="container-fluid">
+				<div class="row">
+					<!-- Insert Views Here -->
+					<div class="col-lg-6">
+						<div class="section">
+							<div class="section-header">
+								<div class="left">
+									<h1>Account Information</h1>
+								</div>
+								
+								<div class="right">
+									<button class="btn-xs btn-primary" data-toggle="collapse" data-target="#advanced_data1">Edit</button>
+								</div>
 
-            <!-- Account Information -->
-            <div id="account-information" class="col-sm-5 col-sm-offset-3 col-md-5 col-md-offset-2 main">
-                <!-- User Information -->
-                <div class="suggestion">
-                    <div class="suggestionTitle">
-                        <h1>Account Information</h1>
-                        <!-- <button class="adv-data-btn"><i class="fa fa-pencil-square-o"></i></button> -->
-                        <div class="clear"></div>
-                    </div>
+								<div class="clear"></div>
+							</div>
 
-                    <div class="suggestionData">
-                        <div class="inner-content">
-                            <p><b>NAME</b><br />
-                            <%= data.firstname %> <%= data.lastname %></p>
+							<div class="section-content">
+									<p><span class="label">Name</span><br /><%= data.user.firstname %> <%= data.user.lastname %></p>
+									<p><span class="label">Email</span><br /><%=data.user.email%></p>
+							</div>
+						</div>
+					</div>
 
-                            <p><b>EMAIL</b><br />
-                            <%= data.email %></p>
-                        </div>
+					<div class="col-lg-6">
+						<div class="section">
+							<div class="section-header">
+								<div class="left">
+									<h1>My Subscription</h1>
+								</div>
+								
+								<div class="right">
+									<button class="btn-xs btn-primary" data-toggle="collapse" data-target="#advanced_data1">Edit</button>
+								</div>
 
-                        <div class="clear"></div>
-                    </div>
-                </div> <!-- End User Information -->
+								<div class="clear"></div>
+							</div>
 
-                <!-- Change Password -->
-                <div class="suggestion">
-                    <div class="suggestionTitle">
-                        <h1>Change My Password</h1>
-                        <div class="clear"></div>
-                    </div>
+							<div class="section-content">
+								<p><span class="label"><%= data.plan.formula %></span><br /><%= data.plan.rate %></p>
+								<p>
+								<b>Subscription Status:</b> 
+                                <% if(data.plan.status == "active") { %>
+                                    <span class="status-active"><%=data.plan.status%></span><br />
+                                <%} else {%>
+                                    <span class="status-inactive"><%=data.plan.status%></span><br />
+                                <%}%>
+								<b>Next Billing Date:</b> <%=data.plan.expires%></p>
+							</div>
+						</div>
+					</div>
 
-                    <div class="suggestionData">
-                        <div class="inner-content">
-                            <form class="form-horizontal">
-                                <fieldset>
-                                    <div class="form-group">
-                                        <label for="old_password" class="col-lg-3 control-label"><i class="fa fa-unlock"></i></label>
-                                        <input type="password" class="form-control lg" id="old_password" name="old_password" placeholder="Old Password" tabindex="1">
-                                    </div>
+					<div class="col-lg-6">
+						<div class="section">
+							<div class="section-header">
+								<div class="left">
+									<h1>Change My Password</h1>
+								</div>
 
-                                    <div class="form-group">
-                                        <label for="new_password" class="col-lg-3 control-label"><i class="fa fa-unlock-alt"></i></label>
-                                        <input type="password" class="form-control lg" id="new_password" name="new_password" placeholder="New Password" tabindex="2">
-                                    </div>
+								<div class="clear"></div>
+							</div>
 
-                                    <div class="form-group">
-                                        <label for="confirm_password" class="col-lg-3 control-label"><i class="fa fa-lock"></i></label>
-                                        <input type="password" class="form-control lg" id="confirm_password" name="confirm_password" placeholder="Confirm Password" tabindex="3">
-                                    </div>
+							<div class="section-content">
+								<form class="inner-section">
+									<div class="group-holder">
+										<div class="form-group">
+											<input type="password" id="current_password" name="current_password" class="form-control" placeholder="Current Password" required="">
+											<label for="current_password"><i class="fa fa-lock"></i></label>
+										</div>
 
-                                    <div class="form-group button-group">
-                                        <button type="submit" id="changePassword" class="dashboard-btn">Change Password</button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
+										<div class="form-group">
+											<input type="password" id="new_password" name="new_password" class="form-control" placeholder="New Password" required="">
+											<label for="new_password"><i class="fa fa-lock"></i></label>
+										</div>
 
-                        <div class="clear"></div>
-                    </div>
-                </div> <!-- End Change Password -->
-            </div> <!-- End Account Information -->
+										<div class="form-group">
+											<input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Confirm Password" required="">
+											<label for="confirm_password"><i class="fa fa-lock"></i></label>
+										</div>
 
-            <!-- Subscription Information -->
-            <div id="subscription-information" class="col-sm-4 col-md-5 main">
-                <div class="suggestion">
-                    <div class="suggestionTitle">
-                        <h1>My Subscription</h1>
-                        <div class="clear"></div>
-                    </div>
+										<button class="btn btn-lg btn-primary btn-block" type="submit">Change Password</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /#page-content-wrapper -->
+	</div>
+	<!-- /#wrapper -->
 
-                    <div class="suggestionData">
-                        <div class="inner-content">
-                            <p><b><span class="billing-formula">PLATINUM FORMULA</span></b><br />
-                            <span class="billing-rate">$20,000.00 Annually</span></p>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="/js/bootstrap.min.js"></script>
 
-                            <p><b>Status:</b> <span class="billing-status billing-status-active">Active</span></p>
-                            <p><b>Next Billing Date:</b> <span class="billing-date">March 17, 2016</span></p>
-
-                            <button class="dashboard-btn">Edit My Subscription</button>
-                            <button class="dashboard-btn bad-action">Cancel My Account</button>
-                        </div>
-                    <div class="clear"></div>
-                </div>
-            </div> <!-- End Subscription Information -->
-
-        </div> <!-- End Row -->
-    </div> <!-- End Container -->
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/ie10-viewport-bug-workaround.js"></script>
-
-    
-
-    <!-- Custom JavaScript -->
-    <script src="/js/main.min.js"></script>
+	<!-- Custom JavaScript -->
+	<script src="/js/dashboard.min.js"></script>
 </body>
+
 </html>

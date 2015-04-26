@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 					'public/css/home.min.css' : 'assets/sass/layouts/home.scss',
 					'public/css/portal.min.css' : 'assets/sass/layouts/portal.scss',
 					'public/css/dashboard.min.css' : 'assets/sass/layouts/dashboard.scss',
-					'public/css/suggestions.min.css' : 'assets/sass/layouts/suggestions.scss'
+					'public/css/suggestions.min.css' : 'assets/sass/layouts/suggestions.scss',
+					'public/css/account.min.css' : 'assets/sass/layouts/account.scss'
 				}
 			}
 		},
