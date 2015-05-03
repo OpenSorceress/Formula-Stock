@@ -12,7 +12,26 @@
  *			essential or positive data.
  */
 #uploads {
-  border: 3px dashed #ECECEC; }
+  border: 4px dashed #ECECEC;
+  margin: 20px 15px 0px 15px;
+  background-color: #FAFAFA;
+  border-radius: 10px;
+  width: calc(100% - 30px);
+  min-height: 200px;
+  -webkit-transition: opacity 500ms ease;
+  -moz-transition: opacity 500ms ease;
+  -o-transition: opacity 500ms ease;
+  transition: opacity 500ms ease; }
+  #uploads:hover {
+    opacity: 0.7; }
+
+.dz-message span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  color: #B9B9B9; }
+
+.dz-icon {
+  font-size: 100px; }
 
 .section {
   background-color: #FFFFFF;
@@ -60,3 +79,9 @@
 
 .clear {
   clear: both; }
+
+a.warning {
+  color: #D91249; }
+
+th {
+  font-weight: 800; }

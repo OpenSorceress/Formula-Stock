@@ -2,3 +2,10 @@
 @import '../components/dropzone.scss';
 @import '../components/section.scss';
 
+a.warning {
+	color: $red;
+}
+
+th {
+	font-weight: 800;
+}
