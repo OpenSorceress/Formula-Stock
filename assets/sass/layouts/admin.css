@@ -1,0 +1,62 @@
+/*
+ * COLOR USES
+ * ----------
+ * 	BLUE:	Used for informational links, buttons, and other branding elements.
+ * 	SLATE:	Used for dashboard menu links and subtitles.
+ * 	NAVY:	Used for dashboard menu background and hover states.
+ * 	BLACK:	Used mostly for headings, body copy and typography in general.
+ * 	WHITE:	Used primarily as a background color.
+ * 	GRAY:	Used for headings, body copy, muted text, and typography in general, borders, 
+ *			background color, and other discreet elements, depending on the shade of gray.
+ * 	GREEN:	Used as a call-to-action, representational stock information, and other
+ *			essential or positive data.
+ */
+#uploads {
+  border: 3px dashed #ECECEC; }
+
+.section {
+  background-color: #FFFFFF;
+  border: 1px solid #ECECEC;
+  border-radius: 3px;
+  margin-top: 35px;
+  padding: 0; }
+
+.section-header {
+  border-bottom: 1px solid #ECECEC;
+  padding: 15px 20px; }
+
+.section-header h1 {
+  font-size: 24px;
+  padding-top: 5px;
+  letter-spacing: -1.5px; }
+
+.sub-section {
+  border-bottom: 1px solid #ECECEC;
+  padding: 7px 20px;
+  margin-bottom: 20px; }
+
+.sub-section p {
+  color: #B9B9B9;
+  font-size: 12px;
+  margin-bottom: 0; }
+
+.section-content {
+  padding: 0 5px;
+  padding-bottom: 20px; }
+
+.section-expansion {
+  border-top: 1px solid #ECECEC;
+  padding: 0px 20px;
+  clear: both; }
+
+.inner-section {
+  padding: 15px 0px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear {
+  clear: both; }

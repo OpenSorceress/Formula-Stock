@@ -14,7 +14,8 @@ module.exports = function(grunt) {
 					'public/css/portal.min.css' : 'assets/sass/layouts/portal.scss',
 					'public/css/dashboard.min.css' : 'assets/sass/layouts/dashboard.scss',
 					'public/css/suggestions.min.css' : 'assets/sass/layouts/suggestions.scss',
-					'public/css/account.min.css' : 'assets/sass/layouts/account.scss'
+					'public/css/account.min.css' : 'assets/sass/layouts/account.scss',
+					'public/css/admin.min.css' : 'assets/sass/layouts/admin.scss'
 				}
 			}
 		},
@@ -33,13 +34,14 @@ module.exports = function(grunt) {
 					'public/js/validation/user_registration.min.js' : ['assets/js/validation/user_registration.js'],
 					'public/js/validation/billing.min.js' : ['assets/js/validation/billing.js'],
 					'public/js/suggestions/pie-chart.min.js' : ['assets/js/suggestions/pie-chart.js'],
-					'public/js/suggestions/line-chart.min.js' : ['assets/js/suggestions/line-chart.js']
+					'public/js/suggestions/line-chart.min.js' : ['assets/js/suggestions/line-chart.js'],
+					'public/js/dropzone.config.js' : ['assets/js/dropzone/config.js']
 				}
 			}
 		},
 		watch: {
 			scripts: {
-				files: ['assets/js/*.js', 'assets/js/validation/*.js', 'assets/js/suggestions/*.js'],
+				files: ['assets/js/*.js', 'assets/js/validation/*.js', 'assets/js/suggestions/*.js', 'assets/js/dropzone/*.js'],
 				tasks: ['uglify'],
 				options: {
 					spawn: false
