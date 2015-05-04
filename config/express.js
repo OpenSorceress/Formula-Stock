@@ -3,7 +3,8 @@ var config = require('./config'),
 	bodyParser = require('body-parser'),
 	passport = require('passport'),
 	flash = require('connect-flash'),
-	session = require('express-session');
+	session = require('express-session'),
+	multer = require('multer');
 
 module.exports = function() {
 	var app = express();
@@ -13,6 +14,7 @@ module.exports = function() {
 	}));
 
 	app.use(bodyParser.json());
+	app.use(multer({ dest: './tmp/' }));
 	
 	app.use(session({
 		saveUninitialized: true,
@@ -22,7 +24,7 @@ module.exports = function() {
 
 	app.use(passport.initialize());
 	app.use(passport.session());
-	app.use(flash());	
+	app.use(flash());
 
 	app.set('views', './app/views');
 	app.set('view engine', 'ejs');
