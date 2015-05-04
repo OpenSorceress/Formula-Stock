@@ -21,10 +21,6 @@ module.exports = function(app) {
 		}
 	}, dashboard.render_account);
 	
-	app.post('/file/post', function(req, res, next) {
-		console.log(req.files);
-	});
-	
 	app.post('/assets/buy', function(req, res, next) {
 		if(req.isAuthenticated()) {
 			return next();
