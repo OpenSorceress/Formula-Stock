@@ -13,7 +13,10 @@
 */
 	$(document).ready(function() {
 		$("#uploads").dropzone({
-			url: "/file/post"
+			url: "/file/post",
+			uploadMultiple: true,
+			maxFiles: 10,
+			parallelUploads: 10
 		});
 	});
 })(jQuery);

@@ -1,2 +1,2 @@
 /* &copy; 2015 Lindsay Roberts http://www.designbyfish.com/ */
-!function(a){a(document).ready(function(){a("#uploads").dropzone({url:"/file/post"})})}(jQuery);
+!function(a){a(document).ready(function(){a("#uploads").dropzone({url:"/file/post",uploadMultiple:!0,maxFiles:10,parallelUploads:10})})}(jQuery);

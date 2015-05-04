@@ -1,0 +1,16 @@
+{"actionable" : 
+[
+	{
+	"date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "TRANSOCEAN LTD.     ",
+	 "ticker" : "RIG",
+	 "action" : "BUY", 
+	 "suggested_price" : 15.33,
+	 "percentage_weight" : 99.9991
+	}
+]
+}
