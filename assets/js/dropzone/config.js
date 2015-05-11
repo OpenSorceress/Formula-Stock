@@ -9,10 +9,21 @@
 			parallelUploads: 10,
 			acceptedFiles: ".json",
 			success: function(file, response) {
-				alert(response);
-			},
-			error: function(response) {
-				alert(response);
+				if(response.error) {
+					var node, _i, _len, _ref, _results;
+					var message = response.msg;
+					file.previewElement.classList.add("dz-error");
+					_ref = file.previewElement.querySelectorAll("[data-dz-errormessage]");
+					_results = [];
+					for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+						node = _ref[_i];
+						_results.push(node.textContent = message);
+					}
+					
+					return _results;
+				} else {
+					return file.previewElement.classList.add("dz-success");
+				}
 			}
 		});
 	});

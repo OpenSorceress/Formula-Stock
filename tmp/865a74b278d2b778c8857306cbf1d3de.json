@@ -1,0 +1,876 @@
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "CHINA MOBILE HONG KO",
+	 "ticker" : "CHL",
+	 "purchase_price" : 47.3647,
+	 "latest_price" : 64.69,
+	 "percentage_weight" : 0,
+	 "days_owned" : 1465
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "CHINA YUCHAI INTL LT",
+	 "ticker" : "CYD",
+	 "purchase_price" : 14.6275,
+	 "latest_price" : 19.56,
+	 "percentage_weight" : 0,
+	 "days_owned" : 1404
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "BLACKBERRY          ",
+	 "ticker" : "BBRY",
+	 "purchase_price" : 10.602,
+	 "latest_price" : 9.3,
+	 "percentage_weight" : 0,
+	 "days_owned" : 1038
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "CHINA AUTO. SYS.    ",
+	 "ticker" : "CAAS",
+	 "purchase_price" : 4.30394,
+	 "latest_price" : 7.04,
+	 "percentage_weight" : 0,
+	 "days_owned" : 1038
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "EZCORP, INC.        ",
+	 "ticker" : "EZPW",
+	 "purchase_price" : 17.8269,
+	 "latest_price" : 9.46,
+	 "percentage_weight" : 0,
+	 "days_owned" : 1038
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "J2 GLOBAL           ",
+	 "ticker" : "JCOM",
+	 "purchase_price" : 24.19,
+	 "latest_price" : 66.9,
+	 "percentage_weight" : 0,
+	 "days_owned" : 1038
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "QUALITY SYSTEMS     ",
+	 "ticker" : "QSII",
+	 "purchase_price" : 17.4334,
+	 "latest_price" : 15.79,
+	 "percentage_weight" : 0,
+	 "days_owned" : 946
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "STAPLES, INC.       ",
+	 "ticker" : "SPLS",
+	 "purchase_price" : 12.2205,
+	 "latest_price" : 16.02,
+	 "percentage_weight" : 0,
+	 "days_owned" : 946
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "MAGELLAN HEALTH SVCS",
+	 "ticker" : "MGLN",
+	 "purchase_price" : 57.2219,
+	 "latest_price" : 68.26,
+	 "percentage_weight" : 0,
+	 "days_owned" : 824
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "WESTERN DIGITAL     ",
+	 "ticker" : "WDC",
+	 "purchase_price" : 62.6092,
+	 "latest_price" : 93.64,
+	 "percentage_weight" : 0,
+	 "days_owned" : 824
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "AMDOCS LTD.         ",
+	 "ticker" : "DOX",
+	 "purchase_price" : 33.99,
+	 "latest_price" : 53.78,
+	 "percentage_weight" : 0,
+	 "days_owned" : 824
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "DEVRY EDUCATION GROU",
+	 "ticker" : "DV",
+	 "purchase_price" : 28.01,
+	 "latest_price" : 33.39,
+	 "percentage_weight" : 0,
+	 "days_owned" : 704
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "MILLER INDS INC. TEN",
+	 "ticker" : "MLR",
+	 "purchase_price" : 15.6343,
+	 "latest_price" : 24.17,
+	 "percentage_weight" : 0,
+	 "days_owned" : 673
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "LEXMARK INT'L `A'   ",
+	 "ticker" : "LXK",
+	 "purchase_price" : 31.9616,
+	 "latest_price" : 43.21,
+	 "percentage_weight" : 0,
+	 "days_owned" : 643
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "CISCO SYSTEMS       ",
+	 "ticker" : "CSCO",
+	 "purchase_price" : 25.17,
+	 "latest_price" : 27.09,
+	 "percentage_weight" : 0,
+	 "days_owned" : 186
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "COMPUTER TASK GROUP ",
+	 "ticker" : "CTG",
+	 "purchase_price" : 11.1,
+	 "latest_price" : 7.34,
+	 "percentage_weight" : 0,
+	 "days_owned" : 186
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "NETGEAR             ",
+	 "ticker" : "NTGR",
+	 "purchase_price" : 31.25,
+	 "latest_price" : 32.02,
+	 "percentage_weight" : 0,
+	 "days_owned" : 186
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "TRANSGLOBE ENERGY   ",
+	 "ticker" : "TGL.TO",
+	 "purchase_price" : 3.69,
+	 "latest_price" : 4.54,
+	 "percentage_weight" : 0,
+	 "days_owned" : 63
+	},
+
+	{
+	 "date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "CARBO CERAMICS      ",
+	 "ticker" : "CRR",
+	 "purchase_price" : 36.44,
+	 "latest_price" : 30.59,
+	 "percentage_weight" : 0,
+	 "days_owned" : 35
+	}{
+
+"logs" : [
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2009"
+		},
+	"balance" : 100000
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2009"
+		},
+	"balance" : 92451
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2009"
+		},
+	"balance" : 101886
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2009"
+		},
+	"balance" : 124470
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2009"
+		},
+	"balance" : 135277
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2009"
+		},
+	"balance" : 137610
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2009"
+		},
+	"balance" : 153282
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2009"
+		},
+	"balance" : 160284
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2009"
+		},
+	"balance" : 171732
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2009"
+		},
+	"balance" : 164612
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2009"
+		},
+	"balance" : 171939
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2009"
+		},
+	"balance" : 181640
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2010"
+		},
+	"balance" : 174749
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2010"
+		},
+	"balance" : 184012
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2010"
+		},
+	"balance" : 197012
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2010"
+		},
+	"balance" : 200147
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2010"
+		},
+	"balance" : 187664
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2010"
+		},
+	"balance" : 181329
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2010"
+		},
+	"balance" : 192514
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2010"
+		},
+	"balance" : 183783
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2010"
+		},
+	"balance" : 202293
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2010"
+		},
+	"balance" : 211645
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2010"
+		},
+	"balance" : 214130
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2010"
+		},
+	"balance" : 227473
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2011"
+		},
+	"balance" : 235459
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2011"
+		},
+	"balance" : 244149
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2011"
+		},
+	"balance" : 245358
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2011"
+		},
+	"balance" : 251004
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2011"
+		},
+	"balance" : 256055
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2011"
+		},
+	"balance" : 252853
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2011"
+		},
+	"balance" : 245135
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2011"
+		},
+	"balance" : 227408
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2011"
+		},
+	"balance" : 207542
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2011"
+		},
+	"balance" : 227813
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2011"
+		},
+	"balance" : 223005
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2011"
+		},
+	"balance" : 226250
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2012"
+		},
+	"balance" : 239536
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2012"
+		},
+	"balance" : 241166
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2012"
+		},
+	"balance" : 246386
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2012"
+		},
+	"balance" : 240639
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2012"
+		},
+	"balance" : 225237
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2012"
+		},
+	"balance" : 229707
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2012"
+		},
+	"balance" : 221984
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2012"
+		},
+	"balance" : 226648
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2012"
+		},
+	"balance" : 229899
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2012"
+		},
+	"balance" : 225676
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2012"
+		},
+	"balance" : 234505
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2012"
+		},
+	"balance" : 239426
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2013"
+		},
+	"balance" : 260162
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2013"
+		},
+	"balance" : 259339
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2013"
+		},
+	"balance" : 267287
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2013"
+		},
+	"balance" : 268352
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2013"
+		},
+	"balance" : 277169
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2013"
+		},
+	"balance" : 276065
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2013"
+		},
+	"balance" : 298088
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2013"
+		},
+	"balance" : 280045
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2013"
+		},
+	"balance" : 298363
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2013"
+		},
+	"balance" : 306786
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2013"
+		},
+	"balance" : 310093
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2013"
+		},
+	"balance" : 313823
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2014"
+		},
+	"balance" : 301348
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2014"
+		},
+	"balance" : 312550
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2014"
+		},
+	"balance" : 321075
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "4",
+		"year" : "2014"
+		},
+	"balance" : 319134
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "5",
+		"year" : "2014"
+		},
+	"balance" : 334877
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "6",
+		"year" : "2014"
+		},
+	"balance" : 348253
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "7",
+		"year" : "2014"
+		},
+	"balance" : 367038
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "8",
+		"year" : "2014"
+		},
+	"balance" : 401270
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "9",
+		"year" : "2014"
+		},
+	"balance" : 400737
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "10",
+		"year" : "2014"
+		},
+	"balance" : 400108
+	},
+	{
+	"date" : {
+		"day" : "30",
+		"month" : "11",
+		"year" : "2014"
+		},
+	"balance" : 408687
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "12",
+		"year" : "2014"
+		},
+	"balance" : 419871
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "1",
+		"year" : "2015"
+		},
+	"balance" : 393486
+	},
+	{
+	"date" : {
+		"day" : "28",
+		"month" : "2",
+		"year" : "2015"
+		},
+	"balance" : 406771
+	},
+	{
+	"date" : {
+		"day" : "31",
+		"month" : "3",
+		"year" : "2015"
+		},
+	"balance" : 406773
+	}
+],
+"statistics" : {
+	"positives" : 196,
+	"negatives" : 30,
+	"geometric_IRR" : 37.71,
+	"CAGR" : 25.25,
+	"total_return" : 309.02
+}
+}

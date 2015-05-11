@@ -1,7 +1,20 @@
 var Asset = require('mongoose').model('Asset'),
 	User = require('mongoose').model('User'),
+	File = require('mongoose').model('File'),
 	passport = require('passport'),
 	request = require('request');
+
+var _filenames = [
+	"entry_weekly.json",
+	"entry_monthly.json",
+	"entry_annual.json",
+	"fund_weekly.json",
+	"fund_monthly.json",
+	"fund_annual.json",
+	"proff_weekly.json",
+	"proff_monthly.json",
+	"proff_annual.json"
+];
 
 function get_json(api_url, callback) {
 	request(api_url, function(error, response, body) {
@@ -258,21 +271,37 @@ exports.sell = function(req, res, next) {
 
 // Upload JSON Documents
 exports.upload_files = function(request, response, next) {
-	console.log("UPLOAD FILES METHOD CALLED");
-	var files = [];
-	
-	for(var i=0; i<request.files.length; i++) {
-		var file = {
-			name: request.files[i].originalname,
-			path: "./" + request.files[i].path,
-			uploaded: new Date().getTime()
-		};
-		
-		console.log("Files Uploading");
-		files.push(file);
+	console.log("UPLOAD FILES METHOD CALLED");	
+	for (var key in request.files) {
+		if (request.files.hasOwnProperty(key)) {
+			if(_filenames.indexOf(request.files[key].originalname) > -1) {
+				var file_object = {
+					name: request.files[key].originalname,
+					path: "./" + request.files[key].path,
+					uploaded: new Date().getTime(),
+					url: "/activate/" + request.files[key].originalname.replace('.json', '')
+				}
+				
+				var file = new File(file_object);
+				file.provider = 'local';
+				
+				// Push into DB.
+				file.save(function(error) {
+					if(error) {
+						console.log("ERROR: File did not save to database.", request.files[key].originalname);
+						// return next(error);
+					} else {
+						// Change This!
+						console.log("Success!", request.files[key].originalname);
+						// return res.redirect('/portfolio');
+					}
+				});
+			} else {
+				// Invalid filename.
+				console.log("ERROR: Invalid filename.", request.files[key].originalname);
+			}
+		}
 	}
-	
-		console.log(request.files);
 }
 
 String.prototype.capitalize = function() {
