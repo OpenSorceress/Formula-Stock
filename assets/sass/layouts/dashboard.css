@@ -533,6 +533,10 @@ body {
     padding-left: 5px;
     letter-spacing: 0.2px; }
 
+.sidebar-nav li a.active {
+  color: #FAFAFA;
+  font-weight: 900; }
+
 h1 {
   padding-top: 10px; }
 

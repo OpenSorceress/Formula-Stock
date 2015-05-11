@@ -16,29 +16,10 @@ var _filenames = [
 	"proff_annual.json"
 ];
 
-function get_json(api_url, callback) {
-	request(api_url, function(error, response, body) {
-		var final_data = JSON.parse(body);
-		return callback(final_data);
-	});
-}
-
-function add_commas(nStr) {
-	nStr += '';
-	x = nStr.split('.');
-	x1 = x[0];
-	x2 = x.length > 1 ? '.' + x[1] : '';
-	var rgx = /(\d+)(\d{3})/;
-	while(rgx.test(x1)) {
-		x1 = x1.replace(rgx, '$1' + ',' + '$2');
-	}
-	return x1 + x2;
-}
-
-
 /* Render Suggestions */
 exports.render_pro_suggestions = function(request, response, next) {
 	console.log(request.user);
+	
 	var user = {
 		firstname : request.user.firstname,
 		lastname : request.user.lastname,
@@ -49,7 +30,8 @@ exports.render_pro_suggestions = function(request, response, next) {
 	response.render('suggestions', {
 		title: 'Formula Stocks - Pro Suggestions',
 		data: {
-			user: user
+			user: user,
+			active: 'pro'
 		}
 	});
 }
@@ -66,7 +48,8 @@ exports.render_premium_suggestions = function(request, response, next) {
 	response.render('suggestions', {
 		title: 'Formula Stocks - Premium Suggestions',
 		data: {
-			user: user
+			user: user,
+			active: 'premium'
 		}
 	});
 }
@@ -82,6 +65,24 @@ exports.render_platinum_suggestions = function(request, response, next) {
 	
 	response.render('suggestions', {
 		title: 'Formula Stocks - Platinum Suggestions',
+		data: {
+			user: user,
+			active: 'platinum'
+		}
+	});
+}
+
+// Renders the Admin Uploads Page.
+exports.render_admin = function(request, response, next) {	
+	var user = {
+		firstname : request.user.firstname,
+		lastname : request.user.lastname,
+		plan: request.user.plan,
+		type: request.user.usertype
+	}
+	
+	response.render('uploads', {
+		title: 'Formula Stocks - Add Documents',
 		data: {
 			user: user
 		}
@@ -208,7 +209,8 @@ exports.render_account = function(req, res, next) {
 			"firstname" : req.user.firstname,
 			"lastname" : req.user.lastname,
 			"email" : req.user.email,
-			"plan" : req.user.plan
+			"plan" : req.user.plan,
+			"type" : req.user.usertype
 		},
 		plan: plan
 	};
@@ -359,4 +361,23 @@ exports.upload_files = function(request, response, next) {
 
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
+function get_json(api_url, callback) {
+	request(api_url, function(error, response, body) {
+		var final_data = JSON.parse(body);
+		return callback(final_data);
+	});
+}
+
+function add_commas(nStr) {
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while(rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
 }

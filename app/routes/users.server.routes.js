@@ -9,7 +9,7 @@ module.exports = function(app) {
 	
 	/* User Login Route */
 	app.route('/login').get(users.renderLogin).post(passport.authenticate('local', {
-		successRedirect: '/portfolio',
+		successRedirect: '/suggestions/pro',
 		failureRedirect: '/login',
 		failureFlash: 'Email or password is incorrect.'
 	}));
