@@ -1,0 +1,68 @@
+{"actionable" : 
+[
+	{
+	"date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "TRANSGLOBE ENERGY   ",
+	 "ticker" : "TGL.TO",
+	 "action" : "BUY", 
+	 "suggested_price" : 4.54,
+	 "percentage_weight" : 12.9998
+	},
+
+	{
+	"date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "CARBO CERAMICS      ",
+	 "ticker" : "CRR",
+	 "action" : "BUY", 
+	 "suggested_price" : 30.59,
+	 "percentage_weight" : 12.9977
+	},
+
+	{
+	"date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "AGCO CORP.          ",
+	 "ticker" : "AGCO",
+	 "action" : "BUY", 
+	 "suggested_price" : 46.71,
+	 "percentage_weight" : 12.9994
+	},
+
+	{
+	"date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "DRIL-QUIP, INC.     ",
+	 "ticker" : "DRQ",
+	 "action" : "BUY", 
+	 "suggested_price" : 68.42,
+	 "percentage_weight" : 12.9998
+	},
+
+	{
+	"date" : {
+		 	"day" : "4",
+		 	"month" : "4",
+		 	"year" : "2015"
+	  },
+	 "name" : "PLEXUS CORP.        ",
+	 "ticker" : "PLXS",
+	 "action" : "BUY", 
+	 "suggested_price" : 40.34,
+	 "percentage_weight" : 12.9975
+	}
+]
+}

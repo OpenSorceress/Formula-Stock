@@ -1,13 +1,26 @@
-/* Dependencies */
+/**
+  * @filename		users.server.controller.js
+  * @description	This class will hold methods for user functionality
+  * @author			Lindsay Roberts Lindsay.Roberts@protonmail.com
+  * @required		Mongoose Models User and Plan, Stripe, and Passport
+*/
+
+// Dependencies
 var User 		= require('mongoose').model('User'),
 	Plan 		= require('mongoose').model('Plan'),
 	Stripe 		= require('stripe')("sk_test_9Z5AY0rUOLbtMMYQ4T5eOH1O"),
 	passport 	= require('passport');
 
 /* -------------------------------------------------
-   RENDER LOGIN SCREEN
+   RENDER LOGIN METHOD
    -------------------------------------------------
- */
+   This method renders the login page. It checks
+   for parameters to see if a user is logged into
+   the system. If not, it will render the register
+   page. Otherwise, it will take the user to their
+   dashboard.
+   -------------------------------------------------
+ */ 
 exports.renderLogin = function(request, response, next) {
 	if (!request.user) {
 		response.render('login', {
@@ -33,6 +46,7 @@ exports.renderLogin = function(request, response, next) {
 exports.renderRegister = function(request, response, next) {
 	if (!request.user) {
 		if(request.query.p) {
+			
 			// Get Parameter "p" from URL:
 			var param = request.query.p;
 			
@@ -135,10 +149,19 @@ exports.renderBilling = function(request, response, next) {
 	}
 };
 
+/* -------------------------------------------------
+   BILLING METHOD
+   -------------------------------------------------
+   This method is called after the user submits the
+   form data. Stripe handles any errors, which
+   returns to the billing page on failure. If it
+   succeeds, it updates the user with the customer
+   data received from Stripe.
+   -------------------------------------------------
+ */
 exports.billing = function(request, response, next) {
 	if(request.user) {
 		var stripeToken = request.body.stripeToken;
-		console.log("Billing User with Stripe...");
 		Stripe.customers.create({
 			source: stripeToken,
 			plan: request.user.plan,
@@ -152,6 +175,7 @@ exports.billing = function(request, response, next) {
 				return response.redirect('/billing');
 			}
 			
+			// Create data to update the user in the database.
 			var unix_timestamp	= customer.subscriptions.data[0].current_period_end;
 			var expires			= new Date(unix_timestamp * 1000);
 			var stripe_plan		= customer.subscriptions.data[0].plan.id;
@@ -367,8 +391,8 @@ exports.update = function(request, response, next) {
 };
  
  /* -------------------------------------------------
-   GET error MESSAGE METHOD
-   -------------------------------------------------
+    GET ERROR MESSAGE METHOD
+    -------------------------------------------------
  */
 var getErrorMessage = function(error) {
 	var message = '';
@@ -396,11 +420,19 @@ var getErrorMessage = function(error) {
 /* -------------------------------------------------
    CAPITALIZE METHOD
    -------------------------------------------------
+   Capitalizes the first letter of a string.
+   -------------------------------------------------
  */
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
+/* -------------------------------------------------
+   FORMAT PRICE METHOD
+   -------------------------------------------------
+   Formats the price to have commas.
+   -------------------------------------------------
+ */
 function format_price(value) {
 	while(/(\d+)(\d{3})/.test(value.toString())) {
 		value = value.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');

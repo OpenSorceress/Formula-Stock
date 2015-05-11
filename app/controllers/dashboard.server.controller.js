@@ -145,7 +145,7 @@ exports.render_account = function(req, res, next) {
 			"plan" : req.user.plan
 		},
 		plan: plan
-	}
+	};
 	
 	
 	
@@ -254,6 +254,25 @@ exports.sell = function(req, res, next) {
 			}
 		});
 	});
+}
+
+// Upload JSON Documents
+exports.upload_files = function(request, response, next) {
+	console.log("UPLOAD FILES METHOD CALLED");
+	var files = [];
+	
+	for(var i=0; i<request.files.length; i++) {
+		var file = {
+			name: request.files[i].originalname,
+			path: "./" + request.files[i].path,
+			uploaded: new Date().getTime()
+		};
+		
+		console.log("Files Uploading");
+		files.push(file);
+	}
+	
+		console.log(request.files);
 }
 
 String.prototype.capitalize = function() {
