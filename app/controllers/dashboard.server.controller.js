@@ -35,6 +35,59 @@ function add_commas(nStr) {
 	return x1 + x2;
 }
 
+
+/* Render Suggestions */
+exports.render_pro_suggestions = function(request, response, next) {
+	console.log(request.user);
+	var user = {
+		firstname : request.user.firstname,
+		lastname : request.user.lastname,
+		plan: request.user.plan,
+		type: request.user.usertype
+	}
+	
+	response.render('suggestions', {
+		title: 'Formula Stocks - Pro Suggestions',
+		data: {
+			user: user
+		}
+	});
+}
+
+exports.render_premium_suggestions = function(request, response, next) {
+	console.log(request.user);
+	var user = {
+		firstname : request.user.firstname,
+		lastname : request.user.lastname,
+		plan: request.user.plan,
+		type: request.user.usertype
+	}
+	
+	response.render('suggestions', {
+		title: 'Formula Stocks - Premium Suggestions',
+		data: {
+			user: user
+		}
+	});
+}
+
+exports.render_platinum_suggestions = function(request, response, next) {
+	console.log(request.user);
+	var user = {
+		firstname : request.user.firstname,
+		lastname : request.user.lastname,
+		plan: request.user.plan,
+		type: request.user.usertype
+	}
+	
+	response.render('suggestions', {
+		title: 'Formula Stocks - Platinum Suggestions',
+		data: {
+			user: user
+		}
+	});
+}
+
 exports.render_account = function(req, res, next) {	
 	var plan = {};
 	var months = [

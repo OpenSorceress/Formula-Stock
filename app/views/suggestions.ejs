@@ -64,7 +64,7 @@
 				<% if(data.user.plan == 'platinum_yearly') { %>
 					<li><a href="/suggestions/platinum">Platinum Suggestions</a></li>
 				<% } %>
-
+<!--
 				<li class="sidebar-heading"><i class="fa fa-line-chart"></i> Our Portfolios</li>
 				<li><a href="/portfolio/pro">Pro Portfolio</a></li>
 				<% if(data.user.plan == 'premium_monthly' || data.user.plan == 'premium_yearly' || data.user.plan == 'platinum_yearly') { %>
@@ -74,15 +74,15 @@
 				<% if(data.user.plan == 'platinum_yearly') { %>
 					<li><a href="/portfolio/platinum">Platinum Portfolio</a></li>
 				<% } %>
-
+-->
 				<% if(data.user.type == 2) { %>
 					<li class="sidebar-heading"><i class="fa fa-user"></i> Administration</li>
 					<li><a href="/admin/upload">Upload JSON Documents</a></li>
 				<% } %>
 
 				<li class="sidebar-heading"><i class="fa fa-user"></i> <%= data.user.firstname %> <%= data.user.lastname %></li>
-				<li><a href="/portfolio/user">Review My Portfolio</a></li>
-				<li><a href="/account">Manage My Account</a></li>
+<!-- 				<li><a href="/portfolio/user">Review My Portfolio</a></li>
+ -->				<li><a href="/account">Manage My Account</a></li>
 				<li><a href="/logout">Sign Out</a></li>
 			</ul>
 		</div>
