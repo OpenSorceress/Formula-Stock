@@ -1,0 +1,253 @@
+/*
+ * TABLE OF CONTENTS
+ * ------------------
+ * #Halis
+ * #Lato
+ */
+/* HALIS FONT WEIGHTS:			LATO FONT WEIGHTS:
+ * 100 (Thin)					100 (Hairline)
+ * 200 (Extra Light)			200 (Thin)
+ * 300 (Light)					300 (Light)
+ * 400 (Regular)				400 (Regular)
+ * 500 (Book)					500 (Medium)
+ * 600 (Medium)					600 (Semibold)
+ * 700 (Bold)					700 (Bold)
+ * 800 (Black)					800 (Heavy)
+ *								900 (Black)
+ */
+/* #Halis */
+@font-face {
+  font-family: 'Halis';
+  src: url('../fonts/halis/HalisR-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Halis';
+  src: url('../fonts/halis/HalisR-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Halis';
+  src: url('../fonts/halis/HalisR-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Halis';
+  src: url('../fonts/halis/HalisR-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Halis';
+  src: url('../fonts/halis/HalisR-Book.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Halis';
+  src: url('../fonts/halis/HalisR-Medium.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Halis';
+  src: url('../fonts/halis/HalisR-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Halis';
+  src: url('../fonts/halis/HalisR-Black.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal; }
+
+/* #Lato */
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Hairline.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-HairlineItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Thin.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-ThinItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-HeavyItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic; }
+
+/*
+ * COLOR USES
+ * ----------
+ * 	BLUE:	Used for informational links, buttons, and other branding elements.
+ * 	SLATE:	Used for dashboard menu links and subtitles.
+ * 	NAVY:	Used for dashboard menu background and hover states.
+ * 	BLACK:	Used mostly for headings, body copy and typography in general.
+ * 	WHITE:	Used primarily as a background color.
+ * 	GRAY:	Used for headings, body copy, muted text, and typography in general, borders, 
+ *			background color, and other discreet elements, depending on the shade of gray.
+ * 	GREEN:	Used as a call-to-action, representational stock information, and other
+ *			essential or positive data.
+ */
+/* Setup */
+html {
+  font-family: 'Lato', sans-serif;
+  font-size: 125%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: auto;
+  -moz-text-size-adjust: auto;
+  -ms-text-size-adjust: auto;
+  -o-text-size-adjust: auto;
+  text-size-adjust: auto; }
+
+/* Copy & Lists */
+p {
+  font-size: 20;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  color: #49494A; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Halis', sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem; }
+
+h1 {
+  font-size: 4.242rem;
+  line-height: 4.5rem;
+  margin-top: 3rem; }
+
+h2 {
+  font-size: 2.828rem;
+  line-height: 3rem;
+  margin-top: 3rem; }
+
+h3 {
+  font-size: 1.414rem; }
+
+h4 {
+  font-size: 0.707rem; }
+
+h5 {
+  font-size: 0.47133rem; }
+
+h6 {
+  font-size: 0.3535rem; }
+
+.lead {
+  font-size: 1.414rem; }
+
+i, em {
+  font-style: italic; }
+
+b, strong {
+  font-weight: 800; }
+
+a {
+  outline: none; }
+
+a:link, a:visited {
+  color: #18AED5; }
+
+small {
+  font-size: 15%; }

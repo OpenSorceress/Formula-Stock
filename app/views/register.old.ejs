@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%=title %></title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <script src="//use.fonticons.com/9b071e54.js"></script> -->
+
+    <!-- jQuery & jQuery UI -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+</head>
+
+<body id="register">
+	<div class="container">
+		<!-- Logo -->
+		<a href="/"><img src='img/flask.svg' alt='Formula Stocks' class="flask" /></a>	
+
+		<!-- Register Form -->
+		<form class="form-horizontal" id="registerForm" action="/register" method="post">
+			<fieldset>
+				<legend>Let's get started.</legend>
+				<p>Try us for 90 days, no credit card required.</p>
+
+				<% for(var i in messages) { %>
+					<div class="alert alert-danger">
+						<p><strong><i class="fa fa-times-circle"></i> Error!</strong> <%= messages[i] %></p>
+					</div>
+				<% } %>
+
+				<div class="form-group small firstname">
+					<label for="firstname" class="col-lg-4 control-label"><i class="fa fa-user"></i></label>
+					<input type="text" class="form-control sm-input" id="firstname" name="firstname" placeholder="First Name">
+				</div>
+
+				<div class="form-group small lastname">
+					<input type="text" class="form-control sm-input" id="lastname" name="lastname" placeholder="Last Name">
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="form-group">
+					<label for="email" class="col-lg-4 control-label"><i class="fa fa-envelope"></i></label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+				</div>
+
+				<div class="form-group">
+					<label for="password" class="col-lg-4 control-label"><i class="fa fa-lock"></i></label>
+					<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+				</div>
+
+				<div class="form-group">
+					<label class="subscription"><i class="fa fa-check"></i></label>
+					<p class="subscription"><span class="subscription">90 Day Free Trial</span> <a class="edit-sub" href="#"><i class="fa fa-sort-desc"></i></a></p>
+					<div class="subscription_menu">
+						<p class="option selected"><a class="option_item" href="trial">90 Day Free Trial</a></p>
+						<p class="option"><a class="option_item" href="pro_month">Pro Formula $49.95 Monthly</a></p>
+						<p class="option"><a class="option_item" href="premium_month">Premium Formula $99.95 Monthly</a></p>
+						<p class="option"><a class="option_item" href="pro_year">Pro Formula $549.95 Annually</a></p>
+						<p class="option"><a class="option_item" href="premium_year">Premium Formula $999.95 Annually</a></p>
+						<p class="option"><a class="option_item" href="platinum_year">Platinum Formula $20,000 Annually</a></p>
+					</div>
+					<input type="hidden">
+				</div>
+
+				<div class="form-group button-group">
+					<p>By creating an account, you agree to Formula Stock's <a href="#">Terms &amp; Conditions</a>.</p>
+					<button type="submit" id="registerButton" class="btn btn-success">Sign Up!</button>
+					<p>Already have an account? <a href="/login">Sign in.</a></p>
+				</div>
+			</fieldset>
+		</form>
+	</div> <!-- /.container -->
+
+	<!-- Main JavaScript -->
+	<script src="/js/main.min.js"></script>
+</body>
+
+</html>

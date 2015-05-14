@@ -1,0 +1,23 @@
+.alert {
+	border-radius: 3px;
+	background-color: $light_blue;
+	border-color: $blue;
+}
+
+.alert p {
+	color: $lightest_gray;
+}
+
+.alert-danger {
+	border-color: $dark_red;
+	background-color: $red;
+}
+
+.alert-success {
+	background-color: $green;
+	border-color: $dark_green;
+}
+
+.express-error, .validation {
+	display: none;
+}

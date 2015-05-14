@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,12 +10,12 @@
 
     <title><%=title %></title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="/css/theme.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/portal.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,106 +23,216 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="//use.fonticons.com/9b071e54.js"></script>
+    <!-- <script src="//use.fonticons.com/9b071e54.js"></script> -->
+
+    <!-- jQuery & jQuery UI -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
 </head>
 
-<body>
-    <!-- Navigation -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><i class="icon icon-formula-stocks-logo icon"></i> Formula Stocks</a>
-        </div>
+<body id="register">
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2">
+				<a href="/"><img src="img/flask.svg" alt="Formula Stocks" class="flask" /></a>
 
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">About Us</a><li>
-            	<li><a href="#">Contact</a></li>
-            	<li><a href="/login">Sign In</a></li>
-            	<li class="active"><a href="/register">Register</a></li>
-            </ul>
-            <!-- <form class="navbar-form navbar-left">
-                <input type="text" class="form-control col-lg-8" ng-model="asset" placeholder="Search">
-            </form> -->
-        </div>
-    </div>
+				<form id="signup" class="text-center" method="post">
+					<h2>Sign Up Today</h2>
 
+					<% for(var i in messages) { %>
+						<div class="alert alert-danger">
+							<p><strong><i class="fa fa-times-circle"></i> Error!</strong><%= messages[i] %></p>
+						</div>
+					<% } %>
 
-    <div class="container">
-    	<div class="row">
-    		<div class="col-md-6 col-md-offset-3">
-	    	
-    		<div class="well">
-    			<% for(var i in messages) { %>
-					<div class="alert alert-dismissable alert-danger">
-						<button type="button" class="close" data-dismiss="alert">×</button>
-						<strong><i class="fa fa-exclamation-circle"></i> Registration Error!</strong> <%= messages[i] %>
-					</div>
-				<% } %>
-		      	<form class="form-horizontal" action="/register" method="post">
-		      		<fieldset>
-		      			<legend>Register An Account</legend>
-		      			<div class="form-group">
-			      			<label for="name" class="col-lg-4 control-label">Your Name</label>
-			      			<div class="col-lg-8">
-			      				<input type="text" class="form-control" id="name" name="name" placeholder="First and Last" required autofocus>
-			      			</div>
-		      			</div>
-
-		      			<div class="form-group">
-		      				<label for="email" class="col-lg-4 control-label">E-mail</label>
-		      				<div class="col-lg-8">
-		      					<input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
-		      				</div>
-		      			</div>
-
-		      			<div class="form-group">
-		      				<label for="username" class="col-lg-4 control-label">Username</label>
-		      				<div class="col-lg-8">
-		      					<input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
-		      				</div>
-		      			</div>
-
-		      			<div class="form-group">
-		      				<label for="password" class="col-lg-4 control-label">Password</label>
-		      				<div class="col-lg-8">
-		      					<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-		      				</div>
-		      			</div>
-
-		      			<div class="form-group">
-		      				<label for="investment_capital" class="col-lg-4 control-label">Investment Capital</label>
-		      				<div class="col-lg-8">
-		      					<div class="input-group">
-			      					<span class="input-group-addon">$</span>
-			      					<input type="text" class="form-control" id="investment_capital" name="investment_capital" placeholder="0.00" required>
-		      					</div>
-		      				</div>
-		      			</div>
-
+					<div class="col-lg-6 col-sm-6 no-padding-left">
 						<div class="form-group">
-							<div class="col-lg-8 col-lg-offset-5">
-								<a href="/login">Already have an account?</a>
-								<button type="submit" id="loginButton" class="btn btn-success">Register!</button>
+							<input type="text" id="firstname" name="firstname" class="form-control" placeholder="First name" required="">
+							<label for="firstname"><i class="fa fa-user"></i></label>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-sm-6 no-padding-right">
+						<div class="form-group">
+							<input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last name" required="">
+							<label for="firstname"><i class="fa fa-user"></i></label>
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-sm-12 group-holder">
+						<div class="form-group">
+							<input type="email" id="email" name="email" class="form-control" placeholder="Email address" required="">
+							<label for="email"><i class="fa fa-envelope"></i></label>
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-sm-12">
+						<div class="group-holder">
+							<div class="form-group">
+								<input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+								<label for="password"><i class="fa fa-lock"></i></label>
 							</div>
 						</div>
-		      		</fieldset>
-		      	</form>
-		    </div>
-		    </div>
-      	</div>
-    </div>
-    <!-- /.container -->
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="/js/jquery.js"></script>
+						<div class="group-holder">
+							<div class="form-group">
+								<input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Confirm password" required="">
+								<label for="confirm_password"><i class="fa fa-lock"></i></label>
+							</div>
+						</div>
+					</div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group subscription-group">
+							<label><i class="fa fa-check"></i></label>
+							
+							<p class="subscription">
+								<span class="current-subscription">
+									<% if(locals.subscription) { %>
+										<%=subscription.formula%>
+									<% } else { %>
+										90 Day Free Trial
+									<% } %>
+								</span> 
+								<a class="edit-sub" href="#">
+									<i class="fa fa-sort-desc"></i>
+								</a>
+							</p>
+							<div class="subscription_menu">
+								<% if(!locals.subscription) { %>
+								<p class="option selected"><a class="option_item" href="trial">90 Day Free Trial</a></p>
+								<% } else { %>
+								<p class="option"><a class="option_item" href="trial">90 Day Free Trial</a></p>
+								<% } %>
+
+								<% if(locals.subscription && locals.subscription.name == 'pro_monthly') { %>
+									<p class="option selected"><a class="option_item" href="pro">Pro Formula</a></p>
+								<% } else { %> 
+									<p class="option"><a class="option_item" href="pro">Pro Formula</a></p>
+								<% } %>
+								
+								<% if(locals.subscription && locals.subscription.name == 'premium_monthly') { %> 
+									<p class="option selected"><a class="option_item" href="premium">Premium Formula</a></p>
+								<% } else { %> 
+									<p class="option"><a class="option_item" href="premium">Premium Formula</a></p>
+								<% } %>
+								
+								<% if(locals.subscription && locals.subscription.name == 'platinum_yearly') {%>
+									<p class="option selected"><a class="option_item" href="platinum">Platinum Formula</a></p>
+								<%} else {%>
+									<p class="option"><a class="option_item" href="platinum">Platinum Formula</a></p>
+								<%}%>
+								
+							</div>
+							<% if(locals.subscription) { %>
+								<input id="selected_plan" name="selected_plan" type="hidden" value="<%=subscription.name%>">
+							<% } else { %>
+								<input id="selected_plan" name="selected_plan" type="hidden" value="trial">
+							<% } %>
+							
+						</div>
+					</div>
+
+					<div class="billing-radio-group  group-holder">
+					
+						<div class="col-lg-12 col-sm-12">
+							<p class="billing-text">Do you want to make payments on a monthly or yearly billing cycle?</p>
+						</div>
+
+						<%
+						if(locals.subscription) {
+							if(subscription.name == 'platinum_yearly') {
+								%>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<label class="checkbox-label text-center">
+											<input type="radio" id="checkbox_monthly" name="subscription_checkbox" value="monthly" disabled="true" /><span>Monthly Billing</span>
+										</label>
+									</div><br />
+								</div>
+
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<label class="checkbox-label text-center">
+											<input type="radio" id="checkbox_yearly" name="subscription_checkbox" value="yearly" checked="true" /><span>Yearly Billing</span>
+										</label>
+									</div><br />
+								</div>
+								<%
+							} else {
+								%>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<label class="checkbox-label text-center">
+											<input type="radio" id="checkbox_monthly" name="subscription_checkbox" value="monthly" checked="true" /> &nbsp;<span>Monthly Billing</span>
+										</label>
+									</div><br />
+								</div>
+
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<label class="checkbox-label text-center">
+											<input type="radio" id="checkbox_yearly" name="subscription_checkbox" value="yearly" /> &nbsp;<span>Yearly Billing</span>
+										</label>
+									</div><br />
+								</div>
+								<%
+							}
+						} else {
+							%>
+							<div class="col-lg-6 col-sm-6">
+								<div class="form-group">
+									<label class="checkbox-label text-center">
+										<input type="radio" id="checkbox_monthly" name="subscription_checkbox" value="monthly" disabled="true" /><span>&nbsp;Monthly Billing</span>
+									</label>
+								</div><br />
+							</div>
+
+							<div class="col-lg-6 col-sm-6">
+								<div class="form-group">
+									<label class="checkbox-label text-center">
+										<input type="radio" id="checkbox_yearly" name="subscription_checkbox" value="yearly" disabled="true" /><span>&nbsp;Yearly Billing</span>
+									</label>
+								</div><br />
+							</div>
+							<%
+						}
+						%>
+					</div>
+
+					<div class="col-lg-12 col-sm-12">
+						<p class="total-label show-border">Total Amount Due:<br/> <span class="total">$<span class="amount-due"><%if(locals.subscription){%><%if(subscription.name=='platinum_yearly'){%>20,000.00<%}else{%><%=subscription.price%>.00<%}}else{%>0.00<%}%>
+						</span></span></p>
+					</div>
+
+					<input type="hidden" value="" name="total_price" id="total_price" />
+					<input type="hidden" value="" id="bot-check" />
+
+					<p class="agreement">By creating an account, you agree to Formula Stock's <a href="#">Terms &amp; Conditions</a>.</p>
+
+					<div class="alert alert-danger validation" style="display: none;">
+						<p><strong><i class="fa fa-times-circle"></i> Error!</strong> <span class="error-message"></span></p>
+					</div>
+					
+					<% if(locals.subscription) {%>
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Next</button>
+					<% } else { %>
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+					<% } %>
+					
+
+					<p>Already have an account? <a href="/login">Sign in.</a></p>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<!-- Main JavaScript -->
+	<!-- <script src="/js/main.min.js"></script> -->
+	<script src="/js/forms.min.js"></script>
+	<script src="/js/validation/user_registration.min.js"></script>
 </body>
 
 </html>

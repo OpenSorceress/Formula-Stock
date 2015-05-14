@@ -11,12 +11,12 @@
 
     <title><%=title %></title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="/css/theme.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/home.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,53 +24,358 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="//use.fonticons.com/9b071e54.js"></script>
+    <!-- <script src="//use.fonticons.com/9b071e54.js"></script> -->
+
+    <!-- jQuery & jQuery UI -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/chartist.min.js"></script>
 </head>
 
-<body class="home">
-    <!-- Navigation -->
-    <div class="navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><i class="icon icon-formula-stocks-logo icon"></i> Formula Stocks</a>
+<body id="page-top">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><img class="logo" src="/img/logo.svg" alt="Formula Stocks" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="#page-top">Home</a></li>
+                    <li><a class="page-scroll" href="#formula-stocks">What We Do</a></li>
+                    <li><a class="page-scroll" href="#our-results">Our Results</a></li>
+                    <li><a class="page-scroll" href="#features-and-pricing">Features &amp; Pricing</a></li>
+                    <li><a class="page-scroll" href="#about-us">About Us</a></li>
+                    <li><a class="page-scroll" href="#contact">Get In Touch</a></li>
+                    <% if(locals.user) { %>
+                        <li class="signin"><a class="signin" href="/portfolio">Dashboard <i class="fa fa-tachometer"></i></a></li>
+                        <li class="signout"><a class="signout" href="/logout">Sign Out <i class="fa fa-sign-out"></i></a></li>
+                    <% } else { %>
+                        <li class="signin"><a class="signin" href="/login">Sign In <i class="fa fa-sign-in"></i></a></li>
+                        <li class="signup"><a class="signup" href="/register">Sign Up <i class="fa fa-sign-out fa-rotate-270"></i></a></li>
+                    <% } %>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
         </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav navbar-right">
-            <% if ( user ) { %>
-            	<li><a href="#">News</a></li>
-            	<li><a href="/portfolio">My Portfolio</a></li>
-            	<li><a href="#">My Account</a></li>
-                <li><a href="/logout">Logout</a></li>
-            <% } else { %>
-            	<li><a href="#">About Us</a><li>
-            	<li><a href="#">Contact</a></li>
-            	<li><a href="/login">Sign In</a></li>
-            	<li><a href="/register">Register</a></li>
-            <% } %>
-            </ul>
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Can intelligent technology help you get better returns on your investments?</h1>
+                <hr>
+                <p><i>Formula Stocks</i> is an expert system that is based on history's best investment principles combined with groundbreaking research... And we have the answer.</p>
+                <a id="read_more" href="#formula-stocks" class="btn btn-primary btn-xl page-scroll">Find Out Now</a>
+                <a id="signup-a-btn" href="/register" class="btn btn-primary btn-xl">Sign Up for Free</a>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <!-- Page Content -->
-    <div class="container-fluid">
-		<div id="CTA">
-			<h1>Beat the market.</h1>
-			<h3>Sign up now and we'll notify you when we launch. Plus <span class="label label-primary"><b>$20 OFF</b></span> your first month's subscription.</h3>
-			<a href="/register" class="btn btn-primary btn-lg">Click Here to Sign Up</a>
-		</div>
-    </div>
-    <!-- /.container -->
+    <section class="bg-primary" id="formula-stocks">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">What is Formula Stocks?</h2>
+                    <hr>
+                    <p class="justify">
+                    	Formula Stocks gives you access to a new, groundbreaking, algorithmic approach to investing in stocks. If you had followed our formula since 1970, your returns could have been as high as <strong>35% per year</strong> depending on the plan chosen. Over 44 years, $1.00 could have grown into $542,857.<sup>1</sup>
+                    </p>
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="/js/jquery.js"></script>
+                    <p class="justify">
+                    	While the future is never an exact representation of the past, we surely stack the odds in your favor. Using Formula Stocks means using strategies for the future, which worked exceedingly well over the past 45 years.
+                    </p>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
+                    <p class="justify">
+                    	We use novel intelligent technology to locate the best investment candidates for the future, maximize your chance of success, and present these on an easy-to-use weekly basis. You make the final decisions.
+                    </p>
+
+                    <blockquote>
+                    	<p class="quote">Machine learning is the new wave of investing for the next 20 years and the smart players are focusing on it.</p>
+                    	<p class="source">— Gustavo Dolfino</p>
+                    </blockquote>
+
+                    <p class="justify">Our strategies are sound and aligned with classic intelligent investment frameworks and security analysis, as used by Benjamin Graham, Warren Buffett and many others. Our returns are generally better, since we have created a vast library of new knowledge and state-of-the-art technology available nowhere else, adding significant value above and beyond the traditional investment strategies.</p>
+
+                    <p class="justify">The last 1,000 investments carried out by the Formula Stocks <a href="#">Platinum Plan</a> resulted in 953 long-term winners. <strong>We beat the S&amp;P500 82% of the time.</strong></p>
+
+                    <p class="justify">Get on the waiting list and be one of the lucky few to get their hands on Formula Stocks before launch. Be on the winning team. <strong>Beat the market.</strong></p>
+
+
+
+                    <a id="see-our-results" href="#our-results" class="btn btn-default btn-xl page-scroll">See Our Results</a>
+                    <p class="text-muted"><small>[1] Taxes, trading commissions, and slippage not accounted for.</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="our-results">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Results</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="log-scale"></div>
+            </div>
+        </div>
+        <div class="container">
+        	<div class="row text-center">
+        		<h4>Too good to be true?</h4>
+        		<p>We're confident in our system. That's why you can try us free for 90 days.</p>
+        		<p><strong>No credit card required.</strong></p>
+        		<a href="#features-and-pricing" class="btn btn-default btn-xl page-scroll">View Our Plans</a>
+        		<!-- <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-2x fa fa-usd wow bounceIn text-primary"></i>
+                        <hr>
+                        <h3>Pro Formula</h3>
+                        <p class="text-muted">$41,468,639 Total Gain</p>
+                        <p class="text-muted">17.91% CAGR</p>
+                        <p class="text-muted">19.88% Geometric IRR</p>
+                        <p class="text-muted">79.7% Success Rate</p>
+                        <p class="text-muted">1086 Profitable Stocks</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-2x fa fa-usd wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <i class="fa fa-2x fa fa-usd wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <hr>
+                        <h3>Premium Formula</h3>
+                        <p class="text-muted">$220,766,363 Total Gain</p>
+                        <p class="text-muted">22.37% CAGR</p>
+                        <p class="text-muted">27.57% Geometric IRR</p>
+                        <p class="text-muted">87.3% Success Rate</p>
+                        <p class="text-muted">1649 Profitable Stocks</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-2x fa fa-usd wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <i class="fa fa-2x fa fa-usd wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <i class="fa fa-2x fa fa-usd wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <hr>
+                        <h3>Platinum Formula</h3>
+                        <p class="text-muted">$15,747,808,018 Total Gain</p>
+                        <p class="text-muted">34.55 CAGR</p>
+                        <p class="text-muted">51.98% Geometric IRR</p>
+                        <p class="text-muted">95.6% Success Rate</p>
+                        <p class="text-muted">740 Profitable Stocks</p>
+                    </div>
+                </div> -->
+        	</div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="features-and-pricing">
+    	<div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Features &amp; Pricing</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+    	<div class="container">
+    		<div class="row">
+                <div class="col-md-3 col-sm-6 pricing-option text-center">
+                    <div class="price-index">
+                    	<i class="fa fa-flask"></i>
+                        <h5>Limited Free Trial</h5>
+                        <p>Experiment, Risk Free</p>
+                        <div class="price-container">
+                            <span class="dollar">$</span>
+                            <span class="price">0</span>
+                            <span class="terms">/90 Days</span>
+                        </div>
+                        <p>Access to all of our system's features</p>
+                        <p>Cancel or Upgrade at any time</p>
+                        <p><strong>No Credit Card Required</strong></p>
+                        <a href="/register" class="btn btn-primary signup-a-btn">Sign Up Today</a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 pricing-option text-center">
+                    <div class="price-index">
+                        <i class="fa fa-user"></i>
+                        <h5>Pro Formula</h5>
+                        <p>Great for Getting Started</p>
+                        <div class="price-container">
+                            <span class="dollar">$</span>
+                            <span class="price">50</span>
+                            <span class="terms">/Month</span>
+                        </div>
+                        <p><strong>79.7%</strong> of stocks sold with profit</p>
+                        <p><strong>19.88%</strong> Geometric IRR</p>
+                        <p><strong>17.91%</strong> CAGR</p>
+                        <a href="/register?p=pro" class="btn btn-primary signup-a-btn">Sign Up Today</a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 pricing-option text-center active">
+                    <div class="price-index">
+                        <i class="fa fa-suitcase"></i>
+                        <h5>Premium Formula</h5>
+                        <p>Excellent for Experienced Investors</p>
+                        <div class="price-container">
+                            <span class="dollar">$</span>
+                            <span class="price">100</span>
+                            <span class="terms">/Month</span>
+                        </div>
+                        <p><strong>22.37%</strong> of stocks sold with profit</p>
+                        <p><strong>27.57%</strong> Geometric IRR</p>
+                        <p><strong>22.37%</strong> CAGR</p>
+                        <a href="/register?p=premium" class="btn btn-primary">Sign Up Today</a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 pricing-option text-center">
+                    <div class="price-index">
+                        <i class="fa fa-users"></i>
+                        <h5>Platinum Formula</h5>
+                        <p>Perfect for Hedge Funds</p>
+                        <div class="price-container">
+                            <span class="dollar">$</span>
+                            <span class="price">20k</span>
+                            <span class="terms">/Year</span>
+                        </div>
+                        <p><strong>95.6%</strong> of stocks sold with profit</p>
+                        <p><strong>50.8%</strong> Geometric IRR</p>
+                        <p><strong>33.4%</strong> CAGR</p>
+                        <a href="/register?p=platinum" class="btn btn-primary signup-a-btn">Sign Up Today</a>
+                    </div>
+                </div>
+    		</div>
+    	</div>
+    </section>
+
+    <section id="about-us">
+    	<div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About Us</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-6 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="/img/founders/thomas.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Thomas Lyck
+                                </div>
+                                <div class="project-name">
+                                    Founder, CEO
+                                </div>
+								<hr class="light">
+                                <p class="bio">Thomas Lyck is the founder of 8 businesses between 1990 until today. Some of the more well known include the system which created all building instruction booklets for LEGO products for over a decade, and many pioneering Computer Graphics solutions for the movie industry in the early 1990s. Besides being CEO and an accomplished investor, Thomas is a specialist in parallel supercomputing, complex data, and artificial intelligence, and has recently spent a decade developing the advanced technology behind FormulaStocks.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="/img/founders/mark-temp.jpg 	" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Mark Lyck
+                                </div>
+                                <div class="project-name">
+                                    Founder, COO
+                                </div>
+                                <hr class="light">
+                                <p class="bio">"It is possible to beat the market. Our portfolio service is the product of a decade's worth of advanced equity research. We know how to gain an edge over the market, and we want to share our results with you."</p>
+				                <p class="bio">Mark Lyck is a young entrepreneur that has brought his experience and edge to Formula Stocks through collaboration with Thomas. With a background in Business Administration, he makes the vision of bringing world-class portfolios to "the winning team" a reality.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>We're here to answer any questions about the Formula Stocks experience. Send us a message and we'll get in touch.</p>
+                    <form>
+                    	<div class="form-group">
+							<input type="text" class="form-control" id="contact_name" placeholder="Full name">
+							<label for="contact_name" class="control-label"><i class="fa fa-user"></i></label>
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" id="contact_email" placeholder="Enter email">
+							<label for="contact_email"><i class="fa fa-envelope"></i></label>
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" id="contact_message" name="message" rows="1" placeholder="Message"></textarea>
+							<label for="contact_message"><i class="fa fa-comment"></i></label>
+						</div>
+						<button type="submit" class="btn btn-default btn-xl">Start the Conversation</button>
+					</form>
+                </div>
+                <!-- <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <p>123-456-6789</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+    	<p>Formula Stocks is not a broker service. We do not buy or sell stocks. Formula Stocks provides suggestions for the stock market. It is up to you to buy and sell any suggested stocks. *CAGR is determined from past performance. Past performance does not guarantee future results. There is risk that comes with investing in the stock market. Our results are calculated from a <a href="#">scientifically unbiased testing environment</a>.</p>
+
+    	<p>For more information, visit our <a href="#">Disclosure Library</a>.</p>
+
+    	<p>&copy; Lyck Invest ApS 2015 - All rights reserved.</p>
+    </footer>
+
+
+    <script src="/js/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Plugin AmCharts -->
+    <script type="text/javascript" src="js/amcharts.js"></script>
+	<script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+	<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+
+    <!-- <script src="/js/main.min.js"></script>
+    <script src="/js/home.min.js"></script> -->
+    <script src="js/creative.js"></script>
+    <script src="js/results.min.js"></script>
+    <script src="js/jquery.elastic.source.js"></script>
+    <script src="js/forms.min.js"></script>
 </body>
-
 </html>

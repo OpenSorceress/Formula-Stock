@@ -1,0 +1,432 @@
+// #Config
+$px-only:false;
+
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'functions.scss';
+
+.clear {
+	clear: both;
+}
+
+.container-fluid {
+	padding: 0px;
+}
+
+#navbar, body {
+	background-color: $formulastocks_white;
+}
+
+.logo {
+	display: block;
+	height: 30px;
+	width: auto;
+	margin: 15px auto 0px auto;
+}
+
+.main {
+	background-color: $formulastocks_white;
+}
+
+#account-information {
+	padding-right: 15px !important;
+	float: left;
+}
+
+#subscription-information {
+	padding-left: 15px !important;
+	float: right;
+}
+
+.suggestion {
+	margin-top: 30px;
+}
+
+.dashboard-btn {
+	background-color: $formulastocks_blue;
+	color: $formulastocks_white;
+	border-radius: 3px;
+	border: none;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 10px 35px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+.bad-action {
+	background-color: $formulastocks_red;
+}
+/*
+
+#account .main:nth-child(2) {
+	padding-right: 15px;
+}
+*/
+
+/*
+#subscription-info {
+	float: right;
+}
+*/
+
+.container-fluid {
+	overflow-x: hidden;
+}
+
+.navbar-header {
+	background-color: $formulastocks_blue;
+	padding: 0px;
+}
+
+.container-fluid .navbar-header .navbar-brand {
+	// text-align: center;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px 0px;
+	width: 100%;
+	font-family: 'Halis', sans-serif;
+	color: $formulastocks_white;
+	
+	text-transform: uppercase;
+	font-weight: 800;
+	@include fontSize(20px);
+}
+
+.sidebar-heading {
+	padding: 10px 20px;
+}
+
+.navbar-right {
+	display: none;
+}
+
+.suggestion {
+	background-color: #fff;
+	border: 1px solid $border_color;
+	border-radius: 3px;
+}
+
+.suggestionTitle {
+	padding: 10px 15px;
+	border-bottom: 1px solid $border_color;
+}
+
+.infoBar {
+	padding: 5px 15px;
+	border-bottom: 1px solid $border_color;
+}
+
+.suggestion h1 {
+	font-family: 'Halis', sans-serif;
+	font-weight: 800;
+	@include fontSize(32px);
+	letter-spacing: -0.05em;
+	text-transform: uppercase;
+	float: left;
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+.new, .action, .symbol {
+	margin: 0;
+	margin-top: 5px;
+	display: block;
+	padding: 3px 5px;
+	background-color: $formulastocks_blue;
+	color: $formulastocks_white;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	@include fontSize(14px);
+	font-weight: 600;
+	float: left;
+	border-radius: 3px;
+}
+
+.action, .symbol {
+	@include fontSize(18px);
+	margin: 0;
+	margin-right: 10px;
+}
+
+.last-updated {
+	font-family: 'Lato', sans-serif;
+	font-style: italic;
+	color: $formulastocks_light_gray;
+	float: right;
+	margin: 0;
+}
+
+.buy {
+	background-color: $formulastocks_blue;
+}
+
+.sell {
+	background-color: $formulastocks_red;
+}
+
+.symbol {
+	background-color: $formulastocks_light_gray
+}
+
+.adv-data-btn {
+	background: $formulastocks_blue;
+	color: $formulastocks_white;
+	border: none;
+	border-radius: 3px;
+	font-family: 'Lato', sans-serif;
+	@include fontSize(22px);
+	padding: 5px 10px;
+	float: right;
+	outline: none;
+}
+
+.sidebar {
+	background-color: $dashboard_menu;
+	border: none;
+	top: 50px;
+}
+
+.sidebar a {
+	color: $dashboard_menu_link;
+	font-family: 'Lato', sans-serif;
+}
+
+.sidebar a:hover {
+	background-color: $dashboard_menu_active !important;	
+}
+
+.sidebar-heading {
+	color:  $dashboard_menu_heading;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.active {
+	border-left: 5px solid $formulastocks_blue;
+	font-weight: 600;
+}
+
+.nav-sidebar > .active a, .nav>li>a:focus, .nav>li>a:hover, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+	background-color: $dashboard_menu_active;
+}
+
+.ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {
+	stroke: #18aed5 !important;
+}
+
+.ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
+	stroke: #e6e6e6 !important;
+}
+
+.allocation {
+	font-family: 'Halis', sans-serif;
+	font-weight: 700;
+	color: $formulastocks_blue;
+	@include fontSize(32px);
+}
+
+.weight {
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	font-weight: 800;
+	@include fontSize(18px);
+}
+
+.allocation, .weight {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.suggestionData {
+	padding: 15px;
+}
+
+.pie-chart {
+	position: relative;
+	float: left;
+	width: 150px;
+	margin-right: 25px;
+}
+
+.chart-data {
+	position: absolute;
+	margin: 0 auto;
+	top: 50px;
+	text-align: center;
+}
+
+.chart-data p {
+	text-align: center;
+	width: 150px;
+}
+
+.action-text {
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+.action-text-buy {
+	color: $formulastocks_blue;
+}
+
+.muted-text {
+	color: $formulastocks_light_gray;
+	@include fontSize(16px);
+}
+
+.statistics-number {
+	font-family: 'Halis', sans-serif;
+	@include fontSize(36px);
+	font-weight: 800;
+}
+
+.statistics div > p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.suggested-price-container {
+	float: left;
+}
+
+.last-price-container {
+	float: right;
+}
+
+.suggested-price-container, .last-price-container {
+	padding: 0px 50px;
+}
+
+.last-price-negative {
+	color: $formulastocks_green;
+}
+
+.last-price-positive {
+	color: $formulastocks_red;
+}
+
+.suggested-price {
+	color: $formulastocks_blue;
+}
+
+.reccomendation {
+	clear: both;
+}
+
+.reccomendation p {
+	@include fontSize(32px);
+}
+
+.statistics {
+	width: 350px;
+	float: left;
+	margin-top: 25px;
+}
+
+.historicalData {
+	// max-width: 590px;
+	width: 590px;
+	float: right;
+}
+
+@media(max-width:768px) {
+	.navbar-right {
+		display: block;
+		width: calc(100% - 50px);
+	}
+	
+	.navbar-brand {
+		width: calc(100% - 60px) !important;
+	}
+}
+
+
+/* TEST*/
+#chart {
+	width	: 100%;
+	height	: 500px;
+}
+
+#donut-chart {
+	font-size	: 11px;
+	width		: 150px;
+	height		: 150px;
+}
+
+#line-chart {
+	width	: 100%;
+	height	: 150px;
+}																					
+
+@media only screen and (max-width: 767px){
+	#account-information, #subscription-information {
+		width: 100%;
+	}
+}
+
+// FORMS
+label {
+	position: absolute;
+	float: left;
+	width: 5% !important;
+	top: 2px;
+	left: 2px;
+	
+	font-size: 22px !important;
+	@include transition(color 300ms ease);
+}
+
+.form-group {
+	border-bottom: 1px solid $formulastocks_grey;
+	margin: 0;
+	position: relative;
+}
+
+.form-group:last-child, .form-group:nth-child(3) {
+	border-bottom: none;
+}
+
+form input.form-control, #old_password, #new_password, #confirm_password {
+	background: none;
+	outline: none !important;
+	box-shadow: none;
+	border: none;
+	float: right;
+	width: 87%;
+	padding: 25px 0px 25px 15px;
+	
+	font-family: 'Lato', sans-serif;
+	@include transition(color 300ms ease);
+	font-size: 14px !important;
+}
+
+form {
+	padding: 0px 15px;
+}
+
+form button {
+	margin-bottom: 0px !important;
+}
+
+::-webkit-input-placeholder {
+	color: $formulastocks_grey !important;
+}
+
+:-moz-placeholder {
+	color: $formulastocks_grey !important;
+}
+
+::-moz-placeholder {
+	color: $formulastocks_grey !important;
+}
+
+:-ms-input-placeholder {
+	color: $formulastocks_grey !important;
+}

@@ -12,18 +12,21 @@ var mongoose = require('mongoose'),
    -------------------------------------------------
  */
 var UserSchema = new Schema({
-	name: String,
+	firstname: String,
+	lastname: String,
 	email: {
 		type: String,
-		index: true
-	},
-	username: {
-		type: String,
+		index: true,
 		trim: true,
 		unique: true
 	},
 	password: String,
-	investment_capital: Number,
+	usertype: Number,
+	plan: String,
+	status: String,
+	trial_expires: Date,
+	expires: Date,
+	stripe_id: String,
 	provider: String,
 	providerId: String,
 	todos: {}
@@ -64,24 +67,24 @@ UserSchema.methods.authenticate = function(password) {
 };
 
 /* -------------------------------------------------
-   FIND UNIQUE USERNAME STATIC METHOD
+   FIND UNIQUE EMAIL STATIC METHOD
    -------------------------------------------------
    This is used to find an available unique username
    for new users.
    -------------------------------------------------
  */
-UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
+UserSchema.statics.findUniqueEmail = function(email, suffix, callback) {
 	var _this = this;
-	var possibleUsername = username + (suffix || '');
+	var possibleEmail = email + (suffix || '');
 	
 	_this.findOne(
-		{username: possibleUsername},
+		{email: possibleEmail},
 		function(err, user) {
 			if (!err) {
 				if (!user) {
-					callback(possibleUsername);
+					callback(possibleEmail);
 				} else {
-					return _this.findUniqueUsername(username, (suffix || 0) + 1, callback);
+					return _this.findUniqueEmail(email, (suffix || 0) + 1, callback);
 				}
 			} else {
 				callback(null);
@@ -89,5 +92,27 @@ UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
 		}
 	);
 };
+
+UserSchema.statics.getPlan = function(email, callback) {
+	var _this = this;
+	
+	_this.findOne({
+		email: email
+	}, function(error, user) {
+		if(!error) {
+			var data = {
+				plan: user.plan,
+				status: user.status
+			};
+			
+			callback(null, data);
+		} else {
+			var error = {
+				message: "User does not exist."
+			}
+			callback(error, null);
+		}
+	});
+}
 
 mongoose.model('User', UserSchema);

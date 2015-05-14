@@ -1,0 +1,92 @@
+@import 'dashboard.boilerplate.scss';
+@import '../base/base.scss';
+
+/* Logo */
+body {
+	background: $lightest_gray;
+}
+
+.logo-container {
+	width: 100%;
+	text-align: center;
+}
+
+#logo {
+	max-width: 300px;
+	text-align: center;
+}
+
+.sidebar-heading i {
+	text-indent: 0px;
+}
+
+#sidebar-wrapper {
+	background-color: $navy;
+}
+
+.sidebar-nav>.sidebar-brand {
+	background-color: $blue;
+	text-indent: 0;
+}
+
+.sidebar-nav>.sidebar-brand {
+	color: $lightest_gray;
+	font-family: 'Halis', sans-serif;
+	font-weight: 800;
+	letter-spacing: -1px;
+	text-align: center;
+	text-transform: uppercase;
+	text-indent: 0;
+}
+
+.sidebar-heading {
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: 30px;
+	color: $slate;
+}
+
+.sidebar-nav li a {
+	color: $light_slate;
+	font-size: 14px;
+	
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	
+	&:hover {
+		color: $lightest_gray;
+		background-color: $dark_navy;
+		border-left: 4px solid $blue;
+		padding-left: 5px;
+		letter-spacing: 0.2px;
+	}
+}
+
+.sidebar-nav li a.active {
+	color: $lightest_gray;
+	font-weight: 900;
+}
+
+h1 {
+	padding-top: 10px;
+}
+
+@media(max-width:768px) {
+	#menu-toggle {
+		float: left;
+	}
+	
+	.logo-container {
+		width: calc(100% - 56px);
+		float: left;
+		margin-left: 20px;
+		text-align: center;
+	}
+	
+	#logo {
+		height: 30px;
+		width: auto;
+	}
+}

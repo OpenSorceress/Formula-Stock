@@ -1,0 +1,519 @@
+// @import '_home.bootstrap.scss';
+@import '../base/base.scss';
+@import '../components/forms.scss';
+
+/*!
+ * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.bg-primary {
+    background-color: $lightest_gray;
+}
+
+.bg-dark {
+    color: $lightest_gray;
+    background-color: $darkest_gray;
+}
+
+.text-faded {
+    color: $gray;
+}
+
+section {
+    padding: 100px 0;
+}
+
+aside {
+    padding: 50px 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.logo {
+	position: absolute;
+	height: 25px;
+	width: auto;
+	top: 10px;
+}
+
+.navbar-default {
+    border-color: $gray;
+    font-family: 'Lato', sans-serif;
+    background-color: $lightest_gray;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: $blue;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: $blue;
+}
+
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: $darkest_gray;
+}
+
+.navbar-default .nav > li>a:hover,
+.navbar-default .nav>li>a:focus:hover {
+    color: $blue;
+}
+
+.navbar-default .nav > li.active>a,
+.navbar-default .nav>li.active>a:focus {
+    color: $blue!important;
+    background-color: transparent;
+}
+
+.navbar-default .nav > li.active>a:hover,
+.navbar-default .nav>li.active>a:focus:hover {
+    background-color: transparent;
+}
+
+@media(min-width:768px) {
+    .navbar-default {
+        border-color: $gray;
+        background-color: $lightest_gray;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: $blue;
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: $blue;
+    }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        color: $darkest_gray;
+    }
+
+    .navbar-default .nav > li>a:hover,
+    .navbar-default .nav>li>a:focus:hover {
+        color: $blue;
+    }
+
+    .navbar-default.affix {
+        border-color: rgba(34,34,34,.05);
+        background-color: $lightest_gray;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: $blue;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: $blue;
+    }
+
+    .navbar-default.affix .nav > li>a,
+    .navbar-default.affix .nav>li>a:focus {
+        color: $darkest_gray;
+    }
+
+    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav>li>a:focus:hover {
+        color: $dark_blue;
+    }
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: $lightest_gray;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.65), 
+      rgba(0, 15, 30, 0.55)
+    ), url('../img/header.jpg');
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 58px;
+}
+
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+
+header .header-content .header-content-inner p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,.7);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+header .header-content .header-content-inner .btn-primary {
+	border: 3px solid $blue!important;
+	
+	&:hover {
+		border: 3px solid $dark_blue!important;
+	}
+	
+	margin: 0px 15px 15px 15px;
+	width: 300px;
+}
+
+header .header-content .header-content-inner #read_more {
+	border: 3px solid $lightest_gray!important;
+	background: transparent;
+	
+	&:hover {
+		border: 3px solid $blue!important;
+		background-color: $blue;
+	}
+}
+
+@media(min-width:768px) {
+    header {
+        min-height: 100%;
+    }
+
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        padding: 0 50px;
+        transform: translateY(-50%);
+    }
+
+    header .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+    }
+
+    header .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+}
+
+.section-heading {
+    margin-top: 0;
+    color: $darkest_gray;
+}
+
+.service-box {
+    margin: 50px auto 0;
+    max-width: 400px;
+}
+
+@media(min-width:992px) {
+    .service-box {
+        margin: 20px auto 0;
+    }
+}
+
+.service-box p {
+    margin-bottom: 0;
+}
+
+.portfolio-box {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.portfolio-box .portfolio-box-caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: $lightest_gray;
+    opacity: 0;
+    background: rgba(24,174,213,.9);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    padding: 0 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+@media(min-width:768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
+
+.call-to-action h2 {
+    margin: 0 auto 20px;
+}
+
+.text-primary {
+    color: $blue;
+}
+
+.no-gutter > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#log-scale {
+	width	: 100%;
+	height	: 500px;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    color: $lightest_gray;
+    background: $darkest_gray;
+}
+
+::selection {
+    text-shadow: none;
+    color: $lightest_gray;
+    background: $darkest_gray;
+}
+
+img::selection {
+    color: $lightest_gray;
+    background: 0 0;
+}
+
+img::-moz-selection {
+    color: $lightest_gray;
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: $darkest_gray;
+}
+
+.bio {
+	color: $lightest_gray;
+	padding: 0 5%;
+	text-align: justify;
+}
+
+/* Pricing Table */
+.pricing-option {
+	padding: 0;
+	margin: 25px 0;
+	-webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+
+.pricing-option.active {
+	background: $dark_navy;
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	z-index: 10;
+	border-radius: 3px !important;
+	-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+	-o-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.price-index {
+	width: 98%;
+	margin: 0 auto;
+	border: 1px solid $dark_navy;
+	border-radius: 5px;
+	padding: 30px 0;
+}
+
+.price-index h5 {
+	color: $darkest_gray;
+}
+
+.price-index i {
+	font-size: 66px;
+	display: inline-block;
+	margin-bottom: 15px;
+	color: $dark_gray;
+	opacity: 0.2;
+}
+
+.pricing-option.active i, 
+.pricing-option.active .dollar,
+.pricing-option.active .price,
+.pricing-option.active .terms,
+.pricing-option.active p,
+.pricing-option.active h5 {
+	color: $lightest_gray;
+}
+
+.pricing-option.active .btn-primary {
+	border: 3px solid $lightest_gray!important;
+	background: transparent;
+	
+	&:hover {
+		border: 3px solid $dark_green!important;
+		background-color: $dark_green;
+	}
+}
+
+.dollar {
+	position: relative;
+	bottom: 52px;
+	font-size: 22px;
+	color: $darkest_gray;
+}
+
+.price {
+	font-size: 90px;
+	font-weight: bold;
+	line-height: 120px;
+	text-align: center;
+	color: $darkest_gray;
+}
+
+.terms {
+	font-size: 22px;
+	line-height: 24px;
+	text-align: center;
+	color: $darkest_gray;
+}
+
+#contact, footer {
+	background: $lightest_gray;
+	padding-bottom: 50px;
+}
+
+footer p {
+	font-size: 10px!important;
+	padding: 0 10%;
+	color: $dark_gray;	
+}
+
+a.signout {
+	color: $red!important;
+	
+	
+	&:hover {
+		color: $lightest_gray!important;
+	}
+}
+
+a.signup {
+	color: $green!important;
+	
+	&:hover {
+		color: $lightest_gray!important;
+	}
+}
+
+a.signin {
+	color: $blue!important;
+	
+	&:hover {
+		color: $lightest_gray!important;
+	}
+}
+
+li.signout, li.signup, li.signin,
+a.signout, a.signup, a.signin {
+	-webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+li.signout:hover {
+	background-color: $red!important;
+}
+
+li.signup:hover {
+	background-color: $green!important;
+}
+
+li.signin:hover {
+	background-color: $blue!important;
+}
+
+#signup-a-btn, .signup-a-btn {
+	background-color: $green;
+	border: 3px solid $green!important;
+}
+
+#signup-a-btn:hover, .signup-a-btn:hover {
+	background-color: $dark_green;
+	border: 3px solid $dark_green!important;
+}
+
+@media(max-width:400px) {
+    #log-scale {
+	    height: 200px;
+    }
+    
+    text {
+	    display: none;
+    }
+}

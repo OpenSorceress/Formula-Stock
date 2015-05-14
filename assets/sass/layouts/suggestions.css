@@ -1,0 +1,258 @@
+/*
+ * COLOR USES
+ * ----------
+ * 	BLUE:	Used for informational links, buttons, and other branding elements.
+ * 	SLATE:	Used for dashboard menu links and subtitles.
+ * 	NAVY:	Used for dashboard menu background and hover states.
+ * 	BLACK:	Used mostly for headings, body copy and typography in general.
+ * 	WHITE:	Used primarily as a background color.
+ * 	GRAY:	Used for headings, body copy, muted text, and typography in general, borders, 
+ *			background color, and other discreet elements, depending on the shade of gray.
+ * 	GREEN:	Used as a call-to-action, representational stock information, and other
+ *			essential or positive data.
+ */
+.section {
+  background-color: #FFFFFF;
+  border: 1px solid #ECECEC;
+  border-radius: 3px;
+  margin-top: 35px;
+  padding: 0; }
+
+.section-header {
+  border-bottom: 1px solid #ECECEC;
+  padding: 15px 20px; }
+
+.section-header h1 {
+  font-size: 24px;
+  padding-top: 5px; }
+
+.sub-section {
+  border-bottom: 1px solid #ECECEC;
+  padding: 7px 20px;
+  margin-bottom: 20px; }
+
+.sub-section p {
+  color: #B9B9B9;
+  font-size: 12px;
+  margin-bottom: 0; }
+
+.section-content {
+  padding: 0 5px;
+  padding-bottom: 20px; }
+
+.section-expansion {
+  border-top: 1px solid #ECECEC;
+  padding: 0px 20px;
+  clear: both; }
+
+.inner-section {
+  padding: 15px 0px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clear {
+  clear: both; }
+
+.pie-chart {
+  width: 100%;
+  height: 300px;
+  -webkit-animation: fadein 3s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 3s;
+  /* Internet Explorer */
+  -o-animation: fadein 3s;
+  /* Opera < 12.1 */
+  animation: fadein 3s; }
+
+.pie-chart-data {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  margin-left: -150px;
+  text-align: center; }
+
+.allocation {
+  font-weight: 900;
+  font-size: 58px;
+  color: #18AED5;
+  margin-bottom: 0;
+  -webkit-animation: allocation-fadein-slideup 1.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: allocation-fadein-slideup 1.5s;
+  /* Firefox < 16 */
+  -ms-animation: allocation-fadein-slideup 1.5s;
+  /* Internet Explorer */
+  -o-animation: allocation-fadein-slideup 1.5s;
+  /* Opera < 12.1 */
+  animation: allocation-fadein-slideup 1.5s; }
+
+.pie-chart-data .subtext {
+  margin-top: -15px;
+  text-transform: uppercase;
+  -webkit-animation: fadein-slideup 1.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein-slideup 1.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein-slideup 1.5s;
+  /* Internet Explorer */
+  -o-animation: fadein-slideup 1.5s;
+  /* Opera < 12.1 */
+  animation: fadein-slideup 1.5s; }
+
+@keyframes fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 0px; }
+
+  to {
+    opacity: 1;
+    margin-top: -15px; } }
+
+/* Firefox < 16 */
+@-moz-keyframes fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 0px; }
+
+  to {
+    opacity: 1;
+    margin-top: -15px; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 0px; }
+
+  to {
+    opacity: 1;
+    margin-top: -15px; } }
+
+/* Internet Explorer */
+@-ms-keyframes fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 0px; }
+
+  to {
+    opacity: 1;
+    margin-top: -15px; } }
+
+/* Opera < 12.1 */
+@-o-keyframes fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 0px; }
+
+  to {
+    opacity: 1;
+    margin-top: -15px; } }
+
+@keyframes allocation-fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 30px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0px; } }
+
+/* Firefox < 16 */
+@-moz-keyframes allocation-fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 30px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0px; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes allocation-fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 30px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0px; } }
+
+/* Internet Explorer */
+@-ms-keyframes allocation-fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 30px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0px; } }
+
+/* Opera < 12.1 */
+@-o-keyframes allocation-fadein-slideup {
+  from {
+    opacity: 0;
+    margin-top: 30px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0px; } }
+
+.load-chart {
+  color: #ECECEC;
+  text-align: center;
+  padding-top: 115px; }
+
+.chart-error {
+  color: #D91249;
+  text-align: center;
+  padding-top: 115px; }
+
+.line-chart {
+  width: 100%;
+  height: 300px; }
+
+.line-chart-error {
+  border: 1px dashed #D91249; }
+
+.suggestion-data {
+  text-align: center;
+  padding: 15px 0px;
+  margin-bottom: 20px; }
+
+.suggestion-data.green {
+  background-color: #12D99E; }
+
+.suggestion-data.blue {
+  background-color: #18AED5; }
+
+.suggestion-data.navy {
+  background-color: #282833; }
+
+.suggestion-data p {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0; }
+
+.suggestion-data .value {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 26px; }
+
+.suggestion-data .label {
+  margin-top: -25px;
+  font-weight: 500; }
+
+i.value-icon {
+  font-size: 100px;
+  position: absolute;
+  left: 7%;
+  top: -20%;
+  opacity: 0.2; }

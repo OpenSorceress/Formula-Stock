@@ -1,0 +1,96 @@
+@import '_fonts.scss';
+@import '_colors.scss';
+
+// Typesetting variables.
+$baseFontSize: 20; // in pixels.
+$baseLineHeight: 1.5; // how large the line height is as a multiple of font size
+$leading: $baseLineHeight * 1rem;
+
+// Rate of growth for headings
+$scale: .75;
+
+/* Setup */
+html {
+	font-family: 'Lato', sans-serif;
+	font-size: $baseFontSize / 16 * 100%;
+	
+	// Make everything look a little nicer in webkit
+	-webkit-font-smoothing: antialiased;
+	
+	-webkit-text-size-adjust: auto;
+	-moz-text-size-adjust: auto;
+	-ms-text-size-adjust: auto;
+	-o-text-size-adjust: auto;
+	text-size-adjust: auto;
+}
+
+/* Copy & Lists */
+p {
+	font-size: $baseFontSize;
+	line-height: $leading;
+	margin-top: $leading;
+	margin-bottom: 0;
+	color: $darkest_gray;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Halis', sans-serif;
+	text-transform: uppercase;
+	font-weight: 800;
+	margin-top: $leading;
+	margin-bottom: 0;
+	line-height: $leading;
+}
+
+h1 {
+	font-size: 3 * $scale * 1rem;
+	line-height: 3 * $leading;
+	margin-top: 2 * $leading;
+}
+
+h2 {
+	font-size: 2 * $scale * 1rem;
+	line-height: 2 * $leading;
+	margin-top: 2 * $leading;
+}
+
+h3 {
+	font-size: 1 * $scale * 1rem;
+}
+
+h4 {
+	font-size: $scale / 2 * 1rem;
+}
+
+h5 {
+	font-size: $scale / 3 * 1rem;
+}
+
+h6 {
+	font-size: $scale / 4 * 1rem;
+}
+
+.lead {
+	font-size: $scale * 1rem;
+}
+
+i, em {
+	font-style:	italic;
+}
+
+b, strong {
+	font-weight: 800;
+}
+
+a {
+	outline: none;
+}
+
+a:link, a:visited {
+	color: $blue;
+}
+
+small {
+	font-size: $baseFontSize * .75%;
+}

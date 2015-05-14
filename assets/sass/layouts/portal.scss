@@ -1,0 +1,61 @@
+@import '../base/base.scss';
+@import '../components/forms.scss';
+@import '../components/alerts.scss';
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: $lightest_gray;
+}
+
+.flask {
+	max-width: 75px;
+	display: block;
+	margin: 50px auto 35px auto;
+}
+
+.checkbox {
+	margin-top: 30px;
+}
+
+.btn-primary {
+	margin-bottom: 20px;
+}
+
+.billing-text {
+	margin-top: 35px;
+	text-align: left;
+}
+
+/*
+.radio-border {
+	border-bottom: 1px solid $darkest_gray;
+	margin-bottom: 35px;
+}
+*/
+
+.total-label.show-border {
+	border-top: 1px solid $darkest_gray;
+	padding-top: 35px;
+}
+
+.total-label {
+	font-weight: 900;
+}
+
+.total {
+	font-size: 62px;
+	font-weight: 900;
+}
+
+form .col-lg-12 {
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+}
+
+.no-padding-left {
+	padding-left: 0px!important;
+}
+
+.no-padding-right {
+	padding-right: 0px!important;
+}
