@@ -59,12 +59,20 @@ module.exports = function(grunt) {
 	                spawn: false
 	            }
 	        }
-		}
+	    },
+	    express: {
+	    	options: {
+				port: 3000,
+				hostname: "localhost",
+				livereload: true
+			}
+	    }
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-express-server');
 	
 	grunt.registerTask('default', ['sass', 'uglify', 'watch']);
 };

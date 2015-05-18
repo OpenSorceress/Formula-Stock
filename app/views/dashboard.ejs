@@ -85,7 +85,13 @@
 					<li><a href="/admin/upload">Upload JSON Documents</a></li>
 				<% } %>
 
-				<li class="sidebar-heading"><i class="fa fa-user"></i> <%= data.user.firstname %> <%= data.user.lastname %></li>
+				<li class="sidebar-heading"><i class="fa fa-user"></i> 
+				<% if(data.user.firstname.length + data.user.lastname.length > 19) { %>
+					<%= data.user.firstname %>
+				<% } else { %>
+					<%= data.user.firstname %> <%= data.user.lastname %>
+				<% } %>
+				</li>
 				<li><a href="/portfolio/user">Review My Portfolio</a></li>
 				<li><a href="/account">Manage My Account</a></li>
 				<li><a href="/logout">Sign Out</a></li>

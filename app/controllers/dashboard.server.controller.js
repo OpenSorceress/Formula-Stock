@@ -4,6 +4,7 @@ var Asset = require('mongoose').model('Asset'),
 	passport = require('passport'),
 	request = require('request');
 
+/* List of Acceptable Filenames */
 var _filenames = [
 	"entry_weekly.json",
 	"entry_monthly.json",
