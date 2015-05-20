@@ -346,15 +346,17 @@ exports.upload_files = function(request, response, next) {
 					if(error) {
 						console.log("ERROR: File did not save to database.", request.files[key].originalname);
 						// return next(error);
+						// Here I don't know how to return an error response.
 					} else {
-						// Change This!
 						console.log("Success!", request.files[key].originalname);
 						// return res.redirect('/portfolio');
+						// Here I don't know how to return a success response.
 					}
 				});
 			} else {
 				// Invalid filename.
 				console.log("ERROR: Invalid filename.", request.files[key].originalname);
+				// Another error response.
 			}
 		}
 	}

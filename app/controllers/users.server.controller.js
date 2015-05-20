@@ -267,7 +267,13 @@ exports.billing = function(request, response, next) {
 					}
 				 });
 			 });
-		 } else {			 
+		 } else {
+			 console.log(request.body.firstname);
+			 console.log(request.body.lastname);
+			 console.log(request.body.email);
+			 console.log(request.body.password);
+			 console.log(request.body.selected_plan);
+			 	 
 			 var user_obj = {
 				 firstname: request.body.firstname,
 				 lastname: request.body.lastname,
